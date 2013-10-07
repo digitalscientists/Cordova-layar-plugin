@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.apache.cordova.camera"
+    version="0.2.3">
+    <name>Layar</name>
+    <description>Layar Vision Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>layar,vision</keywords>
+
+    <js-module src="www/Layar.js" name="Layar">
+        <clobbers target="Layar" />
+    </js-module>
+
+    <!-- android -->
+    <!--
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Camera">
+                <param name="android-package" value="org.apache.cordova.camera.CameraLauncher"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+
+        <source-file src="src/android/CameraLauncher.java" target-dir="src/org/apache/cordova/camera" />
+        <source-file src="src/android/FileHelper.java" target-dir="src/org/apache/cordova/camera" />
+        <source-file src="src/android/ExifHelper.java" target-dir="src/org/apache/cordova/camera" />
+
+        <js-module src="www/CameraPopoverHandle.js" name="CameraPopoverHandle">
+            <clobbers target="CameraPopoverHandle" />
+        </js-module>
+
+     </platform> ->>
+
+     <!-- ios -->
+     <platform name="ios">
+         <config-file target="config.xml" parent="/*">
+             <feature name="Layar">
+                 <param name="ios-package" value="CDVLayar" />
+             </feature>
+         </config-file>
+
+         <js-module src="www/Layar.js" name="Layar">
+            <clobbers target="Layar" />
+         </js-module>
+
+         <header-file src="src/ios/CDVLayar.h" />
+         <source-file src="src/ios/CDVLayar.m" />
+     </platform>
+</plugin>
