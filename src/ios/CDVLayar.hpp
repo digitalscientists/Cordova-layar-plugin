@@ -9,5 +9,5 @@
 #import <Cordova/CDVPlugin.h>
 
 @interface CDVLayar : CDVPlugin
-
+- (void)launchLayarVision:(CDVInvokedUrlCommand*)command;
 @end
