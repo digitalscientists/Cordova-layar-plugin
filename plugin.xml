@@ -17,19 +17,10 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Layar">
-                <param name="android-package" value="com.ds.layar-vision.Layar"/>
+                <param name="android-package" value="com.ds.cordova.layar.LayarVision"/>
             </feature>
         </config-file>
-        <config-file target="AndroidManifest.xml" parent="/*">
-            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-        </config-file>
-
-        <source-file src="src/android/LayarVision.java" target-dir="src/org/apache/cordova/layar" />
-
-        <js-module src="www/Layar.js" name="Layar">
-            <clobbers target="Layar" />
-        </js-module>
-
+        <source-file src="src/android/LayarVision.java" target-dir="src/com/ds/cordova/layar" />
      </platform>
 
      <!-- ios -->
