@@ -12,6 +12,25 @@
     <js-module src="www/Layar.js" name="Layar">
         <clobbers target="Layar" />
     </js-module>
+    
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Layar">
+                <param name="android-package" value="com.ds.layar-vision.Layar"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+
+        <source-file src="src/android/LayarVision.java" target-dir="src/org/apache/cordova/layar" />
+
+        <js-module src="www/Layar.js" name="Layar">
+            <clobbers target="Layar" />
+        </js-module>
+
+     </platform>
 
      <!-- ios -->
      <platform name="ios">
@@ -25,7 +44,7 @@
             <clobbers target="Layar" />
          </js-module>
 
-         <header-file src="src/ios/CDVLayar.h" />
-         <source-file src="src/ios/CDVLayar.m" />
+         <header-file src="src/ios/CDVLayar.hpp" />
+         <source-file src="src/ios/CDVLayar.mm" />
      </platform>
 </plugin>
