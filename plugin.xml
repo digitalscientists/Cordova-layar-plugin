@@ -30,7 +30,7 @@
             <clobbers target="Layar" />
         </js-module>
 
-     </platform> ->>
+     </platform>
 
      <!-- ios -->
      <platform name="ios">
