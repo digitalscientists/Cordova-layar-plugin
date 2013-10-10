@@ -30,11 +30,6 @@
                  <param name="ios-package" value="CDVLayar" />
              </feature>
          </config-file>
-
-         <js-module src="www/Layar.js" name="Layar">
-            <clobbers target="Layar" />
-         </js-module>
-
          <header-file src="src/ios/CDVLayar.hpp" />
          <source-file src="src/ios/CDVLayar.mm" />
      </platform>
