@@ -7,7 +7,7 @@
 //
 
 #import "CDVLayar.hpp"
-#import <LayarSDK/LayarPlayer.hpp>
+#import "LayarPlayer.hpp"
 
 @implementation CDVLayar
 
@@ -20,8 +20,8 @@
 - (void)launchLayarVision:(CDVInvokedUrlCommand*)command
 {
     
-    NSString *consumerKey = @"IFfARbQzwDoNMVHB";
-    NSString *consumerSecret = @"JVMjrbiogcIYKpGNqBReWLnAfHZdzQsl";
+    NSString *consumerKey = [[NSUserDefaults standardUserDefaults] valueForKey:@"LayarKey"];
+    NSString *consumerSecret = [[NSUserDefaults standardUserDefaults] valueForKey:@"LayarSecret"];
     LPARVisionViewController *augmentedRealityViewController = [[LPARVisionViewController alloc] init];
     augmentedRealityViewController.oauthConsumerKey = consumerKey;
     augmentedRealityViewController.oauthConsumerSecret = consumerSecret;

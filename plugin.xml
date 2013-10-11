@@ -8,6 +8,14 @@
     <description>Layar Vision Plugin</description>
     <license>Apache 2.0</license>
     <keywords>layar,vision</keywords>
+    <author>Digital Scientists</author>
+
+    <preference name="KEY" />
+    <preference name="SECRET" />
+
+    <engines>
+      <engine name="cordova" version=">=3.0.0" />
+    </engines>
 
     <js-module src="www/Layar.js" name="Layar">
         <clobbers target="Layar" />
@@ -30,7 +38,81 @@
                  <param name="ios-package" value="CDVLayar" />
              </feature>
          </config-file>
+
+        <config-file target="*-Info.plist" parent="LayarKey">
+            <string>$KEY</string>
+        </config-file>
+        
+        <config-file target="*-Info.plist" parent="LayarSecret">
+            <string>$SECRET</string>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="UIRequiredDeviceCapabilities">
+          <array>
+             <string>opengles-2</string>
+             <string>video-camera</string>
+             <string>accelerometer</string>
+             <string>magnetometer</string>
+             <string>location-services</string>
+             <string>armv7</string>
+          </array>
+        </config-file>
+
+
          <header-file src="src/ios/CDVLayar.hpp" />
          <source-file src="src/ios/CDVLayar.mm" />
+        
+         <resource-file src="src/ios/Layar/Resources/LayarSDKResources.bundle" />
+
+         <header-file src="src/ios/Layar/Headers/LayarPlayer.hpp" target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LayarPlayerDelegate.h" target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LPARVisionViewController.hpp"  target-dir="layar"  />
+         <header-file src="src/ios/Layar/Headers/LCTrackingManagerDelegate.h"  target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LPActionManager.h"  target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LPActionSheet.h"  target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LPARVisionViewBase.h"  target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LPBIW.h"  target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LPBIWBase.h"  target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LPCachingViewController.h"  target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LPFactory.h"  target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LPLayerActionHandler.h"  target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LPPOIViewController.h"  target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LPReferenceImageManager.h"  target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LPShowDialog.h"  target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LPStatusView.h"  target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LSPOIView.h"  target-dir="layar" />
+
+         <source-file src="src/ios/Libraries/libsbjson-ios.a" framework="true"  target-dir="layar" />
+         <source-file src="src/ios/Libraries/libMPOAuthMobile.a" framework="true"  target-dir="layar" />
+         <source-file src="src/ios/Layar/LayarSDK" framework="true"  target-dir="layar" />
+
+         <framework src="libz.dylib" />
+         <framework src="libiconv.dylib" />
+         <framework src="libc++.dylib" />
+         <framework src="libxml2.dylib" />
+         <framework src="AudioToolbox.framework" />
+         <framework src="AVFoundation.framework" />
+         <framework src="CFNetwork.framework" />
+         <framework src="CoreAudio.framework" />
+         <framework src="CoreData.framework" />
+         <framework src="CoreLocation.framework" />
+         <framework src="CoreMedia.framework" />
+         <framework src="CoreMotion.framework" />
+         <framework src="CoreVideo.framework" />
+         <framework src="CoreTelephony.framework" />
+         <framework src="CoreGraphics.framework" />
+         <framework src="Foundation.framework" />
+         <framework src="MediaPlayer.framework" />
+         <framework src="MessageUI.framework" />
+         <framework src="OpenAL.framework" />
+         <framework src="OpenGLES.framework" />
+         <framework src="Security.framework" />
+         <framework src="SystemConfiguration.framework" />
+         <framework src="Twitter.framework" />
+         <framework src="QuartzCore.framework" />
+         <framework src="UIKit.framework" />
+         <framework src="AddressBook.framework" />
+         <framework src="AddressBookUI.framework" />
+         <framework src="Social.framework" weak="true" />
      </platform>
 </plugin>
