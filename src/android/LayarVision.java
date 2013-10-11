@@ -24,6 +24,8 @@ public class LayarVision extends CordovaPlugin implements LayarSDKListener {
 	}
 
 	public void launch() {
+		Log.d(TAG, "#lauch");
+	
 		String oauthKey = "IFfARbQzwDoNMVHB";
 		String oauthSecret = "JVMjrbiogcIYKpGNqBReWLnAfHZdzQsl";
 
