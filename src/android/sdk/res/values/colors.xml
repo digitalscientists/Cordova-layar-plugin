@@ -1,0 +1,23 @@
+<resources>
+
+    <color name="layar_splash_color">#39afe1</color>
+    <color name="layar_divider">#adadad</color>
+    <color name="transparent">#00000000</color>
+    <color name="error">#ff0000</color>
+    <color name="default_text_color">#000000</color>
+    <color name="default_text_color_light">#ffffff</color>
+    <color name="default_text_shadow_color">#ffffff</color>
+    <color name="details_text_color">#999999</color>
+    <color name="default_list_divider_color">#c7c7c7</color>
+    <color name="default_list_bg_color">#ffff</color>
+    <color name="buttons_bar_backcolor">#bdbebd</color>
+    <color name="briefinfo_arrow">#88FFFFFF</color>
+    <color name="layerlist_text">#959495</color>
+    <color name="detail_background">#eaeaea</color>
+    <color name="list_background">@color/detail_background</color>
+    <color name="translucenter_dark">#bf000000</color>
+    <color name="poi_details_background">#f5f4f5</color>
+    <color name="vision_ar_overlay_bar">#80000000</color>
+    <color name="button_highlight">#ff33b5e5</color>
+
+</resources>

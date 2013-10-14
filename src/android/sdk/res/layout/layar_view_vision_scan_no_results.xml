@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scan_no_results"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:gravity="center"
+    android:onClick="cancel"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vision_dark_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/vision_nothing_found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:singleLine="true"
+            android:text="@string/vision_nothing_found_title"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/vision_nothing_found_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="5"
+            android:text="@string/vision_nothing_found_hint"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/vision_nothing_found_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="5"
+        android:singleLine="true"
+        android:text="@string/vision_tap_to_continue"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <!-- Default height of an action bar. -->
+    <dimen name="action_bar_default_height">48dip</dimen>
+    <!-- Vertical padding around action bar icons. -->
+    <dimen name="action_bar_icon_vertical_padding">8dip</dimen>
+    <!-- Text size for action bar titles -->
+    <dimen name="action_bar_title_text_size">18dp</dimen>
+    <!-- Text size for action bar subtitles -->
+    <dimen name="action_bar_subtitle_text_size">14dp</dimen>
+    <!-- Top margin for action bar subtitles -->
+    <dimen name="action_bar_subtitle_top_margin">-3dp</dimen>
+    <!-- Bottom margin for action bar subtitles -->
+    <dimen name="action_bar_subtitle_bottom_margin">5dip</dimen>
+    <!-- Minimum width for an action button in the menu area of an action bar -->
+    <dimen name="action_button_min_width">56dip</dimen>
+    <!-- Action bar elements -->
+    <dimen name="actionbar_compat_height">45dp</dimen>
+    
+    
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+
+    <!-- Layar stuff -->
+    <dimen name="launch_area_width">50dip</dimen>
+    <dimen name="layer_item_height">80dip</dimen>
+    
+    <dimen name="spotlight_item_height">56dip</dimen>
+    <dimen name="spotlight_details_lines_portrait">125dip</dimen>
+    <dimen name="spotlight_details_actions">30dip</dimen>
+    <dimen name="ar_buttons_offset">6dp</dimen>
+    <dimen name="ar_biw_top_height">40dip</dimen>
+    <dimen name="poi_image_height">68dip</dimen>
+    <dimen name="poi_image_width">101dip</dimen>
+    <dimen name="poi_image_rounds">5dip</dimen>
+
+    <dimen name="vision_bottom_bar_height">48dip</dimen>
+</resources>

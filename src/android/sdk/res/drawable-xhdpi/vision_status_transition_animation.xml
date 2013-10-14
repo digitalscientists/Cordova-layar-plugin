@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" >
+  <item android:drawable="@drawable/vision_status_transition_1" android:duration="100" />
+  <item android:drawable="@drawable/vision_status_transition_2" android:duration="100" />
+  <item android:drawable="@drawable/vision_status_transition_3" android:duration="100" />
+  <item android:drawable="@drawable/vision_status_transition_4" android:duration="100" />
+  <item android:drawable="@drawable/vision_status_transition_5" android:duration="100" />
+  <item android:drawable="@drawable/vision_status_transition_6" android:duration="100" />
+  <item android:drawable="@drawable/vision_status_transition_7" android:duration="100" />
+</animation-list>

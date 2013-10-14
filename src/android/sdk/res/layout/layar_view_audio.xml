@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:gravity="center_vertical"
+  android:id="@+id/audioLayout"
+  android:background="@color/translucenter_dark">
+
+  <ImageButton android:id="@+id/btnPlay"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="7dip"
+    android:src="@drawable/btn_player_play_x"
+    android:background="@null" />
+  <SeekBar android:id="@+id/timeline"
+    style="@style/AudioSeekBar"
+    android:layout_width="0dip"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_weight="1"/>
+  <TextView android:id="@+id/duration"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dip"
+    android:layout_marginRight="5dip"
+    android:gravity="center_vertical"
+    android:textColor="#ffffff"
+    android:shadowColor="#000000"
+    android:shadowDx="1"
+    android:shadowDy="1"
+    android:textSize="12dip" />
+ <ImageButton android:id="@+id/btnClose"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="7dip"
+    android:src="@drawable/btn_player_close_x"
+    android:background="@null" />
+</LinearLayout>
