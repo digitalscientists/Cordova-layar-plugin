@@ -18,6 +18,13 @@ object RegeneR extends App {
     }
 
 """
+    case ClassR(t, n) if n == "string" => 
+      currClass = n;
+      s"""$t$n {
+      // hard :) injection
+      public static int layar_vision_key = sRes.getIdentifier("layar_vision_key", "string", sPackageName);
+      public static int layar_vision_secret = sRes.getIdentifier("layar_vision_secret", "string", sPackageName);
+      """
     case ClassR(t, n) => currClass = n; s"$t$n {"
     case Field(t, n) => s"""$t$n = sRes.getIdentifier("$n", "$currClass", sPackageName);"""
     case x           => x
