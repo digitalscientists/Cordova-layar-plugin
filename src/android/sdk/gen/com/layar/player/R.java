@@ -7,352 +7,361 @@
 
 package com.layar.player;
 
-public final class R {
+public class R {
+    private static Resources sRes;
+    private static String sPackageName;
+
+    public static void init(Context ctx){
+        sRes = ctx.getResources();
+        sPackageName = ctx.getPackageName();
+    }
+
+
     public static final class attr {
     }
     public static final class color {
-        public static int briefinfo_arrow  = com.americasmart.app.R.color.briefinfo_arrow ;
-        public static int button_highlight  = com.americasmart.app.R.color.button_highlight ;
-        public static int buttons_bar_backcolor  = com.americasmart.app.R.color.buttons_bar_backcolor ;
-        public static int default_list_bg_color  = com.americasmart.app.R.color.default_list_bg_color ;
-        public static int default_list_divider_color  = com.americasmart.app.R.color.default_list_divider_color ;
-        public static int default_text_color  = com.americasmart.app.R.color.default_text_color ;
-        public static int default_text_color_light  = com.americasmart.app.R.color.default_text_color_light ;
-        public static int default_text_shadow_color  = com.americasmart.app.R.color.default_text_shadow_color ;
-        public static int detail_background  = com.americasmart.app.R.color.detail_background ;
-        public static int details_text_color  = com.americasmart.app.R.color.details_text_color ;
-        public static int error  = com.americasmart.app.R.color.error ;
-        public static int layar_divider  = com.americasmart.app.R.color.layar_divider ;
-        public static int layar_splash_color  = com.americasmart.app.R.color.layar_splash_color ;
-        public static int layerlist_text  = com.americasmart.app.R.color.layerlist_text ;
-        public static int list_background  = com.americasmart.app.R.color.list_background ;
-        public static int poi_details_background  = com.americasmart.app.R.color.poi_details_background ;
-        public static int translucenter_dark  = com.americasmart.app.R.color.translucenter_dark ;
-        public static int transparent  = com.americasmart.app.R.color.transparent ;
-        public static int vision_ar_overlay_bar  = com.americasmart.app.R.color.vision_ar_overlay_bar ;
+        public static int briefinfo_arrow = sRes.getIdentifier("briefinfo_arrow", "color", sPackageName);
+        public static int button_highlight = sRes.getIdentifier("button_highlight", "color", sPackageName);
+        public static int buttons_bar_backcolor = sRes.getIdentifier("buttons_bar_backcolor", "color", sPackageName);
+        public static int default_list_bg_color = sRes.getIdentifier("default_list_bg_color", "color", sPackageName);
+        public static int default_list_divider_color = sRes.getIdentifier("default_list_divider_color", "color", sPackageName);
+        public static int default_text_color = sRes.getIdentifier("default_text_color", "color", sPackageName);
+        public static int default_text_color_light = sRes.getIdentifier("default_text_color_light", "color", sPackageName);
+        public static int default_text_shadow_color = sRes.getIdentifier("default_text_shadow_color", "color", sPackageName);
+        public static int detail_background = sRes.getIdentifier("detail_background", "color", sPackageName);
+        public static int details_text_color = sRes.getIdentifier("details_text_color", "color", sPackageName);
+        public static int error = sRes.getIdentifier("error", "color", sPackageName);
+        public static int layar_divider = sRes.getIdentifier("layar_divider", "color", sPackageName);
+        public static int layar_splash_color = sRes.getIdentifier("layar_splash_color", "color", sPackageName);
+        public static int layerlist_text = sRes.getIdentifier("layerlist_text", "color", sPackageName);
+        public static int list_background = sRes.getIdentifier("list_background", "color", sPackageName);
+        public static int poi_details_background = sRes.getIdentifier("poi_details_background", "color", sPackageName);
+        public static int translucenter_dark = sRes.getIdentifier("translucenter_dark", "color", sPackageName);
+        public static int transparent = sRes.getIdentifier("transparent", "color", sPackageName);
+        public static int vision_ar_overlay_bar = sRes.getIdentifier("vision_ar_overlay_bar", "color", sPackageName);
     }
     public static final class dimen {
         /**  Default height of an action bar. 
          */
-        public static int action_bar_default_height  = com.americasmart.app.R.dimen.action_bar_default_height ;
+        public static int action_bar_default_height = sRes.getIdentifier("action_bar_default_height", "dimen", sPackageName);
         /**  Vertical padding around action bar icons. 
          */
-        public static int action_bar_icon_vertical_padding  = com.americasmart.app.R.dimen.action_bar_icon_vertical_padding ;
+        public static int action_bar_icon_vertical_padding = sRes.getIdentifier("action_bar_icon_vertical_padding", "dimen", sPackageName);
         /**  Bottom margin for action bar subtitles 
          */
-        public static int action_bar_subtitle_bottom_margin  = com.americasmart.app.R.dimen.action_bar_subtitle_bottom_margin ;
+        public static int action_bar_subtitle_bottom_margin = sRes.getIdentifier("action_bar_subtitle_bottom_margin", "dimen", sPackageName);
         /**  Text size for action bar subtitles 
          */
-        public static int action_bar_subtitle_text_size  = com.americasmart.app.R.dimen.action_bar_subtitle_text_size ;
+        public static int action_bar_subtitle_text_size = sRes.getIdentifier("action_bar_subtitle_text_size", "dimen", sPackageName);
         /**  Top margin for action bar subtitles 
          */
-        public static int action_bar_subtitle_top_margin  = com.americasmart.app.R.dimen.action_bar_subtitle_top_margin ;
+        public static int action_bar_subtitle_top_margin = sRes.getIdentifier("action_bar_subtitle_top_margin", "dimen", sPackageName);
         /**  Text size for action bar titles 
          */
-        public static int action_bar_title_text_size  = com.americasmart.app.R.dimen.action_bar_title_text_size ;
+        public static int action_bar_title_text_size = sRes.getIdentifier("action_bar_title_text_size", "dimen", sPackageName);
         /**  Minimum width for an action button in the menu area of an action bar 
          */
-        public static int action_button_min_width  = com.americasmart.app.R.dimen.action_button_min_width ;
+        public static int action_button_min_width = sRes.getIdentifier("action_button_min_width", "dimen", sPackageName);
         /**  Action bar elements 
          */
-        public static int actionbar_compat_height  = com.americasmart.app.R.dimen.actionbar_compat_height ;
-        public static int ar_biw_top_height  = com.americasmart.app.R.dimen.ar_biw_top_height ;
-        public static int ar_buttons_offset  = com.americasmart.app.R.dimen.ar_buttons_offset ;
+        public static int actionbar_compat_height = sRes.getIdentifier("actionbar_compat_height", "dimen", sPackageName);
+        public static int ar_biw_top_height = sRes.getIdentifier("ar_biw_top_height", "dimen", sPackageName);
+        public static int ar_buttons_offset = sRes.getIdentifier("ar_buttons_offset", "dimen", sPackageName);
         /**  Layar stuff 
          */
-        public static int launch_area_width  = com.americasmart.app.R.dimen.launch_area_width ;
-        public static int layer_item_height  = com.americasmart.app.R.dimen.layer_item_height ;
-        public static int poi_image_height  = com.americasmart.app.R.dimen.poi_image_height ;
-        public static int poi_image_rounds  = com.americasmart.app.R.dimen.poi_image_rounds ;
-        public static int poi_image_width  = com.americasmart.app.R.dimen.poi_image_width ;
-        public static int spotlight_details_actions  = com.americasmart.app.R.dimen.spotlight_details_actions ;
-        public static int spotlight_details_lines_portrait  = com.americasmart.app.R.dimen.spotlight_details_lines_portrait ;
-        public static int spotlight_item_height  = com.americasmart.app.R.dimen.spotlight_item_height ;
-        public static int text_size_medium  = com.americasmart.app.R.dimen.text_size_medium ;
-        public static int text_size_small  = com.americasmart.app.R.dimen.text_size_small ;
-        public static int vision_bottom_bar_height  = com.americasmart.app.R.dimen.vision_bottom_bar_height ;
+        public static int launch_area_width = sRes.getIdentifier("launch_area_width", "dimen", sPackageName);
+        public static int layer_item_height = sRes.getIdentifier("layer_item_height", "dimen", sPackageName);
+        public static int poi_image_height = sRes.getIdentifier("poi_image_height", "dimen", sPackageName);
+        public static int poi_image_rounds = sRes.getIdentifier("poi_image_rounds", "dimen", sPackageName);
+        public static int poi_image_width = sRes.getIdentifier("poi_image_width", "dimen", sPackageName);
+        public static int spotlight_details_actions = sRes.getIdentifier("spotlight_details_actions", "dimen", sPackageName);
+        public static int spotlight_details_lines_portrait = sRes.getIdentifier("spotlight_details_lines_portrait", "dimen", sPackageName);
+        public static int spotlight_item_height = sRes.getIdentifier("spotlight_item_height", "dimen", sPackageName);
+        public static int text_size_medium = sRes.getIdentifier("text_size_medium", "dimen", sPackageName);
+        public static int text_size_small = sRes.getIdentifier("text_size_small", "dimen", sPackageName);
+        public static int vision_bottom_bar_height = sRes.getIdentifier("vision_bottom_bar_height", "dimen", sPackageName);
     }
     public static final class drawable {
-        public static int ab_solid  = com.americasmart.app.R.drawable.ab_solid ;
-        public static int actionbar_item_selector  = com.americasmart.app.R.drawable.actionbar_item_selector ;
-        public static int btn_copy  = com.americasmart.app.R.drawable.btn_copy ;
-        public static int btn_copy_f  = com.americasmart.app.R.drawable.btn_copy_f ;
-        public static int btn_copy_n  = com.americasmart.app.R.drawable.btn_copy_n ;
-        public static int btn_copy_p  = com.americasmart.app.R.drawable.btn_copy_p ;
-        public static int btn_launch  = com.americasmart.app.R.drawable.btn_launch ;
-        public static int btn_launch_f  = com.americasmart.app.R.drawable.btn_launch_f ;
-        public static int btn_launch_n  = com.americasmart.app.R.drawable.btn_launch_n ;
-        public static int btn_launch_p  = com.americasmart.app.R.drawable.btn_launch_p ;
-        public static int btn_player_close  = com.americasmart.app.R.drawable.btn_player_close ;
-        public static int btn_player_close_hit  = com.americasmart.app.R.drawable.btn_player_close_hit ;
-        public static int btn_player_close_x  = com.americasmart.app.R.drawable.btn_player_close_x ;
-        public static int btn_player_pause  = com.americasmart.app.R.drawable.btn_player_pause ;
-        public static int btn_player_pause_hit  = com.americasmart.app.R.drawable.btn_player_pause_hit ;
-        public static int btn_player_pause_x  = com.americasmart.app.R.drawable.btn_player_pause_x ;
-        public static int btn_player_play  = com.americasmart.app.R.drawable.btn_player_play ;
-        public static int btn_player_play_hit  = com.americasmart.app.R.drawable.btn_player_play_hit ;
-        public static int btn_player_play_x  = com.americasmart.app.R.drawable.btn_player_play_x ;
-        public static int btn_player_slider  = com.americasmart.app.R.drawable.btn_player_slider ;
-        public static int checkbox  = com.americasmart.app.R.drawable.checkbox ;
-        public static int checkbox_checked  = com.americasmart.app.R.drawable.checkbox_checked ;
-        public static int checkbox_unchecked  = com.americasmart.app.R.drawable.checkbox_unchecked ;
-        public static int custom_home_button  = com.americasmart.app.R.drawable.custom_home_button ;
-        public static int custom_menu_button  = com.americasmart.app.R.drawable.custom_menu_button ;
-        public static int divider  = com.americasmart.app.R.drawable.divider ;
-        public static int divider_horizontal_bright  = com.americasmart.app.R.drawable.divider_horizontal_bright ;
-        public static int email_icon  = com.americasmart.app.R.drawable.email_icon ;
-        public static int group_border  = com.americasmart.app.R.drawable.group_border ;
-        public static int group_mask  = com.americasmart.app.R.drawable.group_mask ;
-        public static int ic_action_next  = com.americasmart.app.R.drawable.ic_action_next ;
-        public static int ic_action_previous  = com.americasmart.app.R.drawable.ic_action_previous ;
-        public static int ic_action_scan  = com.americasmart.app.R.drawable.ic_action_scan ;
-        public static int ic_btn_round_more  = com.americasmart.app.R.drawable.ic_btn_round_more ;
-        public static int ic_btn_round_more_disabled  = com.americasmart.app.R.drawable.ic_btn_round_more_disabled ;
-        public static int ic_btn_round_more_normal  = com.americasmart.app.R.drawable.ic_btn_round_more_normal ;
-        public static int ic_dialog_menu_generic  = com.americasmart.app.R.drawable.ic_dialog_menu_generic ;
-        public static int ic_media_pause  = com.americasmart.app.R.drawable.ic_media_pause ;
-        public static int ic_media_play  = com.americasmart.app.R.drawable.ic_media_play ;
-        public static int ic_menu_about  = com.americasmart.app.R.drawable.ic_menu_about ;
-        public static int ic_menu_ar_custom_overflow  = com.americasmart.app.R.drawable.ic_menu_ar_custom_overflow ;
-        public static int ic_menu_camera  = com.americasmart.app.R.drawable.ic_menu_camera ;
-        public static int ic_menu_layer_actions  = com.americasmart.app.R.drawable.ic_menu_layer_actions ;
-        public static int ic_menu_list  = com.americasmart.app.R.drawable.ic_menu_list ;
-        public static int ic_menu_mapmode  = com.americasmart.app.R.drawable.ic_menu_mapmode ;
-        public static int ic_menu_refresh  = com.americasmart.app.R.drawable.ic_menu_refresh ;
-        public static int ic_menu_refresh_white  = com.americasmart.app.R.drawable.ic_menu_refresh_white ;
-        public static int ic_menu_report_problem  = com.americasmart.app.R.drawable.ic_menu_report_problem ;
-        public static int ic_menu_settings  = com.americasmart.app.R.drawable.ic_menu_settings ;
-        public static int ic_menu_share  = com.americasmart.app.R.drawable.ic_menu_share ;
-        public static int icon  = com.americasmart.app.R.drawable.icon ;
-        public static int icon_3d  = com.americasmart.app.R.drawable.icon_3d ;
-        public static int icon_about  = com.americasmart.app.R.drawable.icon_about ;
-        public static int icon_overlay  = com.americasmart.app.R.drawable.icon_overlay ;
-        public static int icon_overlay_alpha  = com.americasmart.app.R.drawable.icon_overlay_alpha ;
-        public static int layar_splash  = com.americasmart.app.R.drawable.layar_splash ;
-        public static int layar_watermark  = com.americasmart.app.R.drawable.layar_watermark ;
-        public static int layer_details_divider  = com.americasmart.app.R.drawable.layer_details_divider ;
-        public static int library_icon  = com.americasmart.app.R.drawable.library_icon ;
-        public static int list_divider  = com.americasmart.app.R.drawable.list_divider ;
-        public static int list_pressed_holo_dark  = com.americasmart.app.R.drawable.list_pressed_holo_dark ;
-        public static int list_selected_holo_dark  = com.americasmart.app.R.drawable.list_selected_holo_dark ;
-        public static int menu_dropdown_panel_holo_light  = com.americasmart.app.R.drawable.menu_dropdown_panel_holo_light ;
-        public static int more_icon  = com.americasmart.app.R.drawable.more_icon ;
-        public static int no_poi_image  = com.americasmart.app.R.drawable.no_poi_image ;
-        public static int poi_icon_border  = com.americasmart.app.R.drawable.poi_icon_border ;
-        public static int poi_icon_glow  = com.americasmart.app.R.drawable.poi_icon_glow ;
-        public static int poi_icon_shadow  = com.americasmart.app.R.drawable.poi_icon_shadow ;
-        public static int popup_bottom_bright  = com.americasmart.app.R.drawable.popup_bottom_bright ;
-        public static int popup_bottom_medium  = com.americasmart.app.R.drawable.popup_bottom_medium ;
-        public static int popup_center_bright  = com.americasmart.app.R.drawable.popup_center_bright ;
-        public static int popup_top_dark  = com.americasmart.app.R.drawable.popup_top_dark ;
-        public static int qrcode_background  = com.americasmart.app.R.drawable.qrcode_background ;
-        public static int qrcode_icon_audio  = com.americasmart.app.R.drawable.qrcode_icon_audio ;
-        public static int qrcode_icon_email  = com.americasmart.app.R.drawable.qrcode_icon_email ;
-        public static int qrcode_icon_geo  = com.americasmart.app.R.drawable.qrcode_icon_geo ;
-        public static int qrcode_icon_googleplay  = com.americasmart.app.R.drawable.qrcode_icon_googleplay ;
-        public static int qrcode_icon_layar  = com.americasmart.app.R.drawable.qrcode_icon_layar ;
-        public static int qrcode_icon_sms  = com.americasmart.app.R.drawable.qrcode_icon_sms ;
-        public static int qrcode_icon_tel  = com.americasmart.app.R.drawable.qrcode_icon_tel ;
-        public static int qrcode_icon_unknown  = com.americasmart.app.R.drawable.qrcode_icon_unknown ;
-        public static int qrcode_icon_vcard  = com.americasmart.app.R.drawable.qrcode_icon_vcard ;
-        public static int qrcode_icon_video  = com.americasmart.app.R.drawable.qrcode_icon_video ;
-        public static int qrcode_icon_web  = com.americasmart.app.R.drawable.qrcode_icon_web ;
-        public static int qrcode_shadow  = com.americasmart.app.R.drawable.qrcode_shadow ;
-        public static int scan_image  = com.americasmart.app.R.drawable.scan_image ;
-        public static int scan_toast_background  = com.americasmart.app.R.drawable.scan_toast_background ;
-        public static int shadow_clue_gallery  = com.americasmart.app.R.drawable.shadow_clue_gallery ;
-        public static int sharing_icon  = com.americasmart.app.R.drawable.sharing_icon ;
-        public static int slider_background  = com.americasmart.app.R.drawable.slider_background ;
-        public static int splash_logo  = com.americasmart.app.R.drawable.splash_logo ;
-        public static int splash_logo_container  = com.americasmart.app.R.drawable.splash_logo_container ;
-        public static int throbber  = com.americasmart.app.R.drawable.throbber ;
-        public static int throbber_dark  = com.americasmart.app.R.drawable.throbber_dark ;
-        public static int throbber_dark_x  = com.americasmart.app.R.drawable.throbber_dark_x ;
-        public static int throbber_inner  = com.americasmart.app.R.drawable.throbber_inner ;
-        public static int throbber_light  = com.americasmart.app.R.drawable.throbber_light ;
-        public static int throbber_light_x  = com.americasmart.app.R.drawable.throbber_light_x ;
-        public static int throbber_outer  = com.americasmart.app.R.drawable.throbber_outer ;
-        public static int transparency  = com.americasmart.app.R.drawable.transparency ;
-        public static int video_bg  = com.americasmart.app.R.drawable.video_bg ;
-        public static int video_fullscreen  = com.americasmart.app.R.drawable.video_fullscreen ;
-        public static int video_loader  = com.americasmart.app.R.drawable.video_loader ;
-        public static int video_play  = com.americasmart.app.R.drawable.video_play ;
-        public static int video_rewind  = com.americasmart.app.R.drawable.video_rewind ;
-        public static int vision_bracket  = com.americasmart.app.R.drawable.vision_bracket ;
-        public static int vision_brackets  = com.americasmart.app.R.drawable.vision_brackets ;
-        public static int vision_button_bg  = com.americasmart.app.R.drawable.vision_button_bg ;
-        public static int vision_dark_bg  = com.americasmart.app.R.drawable.vision_dark_bg ;
-        public static int vision_no_content_bg  = com.americasmart.app.R.drawable.vision_no_content_bg ;
-        public static int vision_no_content_icon  = com.americasmart.app.R.drawable.vision_no_content_icon ;
-        public static int vision_status_active  = com.americasmart.app.R.drawable.vision_status_active ;
-        public static int vision_status_background  = com.americasmart.app.R.drawable.vision_status_background ;
-        public static int vision_status_fail  = com.americasmart.app.R.drawable.vision_status_fail ;
-        public static int vision_status_inactive  = com.americasmart.app.R.drawable.vision_status_inactive ;
-        public static int vision_status_inactive_ok  = com.americasmart.app.R.drawable.vision_status_inactive_ok ;
-        public static int vision_status_ok  = com.americasmart.app.R.drawable.vision_status_ok ;
-        public static int vision_status_transition_1  = com.americasmart.app.R.drawable.vision_status_transition_1 ;
-        public static int vision_status_transition_2  = com.americasmart.app.R.drawable.vision_status_transition_2 ;
-        public static int vision_status_transition_3  = com.americasmart.app.R.drawable.vision_status_transition_3 ;
-        public static int vision_status_transition_4  = com.americasmart.app.R.drawable.vision_status_transition_4 ;
-        public static int vision_status_transition_5  = com.americasmart.app.R.drawable.vision_status_transition_5 ;
-        public static int vision_status_transition_6  = com.americasmart.app.R.drawable.vision_status_transition_6 ;
-        public static int vision_status_transition_7  = com.americasmart.app.R.drawable.vision_status_transition_7 ;
-        public static int vision_status_transition_animation  = com.americasmart.app.R.drawable.vision_status_transition_animation ;
-        public static int vision_status_transition_background  = com.americasmart.app.R.drawable.vision_status_transition_background ;
+        public static int ab_solid = sRes.getIdentifier("ab_solid", "drawable", sPackageName);
+        public static int actionbar_item_selector = sRes.getIdentifier("actionbar_item_selector", "drawable", sPackageName);
+        public static int btn_copy = sRes.getIdentifier("btn_copy", "drawable", sPackageName);
+        public static int btn_copy_f = sRes.getIdentifier("btn_copy_f", "drawable", sPackageName);
+        public static int btn_copy_n = sRes.getIdentifier("btn_copy_n", "drawable", sPackageName);
+        public static int btn_copy_p = sRes.getIdentifier("btn_copy_p", "drawable", sPackageName);
+        public static int btn_launch = sRes.getIdentifier("btn_launch", "drawable", sPackageName);
+        public static int btn_launch_f = sRes.getIdentifier("btn_launch_f", "drawable", sPackageName);
+        public static int btn_launch_n = sRes.getIdentifier("btn_launch_n", "drawable", sPackageName);
+        public static int btn_launch_p = sRes.getIdentifier("btn_launch_p", "drawable", sPackageName);
+        public static int btn_player_close = sRes.getIdentifier("btn_player_close", "drawable", sPackageName);
+        public static int btn_player_close_hit = sRes.getIdentifier("btn_player_close_hit", "drawable", sPackageName);
+        public static int btn_player_close_x = sRes.getIdentifier("btn_player_close_x", "drawable", sPackageName);
+        public static int btn_player_pause = sRes.getIdentifier("btn_player_pause", "drawable", sPackageName);
+        public static int btn_player_pause_hit = sRes.getIdentifier("btn_player_pause_hit", "drawable", sPackageName);
+        public static int btn_player_pause_x = sRes.getIdentifier("btn_player_pause_x", "drawable", sPackageName);
+        public static int btn_player_play = sRes.getIdentifier("btn_player_play", "drawable", sPackageName);
+        public static int btn_player_play_hit = sRes.getIdentifier("btn_player_play_hit", "drawable", sPackageName);
+        public static int btn_player_play_x = sRes.getIdentifier("btn_player_play_x", "drawable", sPackageName);
+        public static int btn_player_slider = sRes.getIdentifier("btn_player_slider", "drawable", sPackageName);
+        public static int checkbox = sRes.getIdentifier("checkbox", "drawable", sPackageName);
+        public static int checkbox_checked = sRes.getIdentifier("checkbox_checked", "drawable", sPackageName);
+        public static int checkbox_unchecked = sRes.getIdentifier("checkbox_unchecked", "drawable", sPackageName);
+        public static int custom_home_button = sRes.getIdentifier("custom_home_button", "drawable", sPackageName);
+        public static int custom_menu_button = sRes.getIdentifier("custom_menu_button", "drawable", sPackageName);
+        public static int divider = sRes.getIdentifier("divider", "drawable", sPackageName);
+        public static int divider_horizontal_bright = sRes.getIdentifier("divider_horizontal_bright", "drawable", sPackageName);
+        public static int email_icon = sRes.getIdentifier("email_icon", "drawable", sPackageName);
+        public static int group_border = sRes.getIdentifier("group_border", "drawable", sPackageName);
+        public static int group_mask = sRes.getIdentifier("group_mask", "drawable", sPackageName);
+        public static int ic_action_next = sRes.getIdentifier("ic_action_next", "drawable", sPackageName);
+        public static int ic_action_previous = sRes.getIdentifier("ic_action_previous", "drawable", sPackageName);
+        public static int ic_action_scan = sRes.getIdentifier("ic_action_scan", "drawable", sPackageName);
+        public static int ic_btn_round_more = sRes.getIdentifier("ic_btn_round_more", "drawable", sPackageName);
+        public static int ic_btn_round_more_disabled = sRes.getIdentifier("ic_btn_round_more_disabled", "drawable", sPackageName);
+        public static int ic_btn_round_more_normal = sRes.getIdentifier("ic_btn_round_more_normal", "drawable", sPackageName);
+        public static int ic_dialog_menu_generic = sRes.getIdentifier("ic_dialog_menu_generic", "drawable", sPackageName);
+        public static int ic_media_pause = sRes.getIdentifier("ic_media_pause", "drawable", sPackageName);
+        public static int ic_media_play = sRes.getIdentifier("ic_media_play", "drawable", sPackageName);
+        public static int ic_menu_about = sRes.getIdentifier("ic_menu_about", "drawable", sPackageName);
+        public static int ic_menu_ar_custom_overflow = sRes.getIdentifier("ic_menu_ar_custom_overflow", "drawable", sPackageName);
+        public static int ic_menu_camera = sRes.getIdentifier("ic_menu_camera", "drawable", sPackageName);
+        public static int ic_menu_layer_actions = sRes.getIdentifier("ic_menu_layer_actions", "drawable", sPackageName);
+        public static int ic_menu_list = sRes.getIdentifier("ic_menu_list", "drawable", sPackageName);
+        public static int ic_menu_mapmode = sRes.getIdentifier("ic_menu_mapmode", "drawable", sPackageName);
+        public static int ic_menu_refresh = sRes.getIdentifier("ic_menu_refresh", "drawable", sPackageName);
+        public static int ic_menu_refresh_white = sRes.getIdentifier("ic_menu_refresh_white", "drawable", sPackageName);
+        public static int ic_menu_report_problem = sRes.getIdentifier("ic_menu_report_problem", "drawable", sPackageName);
+        public static int ic_menu_settings = sRes.getIdentifier("ic_menu_settings", "drawable", sPackageName);
+        public static int ic_menu_share = sRes.getIdentifier("ic_menu_share", "drawable", sPackageName);
+        public static int icon = sRes.getIdentifier("icon", "drawable", sPackageName);
+        public static int icon_3d = sRes.getIdentifier("icon_3d", "drawable", sPackageName);
+        public static int icon_about = sRes.getIdentifier("icon_about", "drawable", sPackageName);
+        public static int icon_overlay = sRes.getIdentifier("icon_overlay", "drawable", sPackageName);
+        public static int icon_overlay_alpha = sRes.getIdentifier("icon_overlay_alpha", "drawable", sPackageName);
+        public static int layar_splash = sRes.getIdentifier("layar_splash", "drawable", sPackageName);
+        public static int layar_watermark = sRes.getIdentifier("layar_watermark", "drawable", sPackageName);
+        public static int layer_details_divider = sRes.getIdentifier("layer_details_divider", "drawable", sPackageName);
+        public static int library_icon = sRes.getIdentifier("library_icon", "drawable", sPackageName);
+        public static int list_divider = sRes.getIdentifier("list_divider", "drawable", sPackageName);
+        public static int list_pressed_holo_dark = sRes.getIdentifier("list_pressed_holo_dark", "drawable", sPackageName);
+        public static int list_selected_holo_dark = sRes.getIdentifier("list_selected_holo_dark", "drawable", sPackageName);
+        public static int menu_dropdown_panel_holo_light = sRes.getIdentifier("menu_dropdown_panel_holo_light", "drawable", sPackageName);
+        public static int more_icon = sRes.getIdentifier("more_icon", "drawable", sPackageName);
+        public static int no_poi_image = sRes.getIdentifier("no_poi_image", "drawable", sPackageName);
+        public static int poi_icon_border = sRes.getIdentifier("poi_icon_border", "drawable", sPackageName);
+        public static int poi_icon_glow = sRes.getIdentifier("poi_icon_glow", "drawable", sPackageName);
+        public static int poi_icon_shadow = sRes.getIdentifier("poi_icon_shadow", "drawable", sPackageName);
+        public static int popup_bottom_bright = sRes.getIdentifier("popup_bottom_bright", "drawable", sPackageName);
+        public static int popup_bottom_medium = sRes.getIdentifier("popup_bottom_medium", "drawable", sPackageName);
+        public static int popup_center_bright = sRes.getIdentifier("popup_center_bright", "drawable", sPackageName);
+        public static int popup_top_dark = sRes.getIdentifier("popup_top_dark", "drawable", sPackageName);
+        public static int qrcode_background = sRes.getIdentifier("qrcode_background", "drawable", sPackageName);
+        public static int qrcode_icon_audio = sRes.getIdentifier("qrcode_icon_audio", "drawable", sPackageName);
+        public static int qrcode_icon_email = sRes.getIdentifier("qrcode_icon_email", "drawable", sPackageName);
+        public static int qrcode_icon_geo = sRes.getIdentifier("qrcode_icon_geo", "drawable", sPackageName);
+        public static int qrcode_icon_googleplay = sRes.getIdentifier("qrcode_icon_googleplay", "drawable", sPackageName);
+        public static int qrcode_icon_layar = sRes.getIdentifier("qrcode_icon_layar", "drawable", sPackageName);
+        public static int qrcode_icon_sms = sRes.getIdentifier("qrcode_icon_sms", "drawable", sPackageName);
+        public static int qrcode_icon_tel = sRes.getIdentifier("qrcode_icon_tel", "drawable", sPackageName);
+        public static int qrcode_icon_unknown = sRes.getIdentifier("qrcode_icon_unknown", "drawable", sPackageName);
+        public static int qrcode_icon_vcard = sRes.getIdentifier("qrcode_icon_vcard", "drawable", sPackageName);
+        public static int qrcode_icon_video = sRes.getIdentifier("qrcode_icon_video", "drawable", sPackageName);
+        public static int qrcode_icon_web = sRes.getIdentifier("qrcode_icon_web", "drawable", sPackageName);
+        public static int qrcode_shadow = sRes.getIdentifier("qrcode_shadow", "drawable", sPackageName);
+        public static int scan_image = sRes.getIdentifier("scan_image", "drawable", sPackageName);
+        public static int scan_toast_background = sRes.getIdentifier("scan_toast_background", "drawable", sPackageName);
+        public static int shadow_clue_gallery = sRes.getIdentifier("shadow_clue_gallery", "drawable", sPackageName);
+        public static int sharing_icon = sRes.getIdentifier("sharing_icon", "drawable", sPackageName);
+        public static int slider_background = sRes.getIdentifier("slider_background", "drawable", sPackageName);
+        public static int splash_logo = sRes.getIdentifier("splash_logo", "drawable", sPackageName);
+        public static int splash_logo_container = sRes.getIdentifier("splash_logo_container", "drawable", sPackageName);
+        public static int throbber = sRes.getIdentifier("throbber", "drawable", sPackageName);
+        public static int throbber_dark = sRes.getIdentifier("throbber_dark", "drawable", sPackageName);
+        public static int throbber_dark_x = sRes.getIdentifier("throbber_dark_x", "drawable", sPackageName);
+        public static int throbber_inner = sRes.getIdentifier("throbber_inner", "drawable", sPackageName);
+        public static int throbber_light = sRes.getIdentifier("throbber_light", "drawable", sPackageName);
+        public static int throbber_light_x = sRes.getIdentifier("throbber_light_x", "drawable", sPackageName);
+        public static int throbber_outer = sRes.getIdentifier("throbber_outer", "drawable", sPackageName);
+        public static int transparency = sRes.getIdentifier("transparency", "drawable", sPackageName);
+        public static int video_bg = sRes.getIdentifier("video_bg", "drawable", sPackageName);
+        public static int video_fullscreen = sRes.getIdentifier("video_fullscreen", "drawable", sPackageName);
+        public static int video_loader = sRes.getIdentifier("video_loader", "drawable", sPackageName);
+        public static int video_play = sRes.getIdentifier("video_play", "drawable", sPackageName);
+        public static int video_rewind = sRes.getIdentifier("video_rewind", "drawable", sPackageName);
+        public static int vision_bracket = sRes.getIdentifier("vision_bracket", "drawable", sPackageName);
+        public static int vision_brackets = sRes.getIdentifier("vision_brackets", "drawable", sPackageName);
+        public static int vision_button_bg = sRes.getIdentifier("vision_button_bg", "drawable", sPackageName);
+        public static int vision_dark_bg = sRes.getIdentifier("vision_dark_bg", "drawable", sPackageName);
+        public static int vision_no_content_bg = sRes.getIdentifier("vision_no_content_bg", "drawable", sPackageName);
+        public static int vision_no_content_icon = sRes.getIdentifier("vision_no_content_icon", "drawable", sPackageName);
+        public static int vision_status_active = sRes.getIdentifier("vision_status_active", "drawable", sPackageName);
+        public static int vision_status_background = sRes.getIdentifier("vision_status_background", "drawable", sPackageName);
+        public static int vision_status_fail = sRes.getIdentifier("vision_status_fail", "drawable", sPackageName);
+        public static int vision_status_inactive = sRes.getIdentifier("vision_status_inactive", "drawable", sPackageName);
+        public static int vision_status_inactive_ok = sRes.getIdentifier("vision_status_inactive_ok", "drawable", sPackageName);
+        public static int vision_status_ok = sRes.getIdentifier("vision_status_ok", "drawable", sPackageName);
+        public static int vision_status_transition_1 = sRes.getIdentifier("vision_status_transition_1", "drawable", sPackageName);
+        public static int vision_status_transition_2 = sRes.getIdentifier("vision_status_transition_2", "drawable", sPackageName);
+        public static int vision_status_transition_3 = sRes.getIdentifier("vision_status_transition_3", "drawable", sPackageName);
+        public static int vision_status_transition_4 = sRes.getIdentifier("vision_status_transition_4", "drawable", sPackageName);
+        public static int vision_status_transition_5 = sRes.getIdentifier("vision_status_transition_5", "drawable", sPackageName);
+        public static int vision_status_transition_6 = sRes.getIdentifier("vision_status_transition_6", "drawable", sPackageName);
+        public static int vision_status_transition_7 = sRes.getIdentifier("vision_status_transition_7", "drawable", sPackageName);
+        public static int vision_status_transition_animation = sRes.getIdentifier("vision_status_transition_animation", "drawable", sPackageName);
+        public static int vision_status_transition_background = sRes.getIdentifier("vision_status_transition_background", "drawable", sPackageName);
     }
     public static final class id {
-        public static int action_bar_title  = com.americasmart.app.R.id.action_bar_title ;
-        public static int audioLayout  = com.americasmart.app.R.id.audioLayout ;
-        public static int back  = com.americasmart.app.R.id.back ;
-        public static int bottom_bar  = com.americasmart.app.R.id.bottom_bar ;
-        public static int brackets  = com.americasmart.app.R.id.brackets ;
-        public static int btnClose  = com.americasmart.app.R.id.btnClose ;
-        public static int btnPlay  = com.americasmart.app.R.id.btnPlay ;
-        public static int btn_refresh  = com.americasmart.app.R.id.btn_refresh ;
-        public static int btn_share  = com.americasmart.app.R.id.btn_share ;
-        public static int buttonPanel  = com.americasmart.app.R.id.buttonPanel ;
-        public static int content  = com.americasmart.app.R.id.content ;
-        public static int content_area  = com.americasmart.app.R.id.content_area ;
-        public static int copy_link_button  = com.americasmart.app.R.id.copy_link_button ;
-        public static int currentPosistion  = com.americasmart.app.R.id.currentPosistion ;
-        public static int current_layer  = com.americasmart.app.R.id.current_layer ;
-        public static int custom_home_button  = com.americasmart.app.R.id.custom_home_button ;
-        public static int custom_home_icon  = com.americasmart.app.R.id.custom_home_icon ;
-        public static int custom_home_label  = com.americasmart.app.R.id.custom_home_label ;
-        public static int custom_menu_button  = com.americasmart.app.R.id.custom_menu_button ;
-        public static int description  = com.americasmart.app.R.id.description ;
-        public static int distanceIcon  = com.americasmart.app.R.id.distanceIcon ;
-        public static int distanceString  = com.americasmart.app.R.id.distanceString ;
-        public static int divider  = com.americasmart.app.R.id.divider ;
-        public static int duration  = com.americasmart.app.R.id.duration ;
-        public static int forward  = com.americasmart.app.R.id.forward ;
-        public static int glsurfaceview  = com.americasmart.app.R.id.glsurfaceview ;
-        public static int home  = com.americasmart.app.R.id.home ;
-        public static int icon  = com.americasmart.app.R.id.icon ;
-        public static int imageBox  = com.americasmart.app.R.id.imageBox ;
-        public static int imageShareScreenIcon  = com.americasmart.app.R.id.imageShareScreenIcon ;
-        public static int imageThrobber  = com.americasmart.app.R.id.imageThrobber ;
-        public static int imageThrobberShare  = com.americasmart.app.R.id.imageThrobberShare ;
-        public static int info_area  = com.americasmart.app.R.id.info_area ;
-        public static int launchArea  = com.americasmart.app.R.id.launchArea ;
-        public static int layar_list_item  = com.americasmart.app.R.id.layar_list_item ;
-        public static int layer_description  = com.americasmart.app.R.id.layer_description ;
-        public static int layer_header  = com.americasmart.app.R.id.layer_header ;
-        public static int layer_icon  = com.americasmart.app.R.id.layer_icon ;
-        public static int layer_list_desc  = com.americasmart.app.R.id.layer_list_desc ;
-        public static int layer_list_icon  = com.americasmart.app.R.id.layer_list_icon ;
-        public static int layer_list_icongroup  = com.americasmart.app.R.id.layer_list_icongroup ;
-        public static int layer_list_publisher  = com.americasmart.app.R.id.layer_list_publisher ;
-        public static int layer_list_title  = com.americasmart.app.R.id.layer_list_title ;
-        public static int layer_name  = com.americasmart.app.R.id.layer_name ;
-        public static int layer_rate  = com.americasmart.app.R.id.layer_rate ;
-        public static int layer_screenshot  = com.americasmart.app.R.id.layer_screenshot ;
-        public static int layer_type_icon  = com.americasmart.app.R.id.layer_type_icon ;
-        public static int layer_url_text  = com.americasmart.app.R.id.layer_url_text ;
-        public static int linkBar  = com.americasmart.app.R.id.linkBar ;
-        public static int loadingPanel  = com.americasmart.app.R.id.loadingPanel ;
-        public static int loadingProgress  = com.americasmart.app.R.id.loadingProgress ;
-        public static int menu_ar  = com.americasmart.app.R.id.menu_ar ;
-        public static int menu_layer_actions  = com.americasmart.app.R.id.menu_layer_actions ;
-        public static int menu_layer_details  = com.americasmart.app.R.id.menu_layer_details ;
-        public static int menu_layer_filters  = com.americasmart.app.R.id.menu_layer_filters ;
-        public static int menu_list  = com.americasmart.app.R.id.menu_list ;
-        public static int menu_map  = com.americasmart.app.R.id.menu_map ;
-        public static int menu_open_browser  = com.americasmart.app.R.id.menu_open_browser ;
-        public static int menu_refresh_progress  = com.americasmart.app.R.id.menu_refresh_progress ;
-        public static int menu_screenshot  = com.americasmart.app.R.id.menu_screenshot ;
-        public static int message  = com.americasmart.app.R.id.message ;
-        public static int messageArea  = com.americasmart.app.R.id.messageArea ;
-        public static int messageIcon  = com.americasmart.app.R.id.messageIcon ;
-        public static int messageIconProgress  = com.americasmart.app.R.id.messageIconProgress ;
-        public static int messageLimit  = com.americasmart.app.R.id.messageLimit ;
-        public static int messageText  = com.americasmart.app.R.id.messageText ;
-        public static int message_area  = com.americasmart.app.R.id.message_area ;
-        public static int message_area_linear  = com.americasmart.app.R.id.message_area_linear ;
-        public static int message_input_area  = com.americasmart.app.R.id.message_input_area ;
-        public static int negativeButton  = com.americasmart.app.R.id.negativeButton ;
-        public static int poiAttribution  = com.americasmart.app.R.id.poiAttribution ;
-        public static int poiDetails  = com.americasmart.app.R.id.poiDetails ;
-        public static int poiImage  = com.americasmart.app.R.id.poiImage ;
-        public static int poiInfo  = com.americasmart.app.R.id.poiInfo ;
-        public static int poiLine2  = com.americasmart.app.R.id.poiLine2 ;
-        public static int poiTitle  = com.americasmart.app.R.id.poiTitle ;
-        public static int positiveButton  = com.americasmart.app.R.id.positiveButton ;
-        public static int progress  = com.americasmart.app.R.id.progress ;
-        public static int progressLoading  = com.americasmart.app.R.id.progressLoading ;
-        public static int progressText  = com.americasmart.app.R.id.progressText ;
-        public static int rotateLayout  = com.americasmart.app.R.id.rotateLayout ;
-        public static int scan_button  = com.americasmart.app.R.id.scan_button ;
-        public static int scan_hint  = com.americasmart.app.R.id.scan_hint ;
-        public static int scan_in_progress  = com.americasmart.app.R.id.scan_in_progress ;
-        public static int scan_no_results  = com.americasmart.app.R.id.scan_no_results ;
-        public static int scan_point_hint  = com.americasmart.app.R.id.scan_point_hint ;
-        public static int scan_point_title  = com.americasmart.app.R.id.scan_point_title ;
-        public static int scan_status  = com.americasmart.app.R.id.scan_status ;
-        public static int scan_tip  = com.americasmart.app.R.id.scan_tip ;
-        public static int scan_title  = com.americasmart.app.R.id.scan_title ;
-        public static int screenshot_button_retake  = com.americasmart.app.R.id.screenshot_button_retake ;
-        public static int screenshot_button_take  = com.americasmart.app.R.id.screenshot_button_take ;
-        public static int screenshot_button_use  = com.americasmart.app.R.id.screenshot_button_use ;
-        public static int screenshot_imageview  = com.americasmart.app.R.id.screenshot_imageview ;
-        public static int screenshot_take_bar  = com.americasmart.app.R.id.screenshot_take_bar ;
-        public static int shadow  = com.americasmart.app.R.id.shadow ;
-        public static int shareButton  = com.americasmart.app.R.id.shareButton ;
-        public static int status  = com.americasmart.app.R.id.status ;
-        public static int status_step_1  = com.americasmart.app.R.id.status_step_1 ;
-        public static int status_step_2  = com.americasmart.app.R.id.status_step_2 ;
-        public static int status_step_3  = com.americasmart.app.R.id.status_step_3 ;
-        public static int status_transition_1  = com.americasmart.app.R.id.status_transition_1 ;
-        public static int status_transition_2  = com.americasmart.app.R.id.status_transition_2 ;
-        public static int text  = com.americasmart.app.R.id.text ;
-        public static int throbber  = com.americasmart.app.R.id.throbber ;
-        public static int timeline  = com.americasmart.app.R.id.timeline ;
-        public static int tip_layout  = com.americasmart.app.R.id.tip_layout ;
-        public static int title  = com.americasmart.app.R.id.title ;
-        public static int title_template  = com.americasmart.app.R.id.title_template ;
-        public static int topPanel  = com.americasmart.app.R.id.topPanel ;
-        public static int top_bar  = com.americasmart.app.R.id.top_bar ;
-        public static int video  = com.americasmart.app.R.id.video ;
-        public static int vision_nothing_found  = com.americasmart.app.R.id.vision_nothing_found ;
-        public static int vision_nothing_found_2  = com.americasmart.app.R.id.vision_nothing_found_2 ;
-        public static int vision_nothing_found_continue  = com.americasmart.app.R.id.vision_nothing_found_continue ;
-        public static int watermark  = com.americasmart.app.R.id.watermark ;
-        public static int webview  = com.americasmart.app.R.id.webview ;
+        public static int action_bar_title = sRes.getIdentifier("action_bar_title", "id", sPackageName);
+        public static int audioLayout = sRes.getIdentifier("audioLayout", "id", sPackageName);
+        public static int back = sRes.getIdentifier("back", "id", sPackageName);
+        public static int bottom_bar = sRes.getIdentifier("bottom_bar", "id", sPackageName);
+        public static int brackets = sRes.getIdentifier("brackets", "id", sPackageName);
+        public static int btnClose = sRes.getIdentifier("btnClose", "id", sPackageName);
+        public static int btnPlay = sRes.getIdentifier("btnPlay", "id", sPackageName);
+        public static int btn_refresh = sRes.getIdentifier("btn_refresh", "id", sPackageName);
+        public static int btn_share = sRes.getIdentifier("btn_share", "id", sPackageName);
+        public static int buttonPanel = sRes.getIdentifier("buttonPanel", "id", sPackageName);
+        public static int content = sRes.getIdentifier("content", "id", sPackageName);
+        public static int content_area = sRes.getIdentifier("content_area", "id", sPackageName);
+        public static int copy_link_button = sRes.getIdentifier("copy_link_button", "id", sPackageName);
+        public static int currentPosistion = sRes.getIdentifier("currentPosistion", "id", sPackageName);
+        public static int current_layer = sRes.getIdentifier("current_layer", "id", sPackageName);
+        public static int custom_home_button = sRes.getIdentifier("custom_home_button", "id", sPackageName);
+        public static int custom_home_icon = sRes.getIdentifier("custom_home_icon", "id", sPackageName);
+        public static int custom_home_label = sRes.getIdentifier("custom_home_label", "id", sPackageName);
+        public static int custom_menu_button = sRes.getIdentifier("custom_menu_button", "id", sPackageName);
+        public static int description = sRes.getIdentifier("description", "id", sPackageName);
+        public static int distanceIcon = sRes.getIdentifier("distanceIcon", "id", sPackageName);
+        public static int distanceString = sRes.getIdentifier("distanceString", "id", sPackageName);
+        public static int divider = sRes.getIdentifier("divider", "id", sPackageName);
+        public static int duration = sRes.getIdentifier("duration", "id", sPackageName);
+        public static int forward = sRes.getIdentifier("forward", "id", sPackageName);
+        public static int glsurfaceview = sRes.getIdentifier("glsurfaceview", "id", sPackageName);
+        public static int home = sRes.getIdentifier("home", "id", sPackageName);
+        public static int icon = sRes.getIdentifier("icon", "id", sPackageName);
+        public static int imageBox = sRes.getIdentifier("imageBox", "id", sPackageName);
+        public static int imageShareScreenIcon = sRes.getIdentifier("imageShareScreenIcon", "id", sPackageName);
+        public static int imageThrobber = sRes.getIdentifier("imageThrobber", "id", sPackageName);
+        public static int imageThrobberShare = sRes.getIdentifier("imageThrobberShare", "id", sPackageName);
+        public static int info_area = sRes.getIdentifier("info_area", "id", sPackageName);
+        public static int launchArea = sRes.getIdentifier("launchArea", "id", sPackageName);
+        public static int layar_list_item = sRes.getIdentifier("layar_list_item", "id", sPackageName);
+        public static int layer_description = sRes.getIdentifier("layer_description", "id", sPackageName);
+        public static int layer_header = sRes.getIdentifier("layer_header", "id", sPackageName);
+        public static int layer_icon = sRes.getIdentifier("layer_icon", "id", sPackageName);
+        public static int layer_list_desc = sRes.getIdentifier("layer_list_desc", "id", sPackageName);
+        public static int layer_list_icon = sRes.getIdentifier("layer_list_icon", "id", sPackageName);
+        public static int layer_list_icongroup = sRes.getIdentifier("layer_list_icongroup", "id", sPackageName);
+        public static int layer_list_publisher = sRes.getIdentifier("layer_list_publisher", "id", sPackageName);
+        public static int layer_list_title = sRes.getIdentifier("layer_list_title", "id", sPackageName);
+        public static int layer_name = sRes.getIdentifier("layer_name", "id", sPackageName);
+        public static int layer_rate = sRes.getIdentifier("layer_rate", "id", sPackageName);
+        public static int layer_screenshot = sRes.getIdentifier("layer_screenshot", "id", sPackageName);
+        public static int layer_type_icon = sRes.getIdentifier("layer_type_icon", "id", sPackageName);
+        public static int layer_url_text = sRes.getIdentifier("layer_url_text", "id", sPackageName);
+        public static int linkBar = sRes.getIdentifier("linkBar", "id", sPackageName);
+        public static int loadingPanel = sRes.getIdentifier("loadingPanel", "id", sPackageName);
+        public static int loadingProgress = sRes.getIdentifier("loadingProgress", "id", sPackageName);
+        public static int menu_ar = sRes.getIdentifier("menu_ar", "id", sPackageName);
+        public static int menu_layer_actions = sRes.getIdentifier("menu_layer_actions", "id", sPackageName);
+        public static int menu_layer_details = sRes.getIdentifier("menu_layer_details", "id", sPackageName);
+        public static int menu_layer_filters = sRes.getIdentifier("menu_layer_filters", "id", sPackageName);
+        public static int menu_list = sRes.getIdentifier("menu_list", "id", sPackageName);
+        public static int menu_map = sRes.getIdentifier("menu_map", "id", sPackageName);
+        public static int menu_open_browser = sRes.getIdentifier("menu_open_browser", "id", sPackageName);
+        public static int menu_refresh_progress = sRes.getIdentifier("menu_refresh_progress", "id", sPackageName);
+        public static int menu_screenshot = sRes.getIdentifier("menu_screenshot", "id", sPackageName);
+        public static int message = sRes.getIdentifier("message", "id", sPackageName);
+        public static int messageArea = sRes.getIdentifier("messageArea", "id", sPackageName);
+        public static int messageIcon = sRes.getIdentifier("messageIcon", "id", sPackageName);
+        public static int messageIconProgress = sRes.getIdentifier("messageIconProgress", "id", sPackageName);
+        public static int messageLimit = sRes.getIdentifier("messageLimit", "id", sPackageName);
+        public static int messageText = sRes.getIdentifier("messageText", "id", sPackageName);
+        public static int message_area = sRes.getIdentifier("message_area", "id", sPackageName);
+        public static int message_area_linear = sRes.getIdentifier("message_area_linear", "id", sPackageName);
+        public static int message_input_area = sRes.getIdentifier("message_input_area", "id", sPackageName);
+        public static int negativeButton = sRes.getIdentifier("negativeButton", "id", sPackageName);
+        public static int poiAttribution = sRes.getIdentifier("poiAttribution", "id", sPackageName);
+        public static int poiDetails = sRes.getIdentifier("poiDetails", "id", sPackageName);
+        public static int poiImage = sRes.getIdentifier("poiImage", "id", sPackageName);
+        public static int poiInfo = sRes.getIdentifier("poiInfo", "id", sPackageName);
+        public static int poiLine2 = sRes.getIdentifier("poiLine2", "id", sPackageName);
+        public static int poiTitle = sRes.getIdentifier("poiTitle", "id", sPackageName);
+        public static int positiveButton = sRes.getIdentifier("positiveButton", "id", sPackageName);
+        public static int progress = sRes.getIdentifier("progress", "id", sPackageName);
+        public static int progressLoading = sRes.getIdentifier("progressLoading", "id", sPackageName);
+        public static int progressText = sRes.getIdentifier("progressText", "id", sPackageName);
+        public static int rotateLayout = sRes.getIdentifier("rotateLayout", "id", sPackageName);
+        public static int scan_button = sRes.getIdentifier("scan_button", "id", sPackageName);
+        public static int scan_hint = sRes.getIdentifier("scan_hint", "id", sPackageName);
+        public static int scan_in_progress = sRes.getIdentifier("scan_in_progress", "id", sPackageName);
+        public static int scan_no_results = sRes.getIdentifier("scan_no_results", "id", sPackageName);
+        public static int scan_point_hint = sRes.getIdentifier("scan_point_hint", "id", sPackageName);
+        public static int scan_point_title = sRes.getIdentifier("scan_point_title", "id", sPackageName);
+        public static int scan_status = sRes.getIdentifier("scan_status", "id", sPackageName);
+        public static int scan_tip = sRes.getIdentifier("scan_tip", "id", sPackageName);
+        public static int scan_title = sRes.getIdentifier("scan_title", "id", sPackageName);
+        public static int screenshot_button_retake = sRes.getIdentifier("screenshot_button_retake", "id", sPackageName);
+        public static int screenshot_button_take = sRes.getIdentifier("screenshot_button_take", "id", sPackageName);
+        public static int screenshot_button_use = sRes.getIdentifier("screenshot_button_use", "id", sPackageName);
+        public static int screenshot_imageview = sRes.getIdentifier("screenshot_imageview", "id", sPackageName);
+        public static int screenshot_take_bar = sRes.getIdentifier("screenshot_take_bar", "id", sPackageName);
+        public static int shadow = sRes.getIdentifier("shadow", "id", sPackageName);
+        public static int shareButton = sRes.getIdentifier("shareButton", "id", sPackageName);
+        public static int status = sRes.getIdentifier("status", "id", sPackageName);
+        public static int status_step_1 = sRes.getIdentifier("status_step_1", "id", sPackageName);
+        public static int status_step_2 = sRes.getIdentifier("status_step_2", "id", sPackageName);
+        public static int status_step_3 = sRes.getIdentifier("status_step_3", "id", sPackageName);
+        public static int status_transition_1 = sRes.getIdentifier("status_transition_1", "id", sPackageName);
+        public static int status_transition_2 = sRes.getIdentifier("status_transition_2", "id", sPackageName);
+        public static int text = sRes.getIdentifier("text", "id", sPackageName);
+        public static int throbber = sRes.getIdentifier("throbber", "id", sPackageName);
+        public static int timeline = sRes.getIdentifier("timeline", "id", sPackageName);
+        public static int tip_layout = sRes.getIdentifier("tip_layout", "id", sPackageName);
+        public static int title = sRes.getIdentifier("title", "id", sPackageName);
+        public static int title_template = sRes.getIdentifier("title_template", "id", sPackageName);
+        public static int topPanel = sRes.getIdentifier("topPanel", "id", sPackageName);
+        public static int top_bar = sRes.getIdentifier("top_bar", "id", sPackageName);
+        public static int video = sRes.getIdentifier("video", "id", sPackageName);
+        public static int vision_nothing_found = sRes.getIdentifier("vision_nothing_found", "id", sPackageName);
+        public static int vision_nothing_found_2 = sRes.getIdentifier("vision_nothing_found_2", "id", sPackageName);
+        public static int vision_nothing_found_continue = sRes.getIdentifier("vision_nothing_found_continue", "id", sPackageName);
+        public static int watermark = sRes.getIdentifier("watermark", "id", sPackageName);
+        public static int webview = sRes.getIdentifier("webview", "id", sPackageName);
     }
     public static final class layout {
-        public static int layar_activity_audio  = com.americasmart.app.R.layout.layar_activity_audio ;
-        public static int layar_activity_layer_details  = com.americasmart.app.R.layout.layar_activity_layer_details ;
-        public static int layar_activity_screenshot  = com.americasmart.app.R.layout.layar_activity_screenshot ;
-        public static int layar_activity_share_social  = com.americasmart.app.R.layout.layar_activity_share_social ;
-        public static int layar_activity_video  = com.americasmart.app.R.layout.layar_activity_video ;
-        public static int layar_activity_vision  = com.americasmart.app.R.layout.layar_activity_vision ;
-        public static int layar_activity_web  = com.americasmart.app.R.layout.layar_activity_web ;
-        public static int layar_dialog_message_with_icon  = com.americasmart.app.R.layout.layar_dialog_message_with_icon ;
-        public static int layar_dialog_smart  = com.americasmart.app.R.layout.layar_dialog_smart ;
-        public static int layar_dialog_smart_progress  = com.americasmart.app.R.layout.layar_dialog_smart_progress ;
-        public static int layar_fragment_layer_details  = com.americasmart.app.R.layout.layar_fragment_layer_details ;
-        public static int layar_list_item  = com.americasmart.app.R.layout.layar_list_item ;
-        public static int layar_view_audio  = com.americasmart.app.R.layout.layar_view_audio ;
-        public static int layar_view_custom_home_button  = com.americasmart.app.R.layout.layar_view_custom_home_button ;
-        public static int layar_view_custom_menu_button  = com.americasmart.app.R.layout.layar_view_custom_menu_button ;
-        public static int layar_view_divider  = com.americasmart.app.R.layout.layar_view_divider ;
-        public static int layar_view_message_input  = com.americasmart.app.R.layout.layar_view_message_input ;
-        public static int layar_view_poi_action_item  = com.americasmart.app.R.layout.layar_view_poi_action_item ;
-        public static int layar_view_qrcode_plaintext  = com.americasmart.app.R.layout.layar_view_qrcode_plaintext ;
-        public static int layar_view_qrcode_template  = com.americasmart.app.R.layout.layar_view_qrcode_template ;
-        public static int layar_view_take_screenshot_bar  = com.americasmart.app.R.layout.layar_view_take_screenshot_bar ;
-        public static int layar_view_unsupported_content  = com.americasmart.app.R.layout.layar_view_unsupported_content ;
-        public static int layar_view_vision_loading  = com.americasmart.app.R.layout.layar_view_vision_loading ;
-        public static int layar_view_vision_nav_bar  = com.americasmart.app.R.layout.layar_view_vision_nav_bar ;
-        public static int layar_view_vision_no_content  = com.americasmart.app.R.layout.layar_view_vision_no_content ;
-        public static int layar_view_vision_scan_brackets  = com.americasmart.app.R.layout.layar_view_vision_scan_brackets ;
-        public static int layar_view_vision_scan_no_results  = com.americasmart.app.R.layout.layar_view_vision_scan_no_results ;
-        public static int layar_view_vision_scan_toast  = com.americasmart.app.R.layout.layar_view_vision_scan_toast ;
-        public static int layar_view_vision_status  = com.americasmart.app.R.layout.layar_view_vision_status ;
+        public static int layar_activity_audio = sRes.getIdentifier("layar_activity_audio", "layout", sPackageName);
+        public static int layar_activity_layer_details = sRes.getIdentifier("layar_activity_layer_details", "layout", sPackageName);
+        public static int layar_activity_screenshot = sRes.getIdentifier("layar_activity_screenshot", "layout", sPackageName);
+        public static int layar_activity_share_social = sRes.getIdentifier("layar_activity_share_social", "layout", sPackageName);
+        public static int layar_activity_video = sRes.getIdentifier("layar_activity_video", "layout", sPackageName);
+        public static int layar_activity_vision = sRes.getIdentifier("layar_activity_vision", "layout", sPackageName);
+        public static int layar_activity_web = sRes.getIdentifier("layar_activity_web", "layout", sPackageName);
+        public static int layar_dialog_message_with_icon = sRes.getIdentifier("layar_dialog_message_with_icon", "layout", sPackageName);
+        public static int layar_dialog_smart = sRes.getIdentifier("layar_dialog_smart", "layout", sPackageName);
+        public static int layar_dialog_smart_progress = sRes.getIdentifier("layar_dialog_smart_progress", "layout", sPackageName);
+        public static int layar_fragment_layer_details = sRes.getIdentifier("layar_fragment_layer_details", "layout", sPackageName);
+        public static int layar_list_item = sRes.getIdentifier("layar_list_item", "layout", sPackageName);
+        public static int layar_view_audio = sRes.getIdentifier("layar_view_audio", "layout", sPackageName);
+        public static int layar_view_custom_home_button = sRes.getIdentifier("layar_view_custom_home_button", "layout", sPackageName);
+        public static int layar_view_custom_menu_button = sRes.getIdentifier("layar_view_custom_menu_button", "layout", sPackageName);
+        public static int layar_view_divider = sRes.getIdentifier("layar_view_divider", "layout", sPackageName);
+        public static int layar_view_message_input = sRes.getIdentifier("layar_view_message_input", "layout", sPackageName);
+        public static int layar_view_poi_action_item = sRes.getIdentifier("layar_view_poi_action_item", "layout", sPackageName);
+        public static int layar_view_qrcode_plaintext = sRes.getIdentifier("layar_view_qrcode_plaintext", "layout", sPackageName);
+        public static int layar_view_qrcode_template = sRes.getIdentifier("layar_view_qrcode_template", "layout", sPackageName);
+        public static int layar_view_take_screenshot_bar = sRes.getIdentifier("layar_view_take_screenshot_bar", "layout", sPackageName);
+        public static int layar_view_unsupported_content = sRes.getIdentifier("layar_view_unsupported_content", "layout", sPackageName);
+        public static int layar_view_vision_loading = sRes.getIdentifier("layar_view_vision_loading", "layout", sPackageName);
+        public static int layar_view_vision_nav_bar = sRes.getIdentifier("layar_view_vision_nav_bar", "layout", sPackageName);
+        public static int layar_view_vision_no_content = sRes.getIdentifier("layar_view_vision_no_content", "layout", sPackageName);
+        public static int layar_view_vision_scan_brackets = sRes.getIdentifier("layar_view_vision_scan_brackets", "layout", sPackageName);
+        public static int layar_view_vision_scan_no_results = sRes.getIdentifier("layar_view_vision_scan_no_results", "layout", sPackageName);
+        public static int layar_view_vision_scan_toast = sRes.getIdentifier("layar_view_vision_scan_toast", "layout", sPackageName);
+        public static int layar_view_vision_status = sRes.getIdentifier("layar_view_vision_status", "layout", sPackageName);
     }
     public static final class menu {
-        public static int layar_activity_geo  = com.americasmart.app.R.menu.layar_activity_geo ;
-        public static int layar_activity_web  = com.americasmart.app.R.menu.layar_activity_web ;
+        public static int layar_activity_geo = sRes.getIdentifier("layar_activity_geo", "menu", sPackageName);
+        public static int layar_activity_web = sRes.getIdentifier("layar_activity_web", "menu", sPackageName);
     }
     public static final class string {
         /**  Action Chooser 
@@ -363,12 +372,12 @@ public final class R {
  Action Chooser 
  Action Chooser 
          */
-        public static int action_chooser_title  = com.americasmart.app.R.string.action_chooser_title ;
-        public static int action_scan  = com.americasmart.app.R.string.action_scan ;
-        public static int action_share  = com.americasmart.app.R.string.action_share ;
-        public static int apply  = com.americasmart.app.R.string.apply ;
-        public static int audio_error  = com.americasmart.app.R.string.audio_error ;
-        public static int audio_error_title  = com.americasmart.app.R.string.audio_error_title ;
+        public static int action_chooser_title = sRes.getIdentifier("action_chooser_title", "string", sPackageName);
+        public static int action_scan = sRes.getIdentifier("action_scan", "string", sPackageName);
+        public static int action_share = sRes.getIdentifier("action_share", "string", sPackageName);
+        public static int apply = sRes.getIdentifier("apply", "string", sPackageName);
+        public static int audio_error = sRes.getIdentifier("audio_error", "string", sPackageName);
+        public static int audio_error_title = sRes.getIdentifier("audio_error_title", "string", sPackageName);
         /**  Audio 
  Audio 
  Audio 
@@ -377,9 +386,9 @@ public final class R {
  Audio 
  Audio 
          */
-        public static int audio_loading  = com.americasmart.app.R.string.audio_loading ;
-        public static int cancel  = com.americasmart.app.R.string.cancel ;
-        public static int continue_  = com.americasmart.app.R.string.continue_ ;
+        public static int audio_loading = sRes.getIdentifier("audio_loading", "string", sPackageName);
+        public static int cancel = sRes.getIdentifier("cancel", "string", sPackageName);
+        public static int continue_ = sRes.getIdentifier("continue_", "string", sPackageName);
         /**  DetailsView 
  DetailsView 
  DetailsView 
@@ -388,11 +397,11 @@ public final class R {
  DetailsView 
  DetailsView 
          */
-        public static int copy_link  = com.americasmart.app.R.string.copy_link ;
-        public static int copy_message  = com.americasmart.app.R.string.copy_message ;
-        public static int copy_message_fail  = com.americasmart.app.R.string.copy_message_fail ;
-        public static int country_code_default  = com.americasmart.app.R.string.country_code_default ;
-        public static int custom_filter_layer_settings  = com.americasmart.app.R.string.custom_filter_layer_settings ;
+        public static int copy_link = sRes.getIdentifier("copy_link", "string", sPackageName);
+        public static int copy_message = sRes.getIdentifier("copy_message", "string", sPackageName);
+        public static int copy_message_fail = sRes.getIdentifier("copy_message_fail", "string", sPackageName);
+        public static int country_code_default = sRes.getIdentifier("country_code_default", "string", sPackageName);
+        public static int custom_filter_layer_settings = sRes.getIdentifier("custom_filter_layer_settings", "string", sPackageName);
         /**  Layer custom filters 
  Layer custom filters 
  Layer custom filters 
@@ -401,27 +410,27 @@ public final class R {
  Layer custom filters 
  Layer custom filters 
          */
-        public static int custom_filter_range_settings  = com.americasmart.app.R.string.custom_filter_range_settings ;
-        public static int custom_filter_range_text  = com.americasmart.app.R.string.custom_filter_range_text ;
-        public static int developer  = com.americasmart.app.R.string.developer ;
-        public static int distance_unit_default  = com.americasmart.app.R.string.distance_unit_default ;
-        public static int download_layar_button  = com.americasmart.app.R.string.download_layar_button ;
-        public static int download_layar_description  = com.americasmart.app.R.string.download_layar_description ;
-        public static int download_layar_title  = com.americasmart.app.R.string.download_layar_title ;
-        public static int download_message  = com.americasmart.app.R.string.download_message ;
-        public static int ellipsis  = com.americasmart.app.R.string.ellipsis ;
-        public static int email  = com.americasmart.app.R.string.email ;
-        public static int error_layer_deleted  = com.americasmart.app.R.string.error_layer_deleted ;
-        public static int error_location_provider_message  = com.americasmart.app.R.string.error_location_provider_message ;
-        public static int error_location_provider_title  = com.americasmart.app.R.string.error_location_provider_title ;
-        public static int error_maintenance  = com.americasmart.app.R.string.error_maintenance ;
-        public static int error_maintenance_title  = com.americasmart.app.R.string.error_maintenance_title ;
-        public static int error_no_active_connection  = com.americasmart.app.R.string.error_no_active_connection ;
-        public static int error_no_connection  = com.americasmart.app.R.string.error_no_connection ;
-        public static int error_oauth_timestamp_invalid  = com.americasmart.app.R.string.error_oauth_timestamp_invalid ;
-        public static int error_oauth_verification_failed  = com.americasmart.app.R.string.error_oauth_verification_failed ;
-        public static int error_out_of_memory  = com.americasmart.app.R.string.error_out_of_memory ;
-        public static int error_player_expired  = com.americasmart.app.R.string.error_player_expired ;
+        public static int custom_filter_range_settings = sRes.getIdentifier("custom_filter_range_settings", "string", sPackageName);
+        public static int custom_filter_range_text = sRes.getIdentifier("custom_filter_range_text", "string", sPackageName);
+        public static int developer = sRes.getIdentifier("developer", "string", sPackageName);
+        public static int distance_unit_default = sRes.getIdentifier("distance_unit_default", "string", sPackageName);
+        public static int download_layar_button = sRes.getIdentifier("download_layar_button", "string", sPackageName);
+        public static int download_layar_description = sRes.getIdentifier("download_layar_description", "string", sPackageName);
+        public static int download_layar_title = sRes.getIdentifier("download_layar_title", "string", sPackageName);
+        public static int download_message = sRes.getIdentifier("download_message", "string", sPackageName);
+        public static int ellipsis = sRes.getIdentifier("ellipsis", "string", sPackageName);
+        public static int email = sRes.getIdentifier("email", "string", sPackageName);
+        public static int error_layer_deleted = sRes.getIdentifier("error_layer_deleted", "string", sPackageName);
+        public static int error_location_provider_message = sRes.getIdentifier("error_location_provider_message", "string", sPackageName);
+        public static int error_location_provider_title = sRes.getIdentifier("error_location_provider_title", "string", sPackageName);
+        public static int error_maintenance = sRes.getIdentifier("error_maintenance", "string", sPackageName);
+        public static int error_maintenance_title = sRes.getIdentifier("error_maintenance_title", "string", sPackageName);
+        public static int error_no_active_connection = sRes.getIdentifier("error_no_active_connection", "string", sPackageName);
+        public static int error_no_connection = sRes.getIdentifier("error_no_connection", "string", sPackageName);
+        public static int error_oauth_timestamp_invalid = sRes.getIdentifier("error_oauth_timestamp_invalid", "string", sPackageName);
+        public static int error_oauth_verification_failed = sRes.getIdentifier("error_oauth_verification_failed", "string", sPackageName);
+        public static int error_out_of_memory = sRes.getIdentifier("error_out_of_memory", "string", sPackageName);
+        public static int error_player_expired = sRes.getIdentifier("error_player_expired", "string", sPackageName);
         /**  Social stuff 
  Social stuff 
  Social stuff 
@@ -430,8 +439,8 @@ public final class R {
  Social stuff 
  Social stuff 
          */
-        public static int facebook  = com.americasmart.app.R.string.facebook ;
-        public static int layer  = com.americasmart.app.R.string.layer ;
+        public static int facebook = sRes.getIdentifier("facebook", "string", sPackageName);
+        public static int layer = sRes.getIdentifier("layer", "string", sPackageName);
         /**  Layer actions 
  Layer actions 
  Layer actions 
@@ -440,9 +449,9 @@ public final class R {
  Layer actions 
  Layer actions 
          */
-        public static int layer_actions  = com.americasmart.app.R.string.layer_actions ;
-        public static int layer_details_body  = com.americasmart.app.R.string.layer_details_body ;
-        public static int layer_details_subject  = com.americasmart.app.R.string.layer_details_subject ;
+        public static int layer_actions = sRes.getIdentifier("layer_actions", "string", sPackageName);
+        public static int layer_details_body = sRes.getIdentifier("layer_details_body", "string", sPackageName);
+        public static int layer_details_subject = sRes.getIdentifier("layer_details_subject", "string", sPackageName);
         /**  Feedback 
  Feedback 
  Feedback 
@@ -451,8 +460,8 @@ public final class R {
  Feedback 
  Feedback 
          */
-        public static int layer_report_problem  = com.americasmart.app.R.string.layer_report_problem ;
-        public static int layer_report_problem_body  = com.americasmart.app.R.string.layer_report_problem_body ;
+        public static int layer_report_problem = sRes.getIdentifier("layer_report_problem", "string", sPackageName);
+        public static int layer_report_problem_body = sRes.getIdentifier("layer_report_problem_body", "string", sPackageName);
         /**  DetailsView activity 
  DetailsView activity 
  DetailsView activity 
@@ -461,8 +470,8 @@ public final class R {
  DetailsView activity 
  DetailsView activity 
          */
-        public static int leaving_message  = com.americasmart.app.R.string.leaving_message ;
-        public static int menu_about  = com.americasmart.app.R.string.menu_about ;
+        public static int leaving_message = sRes.getIdentifier("leaving_message", "string", sPackageName);
+        public static int menu_about = sRes.getIdentifier("menu_about", "string", sPackageName);
         /**  Menu Options 
  Menu Options 
  Menu Options 
@@ -471,11 +480,11 @@ public final class R {
  Menu Options 
  Menu Options 
          */
-        public static int menu_filter  = com.americasmart.app.R.string.menu_filter ;
-        public static int menu_goto_ar  = com.americasmart.app.R.string.menu_goto_ar ;
-        public static int menu_layer_info  = com.americasmart.app.R.string.menu_layer_info ;
-        public static int menu_refresh  = com.americasmart.app.R.string.menu_refresh ;
-        public static int menu_screenshot  = com.americasmart.app.R.string.menu_screenshot ;
+        public static int menu_filter = sRes.getIdentifier("menu_filter", "string", sPackageName);
+        public static int menu_goto_ar = sRes.getIdentifier("menu_goto_ar", "string", sPackageName);
+        public static int menu_layer_info = sRes.getIdentifier("menu_layer_info", "string", sPackageName);
+        public static int menu_refresh = sRes.getIdentifier("menu_refresh", "string", sPackageName);
+        public static int menu_screenshot = sRes.getIdentifier("menu_screenshot", "string", sPackageName);
         /**  Problem reporting 
  Problem reporting 
  Problem reporting 
@@ -484,10 +493,10 @@ public final class R {
  Problem reporting 
  Problem reporting 
          */
-        public static int multiple_login_email_address  = com.americasmart.app.R.string.multiple_login_email_address ;
-        public static int no  = com.americasmart.app.R.string.no ;
-        public static int no_connection_message  = com.americasmart.app.R.string.no_connection_message ;
-        public static int no_connection_settings  = com.americasmart.app.R.string.no_connection_settings ;
+        public static int multiple_login_email_address = sRes.getIdentifier("multiple_login_email_address", "string", sPackageName);
+        public static int no = sRes.getIdentifier("no", "string", sPackageName);
+        public static int no_connection_message = sRes.getIdentifier("no_connection_message", "string", sPackageName);
+        public static int no_connection_settings = sRes.getIdentifier("no_connection_settings", "string", sPackageName);
         /**  Miscellaneous errors 
  Miscellaneous errors 
  Miscellaneous errors 
@@ -496,7 +505,7 @@ public final class R {
  Miscellaneous errors 
  Miscellaneous errors 
          */
-        public static int no_connection_title  = com.americasmart.app.R.string.no_connection_title ;
+        public static int no_connection_title = sRes.getIdentifier("no_connection_title", "string", sPackageName);
         /**  Please do not translate the string names and the placeholders (%%) 
  General Strings 
  Please do not translate the string names and the placeholders (%%) 
@@ -512,9 +521,9 @@ public final class R {
  Please do not translate the string names and the placeholders (%%) 
  General Strings 
          */
-        public static int ok  = com.americasmart.app.R.string.ok ;
-        public static int openGPSSettingPrompt  = com.americasmart.app.R.string.openGPSSettingPrompt ;
-        public static int open_in_browser  = com.americasmart.app.R.string.open_in_browser ;
+        public static int ok = sRes.getIdentifier("ok", "string", sPackageName);
+        public static int openGPSSettingPrompt = sRes.getIdentifier("openGPSSettingPrompt", "string", sPackageName);
+        public static int open_in_browser = sRes.getIdentifier("open_in_browser", "string", sPackageName);
         /**  POI actions 
  POI actions 
  POI actions 
@@ -523,12 +532,12 @@ public final class R {
  POI actions 
  POI actions 
          */
-        public static int poi_action_directions  = com.americasmart.app.R.string.poi_action_directions ;
-        public static int poi_action_lock  = com.americasmart.app.R.string.poi_action_lock ;
-        public static int poi_action_unlock  = com.americasmart.app.R.string.poi_action_unlock ;
-        public static int progress_analyzing  = com.americasmart.app.R.string.progress_analyzing ;
-        public static int progress_getting_content  = com.americasmart.app.R.string.progress_getting_content ;
-        public static int progress_getting_results  = com.americasmart.app.R.string.progress_getting_results ;
+        public static int poi_action_directions = sRes.getIdentifier("poi_action_directions", "string", sPackageName);
+        public static int poi_action_lock = sRes.getIdentifier("poi_action_lock", "string", sPackageName);
+        public static int poi_action_unlock = sRes.getIdentifier("poi_action_unlock", "string", sPackageName);
+        public static int progress_analyzing = sRes.getIdentifier("progress_analyzing", "string", sPackageName);
+        public static int progress_getting_content = sRes.getIdentifier("progress_getting_content", "string", sPackageName);
+        public static int progress_getting_results = sRes.getIdentifier("progress_getting_results", "string", sPackageName);
         /**  Progress 
  Progress 
  Progress 
@@ -537,24 +546,24 @@ public final class R {
  Progress 
  Progress 
          */
-        public static int progress_loading  = com.americasmart.app.R.string.progress_loading ;
-        public static int progress_processing  = com.americasmart.app.R.string.progress_processing ;
-        public static int qrcode_audio  = com.americasmart.app.R.string.qrcode_audio ;
-        public static int qrcode_audio_text  = com.americasmart.app.R.string.qrcode_audio_text ;
-        public static int qrcode_email  = com.americasmart.app.R.string.qrcode_email ;
-        public static int qrcode_geo  = com.americasmart.app.R.string.qrcode_geo ;
-        public static int qrcode_geo_text  = com.americasmart.app.R.string.qrcode_geo_text ;
-        public static int qrcode_googleplay  = com.americasmart.app.R.string.qrcode_googleplay ;
-        public static int qrcode_layer  = com.americasmart.app.R.string.qrcode_layer ;
-        public static int qrcode_sms  = com.americasmart.app.R.string.qrcode_sms ;
-        public static int qrcode_tel  = com.americasmart.app.R.string.qrcode_tel ;
-        public static int qrcode_unknown  = com.americasmart.app.R.string.qrcode_unknown ;
-        public static int qrcode_unsuported_action  = com.americasmart.app.R.string.qrcode_unsuported_action ;
-        public static int qrcode_vcard  = com.americasmart.app.R.string.qrcode_vcard ;
-        public static int qrcode_video  = com.americasmart.app.R.string.qrcode_video ;
-        public static int qrcode_video_text  = com.americasmart.app.R.string.qrcode_video_text ;
-        public static int qrcode_web  = com.americasmart.app.R.string.qrcode_web ;
-        public static int save  = com.americasmart.app.R.string.save ;
+        public static int progress_loading = sRes.getIdentifier("progress_loading", "string", sPackageName);
+        public static int progress_processing = sRes.getIdentifier("progress_processing", "string", sPackageName);
+        public static int qrcode_audio = sRes.getIdentifier("qrcode_audio", "string", sPackageName);
+        public static int qrcode_audio_text = sRes.getIdentifier("qrcode_audio_text", "string", sPackageName);
+        public static int qrcode_email = sRes.getIdentifier("qrcode_email", "string", sPackageName);
+        public static int qrcode_geo = sRes.getIdentifier("qrcode_geo", "string", sPackageName);
+        public static int qrcode_geo_text = sRes.getIdentifier("qrcode_geo_text", "string", sPackageName);
+        public static int qrcode_googleplay = sRes.getIdentifier("qrcode_googleplay", "string", sPackageName);
+        public static int qrcode_layer = sRes.getIdentifier("qrcode_layer", "string", sPackageName);
+        public static int qrcode_sms = sRes.getIdentifier("qrcode_sms", "string", sPackageName);
+        public static int qrcode_tel = sRes.getIdentifier("qrcode_tel", "string", sPackageName);
+        public static int qrcode_unknown = sRes.getIdentifier("qrcode_unknown", "string", sPackageName);
+        public static int qrcode_unsuported_action = sRes.getIdentifier("qrcode_unsuported_action", "string", sPackageName);
+        public static int qrcode_vcard = sRes.getIdentifier("qrcode_vcard", "string", sPackageName);
+        public static int qrcode_video = sRes.getIdentifier("qrcode_video", "string", sPackageName);
+        public static int qrcode_video_text = sRes.getIdentifier("qrcode_video_text", "string", sPackageName);
+        public static int qrcode_web = sRes.getIdentifier("qrcode_web", "string", sPackageName);
+        public static int save = sRes.getIdentifier("save", "string", sPackageName);
         /**  Screenshot 
  Screenshot 
  Screenshot 
@@ -563,15 +572,15 @@ public final class R {
  Screenshot 
  Screenshot 
          */
-        public static int screenshot_hold_steady  = com.americasmart.app.R.string.screenshot_hold_steady ;
-        public static int screenshot_no_sdcard  = com.americasmart.app.R.string.screenshot_no_sdcard ;
-        public static int screenshot_out_of_memory  = com.americasmart.app.R.string.screenshot_out_of_memory ;
-        public static int screenshot_preview  = com.americasmart.app.R.string.screenshot_preview ;
-        public static int screenshot_processsing  = com.americasmart.app.R.string.screenshot_processsing ;
-        public static int screenshot_retake  = com.americasmart.app.R.string.screenshot_retake ;
-        public static int screenshot_save_to_library  = com.americasmart.app.R.string.screenshot_save_to_library ;
-        public static int screenshot_send_email  = com.americasmart.app.R.string.screenshot_send_email ;
-        public static int share_chooser_title  = com.americasmart.app.R.string.share_chooser_title ;
+        public static int screenshot_hold_steady = sRes.getIdentifier("screenshot_hold_steady", "string", sPackageName);
+        public static int screenshot_no_sdcard = sRes.getIdentifier("screenshot_no_sdcard", "string", sPackageName);
+        public static int screenshot_out_of_memory = sRes.getIdentifier("screenshot_out_of_memory", "string", sPackageName);
+        public static int screenshot_preview = sRes.getIdentifier("screenshot_preview", "string", sPackageName);
+        public static int screenshot_processsing = sRes.getIdentifier("screenshot_processsing", "string", sPackageName);
+        public static int screenshot_retake = sRes.getIdentifier("screenshot_retake", "string", sPackageName);
+        public static int screenshot_save_to_library = sRes.getIdentifier("screenshot_save_to_library", "string", sPackageName);
+        public static int screenshot_send_email = sRes.getIdentifier("screenshot_send_email", "string", sPackageName);
+        public static int share_chooser_title = sRes.getIdentifier("share_chooser_title", "string", sPackageName);
         /**  Sharing 
  Sharing 
  Sharing 
@@ -580,14 +589,14 @@ public final class R {
  Sharing 
  Sharing 
          */
-        public static int share_dialog_title  = com.americasmart.app.R.string.share_dialog_title ;
-        public static int share_fail  = com.americasmart.app.R.string.share_fail ;
-        public static int share_layer  = com.americasmart.app.R.string.share_layer ;
-        public static int share_on_facebook_add_your_thougth  = com.americasmart.app.R.string.share_on_facebook_add_your_thougth ;
-        public static int share_on_facebook_post  = com.americasmart.app.R.string.share_on_facebook_post ;
-        public static int share_on_facebook_share  = com.americasmart.app.R.string.share_on_facebook_share ;
-        public static int share_on_facebook_share_link  = com.americasmart.app.R.string.share_on_facebook_share_link ;
-        public static int share_on_facebook_whats_on_your_mind  = com.americasmart.app.R.string.share_on_facebook_whats_on_your_mind ;
+        public static int share_dialog_title = sRes.getIdentifier("share_dialog_title", "string", sPackageName);
+        public static int share_fail = sRes.getIdentifier("share_fail", "string", sPackageName);
+        public static int share_layer = sRes.getIdentifier("share_layer", "string", sPackageName);
+        public static int share_on_facebook_add_your_thougth = sRes.getIdentifier("share_on_facebook_add_your_thougth", "string", sPackageName);
+        public static int share_on_facebook_post = sRes.getIdentifier("share_on_facebook_post", "string", sPackageName);
+        public static int share_on_facebook_share = sRes.getIdentifier("share_on_facebook_share", "string", sPackageName);
+        public static int share_on_facebook_share_link = sRes.getIdentifier("share_on_facebook_share_link", "string", sPackageName);
+        public static int share_on_facebook_whats_on_your_mind = sRes.getIdentifier("share_on_facebook_whats_on_your_mind", "string", sPackageName);
         /**  Share on Facebook 
  Share on Facebook 
  Share on Facebook 
@@ -596,7 +605,7 @@ public final class R {
  Share on Facebook 
  Share on Facebook 
          */
-        public static int share_on_facebook_write_post  = com.americasmart.app.R.string.share_on_facebook_write_post ;
+        public static int share_on_facebook_write_post = sRes.getIdentifier("share_on_facebook_write_post", "string", sPackageName);
         /**  supressed 
  supressed 
  supressed 
@@ -605,9 +614,9 @@ public final class R {
  supressed 
  supressed 
          */
-        public static int share_screenshot  = com.americasmart.app.R.string.share_screenshot ;
-        public static int share_status  = com.americasmart.app.R.string.share_status ;
-        public static int share_success_message  = com.americasmart.app.R.string.share_success_message ;
+        public static int share_screenshot = sRes.getIdentifier("share_screenshot", "string", sPackageName);
+        public static int share_status = sRes.getIdentifier("share_status", "string", sPackageName);
+        public static int share_success_message = sRes.getIdentifier("share_success_message", "string", sPackageName);
         /**  POIDetails strings 
  POIDetails strings 
  POIDetails strings 
@@ -616,10 +625,10 @@ public final class R {
  POIDetails strings 
  POIDetails strings 
          */
-        public static int spot_actions  = com.americasmart.app.R.string.spot_actions ;
-        public static int status_1_result_found  = com.americasmart.app.R.string.status_1_result_found ;
-        public static int status_authentication_required  = com.americasmart.app.R.string.status_authentication_required ;
-        public static int status_no_content_available  = com.americasmart.app.R.string.status_no_content_available ;
+        public static int spot_actions = sRes.getIdentifier("spot_actions", "string", sPackageName);
+        public static int status_1_result_found = sRes.getIdentifier("status_1_result_found", "string", sPackageName);
+        public static int status_authentication_required = sRes.getIdentifier("status_authentication_required", "string", sPackageName);
+        public static int status_no_content_available = sRes.getIdentifier("status_no_content_available", "string", sPackageName);
         /**  Status results 
  Status results 
  Status results 
@@ -628,8 +637,8 @@ public final class R {
  Status results 
  Status results 
          */
-        public static int status_no_results_found  = com.americasmart.app.R.string.status_no_results_found ;
-        public static int status_something_went_wrong  = com.americasmart.app.R.string.status_something_went_wrong ;
+        public static int status_no_results_found = sRes.getIdentifier("status_no_results_found", "string", sPackageName);
+        public static int status_something_went_wrong = sRes.getIdentifier("status_something_went_wrong", "string", sPackageName);
         /**  Status 
  Status 
  Status 
@@ -638,9 +647,9 @@ public final class R {
  Status 
  Status 
          */
-        public static int status_waiting_location  = com.americasmart.app.R.string.status_waiting_location ;
-        public static int status_x_results_found  = com.americasmart.app.R.string.status_x_results_found ;
-        public static int toast_gps_disabled  = com.americasmart.app.R.string.toast_gps_disabled ;
+        public static int status_waiting_location = sRes.getIdentifier("status_waiting_location", "string", sPackageName);
+        public static int status_x_results_found = sRes.getIdentifier("status_x_results_found", "string", sPackageName);
+        public static int toast_gps_disabled = sRes.getIdentifier("toast_gps_disabled", "string", sPackageName);
         /**  Auto Trigger Options 
  Auto Trigger Options 
  Auto Trigger Options 
@@ -649,14 +658,14 @@ public final class R {
  Auto Trigger Options 
  Auto Trigger Options 
          */
-        public static int trigger_available  = com.americasmart.app.R.string.trigger_available ;
-        public static int trigger_do_launch_action  = com.americasmart.app.R.string.trigger_do_launch_action ;
-        public static int trigger_dont_launch_action  = com.americasmart.app.R.string.trigger_dont_launch_action ;
-        public static int twitter  = com.americasmart.app.R.string.twitter ;
-        public static int unable_to_connect  = com.americasmart.app.R.string.unable_to_connect ;
-        public static int unsupported_content_description  = com.americasmart.app.R.string.unsupported_content_description ;
-        public static int unsupported_content_title  = com.americasmart.app.R.string.unsupported_content_title ;
-        public static int use  = com.americasmart.app.R.string.use ;
+        public static int trigger_available = sRes.getIdentifier("trigger_available", "string", sPackageName);
+        public static int trigger_do_launch_action = sRes.getIdentifier("trigger_do_launch_action", "string", sPackageName);
+        public static int trigger_dont_launch_action = sRes.getIdentifier("trigger_dont_launch_action", "string", sPackageName);
+        public static int twitter = sRes.getIdentifier("twitter", "string", sPackageName);
+        public static int unable_to_connect = sRes.getIdentifier("unable_to_connect", "string", sPackageName);
+        public static int unsupported_content_description = sRes.getIdentifier("unsupported_content_description", "string", sPackageName);
+        public static int unsupported_content_title = sRes.getIdentifier("unsupported_content_title", "string", sPackageName);
+        public static int use = sRes.getIdentifier("use", "string", sPackageName);
         /**  Video 
  Video 
  Video 
@@ -665,8 +674,8 @@ public final class R {
  Video 
  Video 
          */
-        public static int video_loading  = com.americasmart.app.R.string.video_loading ;
-        public static int view_list  = com.americasmart.app.R.string.view_list ;
+        public static int video_loading = sRes.getIdentifier("video_loading", "string", sPackageName);
+        public static int view_list = sRes.getIdentifier("view_list", "string", sPackageName);
         /**  View Buttons 
  View Buttons 
  View Buttons 
@@ -675,10 +684,10 @@ public final class R {
  View Buttons 
  View Buttons 
          */
-        public static int view_map  = com.americasmart.app.R.string.view_map ;
-        public static int vision_no_content_text  = com.americasmart.app.R.string.vision_no_content_text ;
-        public static int vision_no_content_title  = com.americasmart.app.R.string.vision_no_content_title ;
-        public static int vision_nothing_found_hint  = com.americasmart.app.R.string.vision_nothing_found_hint ;
+        public static int view_map = sRes.getIdentifier("view_map", "string", sPackageName);
+        public static int vision_no_content_text = sRes.getIdentifier("vision_no_content_text", "string", sPackageName);
+        public static int vision_no_content_title = sRes.getIdentifier("vision_no_content_title", "string", sPackageName);
+        public static int vision_nothing_found_hint = sRes.getIdentifier("vision_nothing_found_hint", "string", sPackageName);
         /**  Vision AR View 
  Vision AR View 
  Vision AR View 
@@ -687,38 +696,38 @@ public final class R {
  Vision AR View 
  Vision AR View 
          */
-        public static int vision_nothing_found_title  = com.americasmart.app.R.string.vision_nothing_found_title ;
-        public static int vision_point_hint  = com.americasmart.app.R.string.vision_point_hint ;
-        public static int vision_point_title  = com.americasmart.app.R.string.vision_point_title ;
-        public static int vision_scan_hint  = com.americasmart.app.R.string.vision_scan_hint ;
-        public static int vision_scan_title  = com.americasmart.app.R.string.vision_scan_title ;
-        public static int vision_tap_to_continue  = com.americasmart.app.R.string.vision_tap_to_continue ;
-        public static int yes  = com.americasmart.app.R.string.yes ;
+        public static int vision_nothing_found_title = sRes.getIdentifier("vision_nothing_found_title", "string", sPackageName);
+        public static int vision_point_hint = sRes.getIdentifier("vision_point_hint", "string", sPackageName);
+        public static int vision_point_title = sRes.getIdentifier("vision_point_title", "string", sPackageName);
+        public static int vision_scan_hint = sRes.getIdentifier("vision_scan_hint", "string", sPackageName);
+        public static int vision_scan_title = sRes.getIdentifier("vision_scan_title", "string", sPackageName);
+        public static int vision_tap_to_continue = sRes.getIdentifier("vision_tap_to_continue", "string", sPackageName);
+        public static int yes = sRes.getIdentifier("yes", "string", sPackageName);
     }
     public static final class style {
-        public static int ActionBarCompatText  = com.americasmart.app.R.style.ActionBarCompatText ;
-        public static int AudioSeekBar  = com.americasmart.app.R.style.AudioSeekBar ;
-        public static int BaseListView  = com.americasmart.app.R.style.BaseListView ;
-        public static int BiwDialogTheme  = com.americasmart.app.R.style.BiwDialogTheme ;
-        public static int CustomHomeLabel  = com.americasmart.app.R.style.CustomHomeLabel ;
-        public static int CustomMenuDialog  = com.americasmart.app.R.style.CustomMenuDialog ;
-        public static int DefaultText  = com.americasmart.app.R.style.DefaultText ;
-        public static int DescriptionText  = com.americasmart.app.R.style.DescriptionText ;
-        public static int DetailsText  = com.americasmart.app.R.style.DetailsText ;
-        public static int FilterTextView  = com.americasmart.app.R.style.FilterTextView ;
-        public static int FilterTheme  = com.americasmart.app.R.style.FilterTheme ;
-        public static int FullScreenTheme  = com.americasmart.app.R.style.FullScreenTheme ;
-        public static int Layar_Theme_Default  = com.americasmart.app.R.style.Layar_Theme_Default ;
-        public static int LayarTheme  = com.americasmart.app.R.style.LayarTheme ;
-        public static int LayarTheme_Black  = com.americasmart.app.R.style.LayarTheme_Black ;
-        public static int LayarTheme_Light  = com.americasmart.app.R.style.LayarTheme_Light ;
-        public static int LayarTitleTheme  = com.americasmart.app.R.style.LayarTitleTheme ;
-        public static int SectionHeaderText  = com.americasmart.app.R.style.SectionHeaderText ;
-        public static int SmartDialogTheme  = com.americasmart.app.R.style.SmartDialogTheme ;
-        public static int TabTitleText  = com.americasmart.app.R.style.TabTitleText ;
-        public static int Throbber  = com.americasmart.app.R.style.Throbber ;
-        public static int Throbber_Black  = com.americasmart.app.R.style.Throbber_Black ;
-        public static int Throbber_Light  = com.americasmart.app.R.style.Throbber_Light ;
-        public static int TitleText  = com.americasmart.app.R.style.TitleText ;
+        public static int ActionBarCompatText = sRes.getIdentifier("ActionBarCompatText", "style", sPackageName);
+        public static int AudioSeekBar = sRes.getIdentifier("AudioSeekBar", "style", sPackageName);
+        public static int BaseListView = sRes.getIdentifier("BaseListView", "style", sPackageName);
+        public static int BiwDialogTheme = sRes.getIdentifier("BiwDialogTheme", "style", sPackageName);
+        public static int CustomHomeLabel = sRes.getIdentifier("CustomHomeLabel", "style", sPackageName);
+        public static int CustomMenuDialog = sRes.getIdentifier("CustomMenuDialog", "style", sPackageName);
+        public static int DefaultText = sRes.getIdentifier("DefaultText", "style", sPackageName);
+        public static int DescriptionText = sRes.getIdentifier("DescriptionText", "style", sPackageName);
+        public static int DetailsText = sRes.getIdentifier("DetailsText", "style", sPackageName);
+        public static int FilterTextView = sRes.getIdentifier("FilterTextView", "style", sPackageName);
+        public static int FilterTheme = sRes.getIdentifier("FilterTheme", "style", sPackageName);
+        public static int FullScreenTheme = sRes.getIdentifier("FullScreenTheme", "style", sPackageName);
+        public static int Layar_Theme_Default = sRes.getIdentifier("Layar_Theme_Default", "style", sPackageName);
+        public static int LayarTheme = sRes.getIdentifier("LayarTheme", "style", sPackageName);
+        public static int LayarTheme_Black = sRes.getIdentifier("LayarTheme_Black", "style", sPackageName);
+        public static int LayarTheme_Light = sRes.getIdentifier("LayarTheme_Light", "style", sPackageName);
+        public static int LayarTitleTheme = sRes.getIdentifier("LayarTitleTheme", "style", sPackageName);
+        public static int SectionHeaderText = sRes.getIdentifier("SectionHeaderText", "style", sPackageName);
+        public static int SmartDialogTheme = sRes.getIdentifier("SmartDialogTheme", "style", sPackageName);
+        public static int TabTitleText = sRes.getIdentifier("TabTitleText", "style", sPackageName);
+        public static int Throbber = sRes.getIdentifier("Throbber", "style", sPackageName);
+        public static int Throbber_Black = sRes.getIdentifier("Throbber_Black", "style", sPackageName);
+        public static int Throbber_Light = sRes.getIdentifier("Throbber_Light", "style", sPackageName);
+        public static int TitleText = sRes.getIdentifier("TitleText", "style", sPackageName);
     }
 }

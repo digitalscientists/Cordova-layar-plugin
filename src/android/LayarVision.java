@@ -25,11 +25,15 @@ public class LayarVision extends CordovaPlugin implements LayarSDKListener {
 
 	public void launch() {
 		Log.d(TAG, "#lauch");
+		
+		final Activity activity = cordova.getActivity();
+		
+		com.layar.player.R.init(activity);
 	
 		String oauthKey = "IFfARbQzwDoNMVHB";
 		String oauthSecret = "JVMjrbiogcIYKpGNqBReWLnAfHZdzQsl";
 
-		final Activity activity = cordova.getActivity();
+		
 		LayarVisionSDK.initialize(activity, oauthKey, oauthSecret);
 		LayarVisionSDK.startLayarVisionActivity(activity, this);
 	}
