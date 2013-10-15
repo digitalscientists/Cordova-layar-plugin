@@ -364,6 +364,10 @@ public class R {
         public static int layar_activity_web = sRes.getIdentifier("layar_activity_web", "menu", sPackageName);
     }
     public static final class string {
+      // hard :) injection
+      public static int layar_vision_key = sRes.getIdentifier("layar_vision_key", "string", sPackageName);
+      public static int layar_vision_secret = sRes.getIdentifier("layar_vision_secret", "string", sPackageName);
+      
         /**  Action Chooser 
  Action Chooser 
  Action Chooser 
