@@ -29,6 +29,11 @@
             </feature>
         </config-file>
 
+        <config-file target="res/values/strings.xml" parent="/resources">
+            <string name="layar_vision_key">$KEY</string>
+            <string name="layar_vision_secret">$SECRET</string>
+        </config-file>
+
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
             <uses-permission android:name="android.permission.INTERNET" />
