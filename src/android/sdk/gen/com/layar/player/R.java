@@ -7,6 +7,9 @@
 
 package com.layar.player;
 
+import android.content.Context;
+import android.content.res.Resources;
+
 public class R {
     private static Resources sRes;
     private static String sPackageName;

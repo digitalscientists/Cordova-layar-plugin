@@ -3,10 +3,17 @@ object RegeneR extends App {
   val pkg = "com.americasmart.app"
   val source = io.Source.fromFile(???) // path to your R file
 
+  val Package = "(package.*)".r
   val Field = "(.*public static int )(.*)=.*".r
   val ClassR = "(.*public static final class )(.*?) \\{".r
   var currClass = ""
   val result = source.getLines map {
+    case Package(p) => 
+s"""$p
+
+import android.content.Context;
+import android.content.res.Resources;"""
+      
     case "public final class R {" =>
 """public class R {
     private static Resources sRes;
