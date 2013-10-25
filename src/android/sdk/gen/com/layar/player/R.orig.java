@@ -11,344 +11,434 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static int briefinfo_arrow=0x7f04000b;
-        public static int button_highlight=0x7f040012;
-        public static int buttons_bar_backcolor=0x7f04000a;
-        public static int default_list_bg_color=0x7f040009;
-        public static int default_list_divider_color=0x7f040008;
-        public static int default_text_color=0x7f040004;
-        public static int default_text_color_light=0x7f040005;
-        public static int default_text_shadow_color=0x7f040006;
-        public static int detail_background=0x7f04000d;
-        public static int details_text_color=0x7f040007;
-        public static int error=0x7f040003;
-        public static int layar_divider=0x7f040001;
-        public static int layar_splash_color=0x7f040000;
-        public static int layerlist_text=0x7f04000c;
-        public static int list_background=0x7f04000e;
-        public static int poi_details_background=0x7f040010;
-        public static int translucenter_dark=0x7f04000f;
-        public static int transparent=0x7f040002;
-        public static int vision_ar_overlay_bar=0x7f040011;
+        public static int accent=0x7f040009;
+        public static int actionbar_text=0x7f040022;
+        public static int background_actionbar=0x7f040023;
+        public static int background_actionbar_empty_space=0x7f040024;
+        public static int background_actionbar_not_branded=0x7f040025;
+        /**   
+         */
+        public static int background_nothing_found_dialog=0x7f040007;
+        public static int background_panel=0x7f04000a;
+        public static int background_welcome_sequence=0x7f040008;
+        public static int black=0x7f040001;
+        public static int briefinfo_arrow=0x7f040018;
+        public static int button_highlight=0x7f04001f;
+        public static int buttons_bar_backcolor=0x7f040017;
+        public static int default_list_bg_color=0x7f040016;
+        public static int default_list_divider_color=0x7f040015;
+        public static int default_text_color=0x7f040011;
+        public static int default_text_color_light=0x7f040012;
+        public static int default_text_shadow_color=0x7f040013;
+        public static int detail_background=0x7f04001a;
+        public static int details_text_color=0x7f040014;
+        public static int error=0x7f040010;
+        public static int grey=0x7f040002;
+        public static int holo_blue_bright=0x7f040003;
+        public static int holo_blue_light=0x7f040004;
+        public static int layar_brand=0x7f040005;
+        public static int layar_divider=0x7f04000e;
+        public static int layar_splash_color=0x7f04000d;
+        public static int layerlist_text=0x7f040019;
+        public static int list_background=0x7f04001b;
+        public static int poi_details_background=0x7f04001d;
+        public static int primary_text=0x7f04000b;
+        public static int secondary_text=0x7f04000c;
+        /**  Used for pressed state of items in actionbar 
+         */
+        public static int semitransparent_white=0x7f040006;
+        public static int share_on_facebook_button_pressed=0x7f040021;
+        public static int share_on_facebook_post_button_text=0x7f040026;
+        public static int share_on_facebook_title=0x7f040020;
+        public static int translucenter_dark=0x7f04001c;
+        public static int transparent=0x7f04000f;
+        public static int vision_ar_overlay_bar=0x7f04001e;
+        /**  Base colors 
+         */
+        public static int white=0x7f040000;
     }
     public static final class dimen {
-        /**  Default height of an action bar. 
-         */
-        public static int action_bar_default_height=0x7f060000;
-        /**  Vertical padding around action bar icons. 
-         */
-        public static int action_bar_icon_vertical_padding=0x7f060001;
-        /**  Bottom margin for action bar subtitles 
-         */
-        public static int action_bar_subtitle_bottom_margin=0x7f060005;
-        /**  Text size for action bar subtitles 
-         */
-        public static int action_bar_subtitle_text_size=0x7f060003;
-        /**  Top margin for action bar subtitles 
-         */
-        public static int action_bar_subtitle_top_margin=0x7f060004;
-        /**  Text size for action bar titles 
-         */
-        public static int action_bar_title_text_size=0x7f060002;
-        /**  Minimum width for an action button in the menu area of an action bar 
-         */
-        public static int action_button_min_width=0x7f060006;
-        /**  Action bar elements 
-         */
-        public static int actionbar_compat_height=0x7f060007;
+        public static int actionbar_height=0x7f060004;
         public static int ar_biw_top_height=0x7f060010;
         public static int ar_buttons_offset=0x7f06000f;
+        public static int big_actionbar_height=0x7f060005;
         /**  Layar stuff 
          */
         public static int launch_area_width=0x7f06000a;
         public static int layer_item_height=0x7f06000b;
+        public static int list_divider_height=0x7f060003;
+        public static int margin_big=0x7f060000;
+        public static int margin_normal=0x7f060001;
+        public static int margin_small=0x7f060002;
         public static int poi_image_height=0x7f060011;
         public static int poi_image_rounds=0x7f060013;
         public static int poi_image_width=0x7f060012;
         public static int spotlight_details_actions=0x7f06000e;
         public static int spotlight_details_lines_portrait=0x7f06000d;
         public static int spotlight_item_height=0x7f06000c;
-        public static int text_size_medium=0x7f060009;
-        public static int text_size_small=0x7f060008;
+        public static int text_size_large=0x7f060008;
+        public static int text_size_medium=0x7f060007;
+        public static int text_size_prefs_section=0x7f060009;
+        public static int text_size_small=0x7f060006;
         public static int vision_bottom_bar_height=0x7f060014;
+        public static int watermark_padding=0x7f060015;
     }
     public static final class drawable {
-        public static int ab_solid=0x7f020000;
-        public static int actionbar_item_selector=0x7f020001;
-        public static int btn_copy=0x7f020002;
-        public static int btn_copy_f=0x7f020003;
-        public static int btn_copy_n=0x7f020004;
-        public static int btn_copy_p=0x7f020005;
-        public static int btn_launch=0x7f020006;
-        public static int btn_launch_f=0x7f020007;
-        public static int btn_launch_n=0x7f020008;
-        public static int btn_launch_p=0x7f020009;
-        public static int btn_player_close=0x7f02000a;
-        public static int btn_player_close_hit=0x7f02000b;
-        public static int btn_player_close_x=0x7f02000c;
-        public static int btn_player_pause=0x7f02000d;
-        public static int btn_player_pause_hit=0x7f02000e;
-        public static int btn_player_pause_x=0x7f02000f;
-        public static int btn_player_play=0x7f020010;
-        public static int btn_player_play_hit=0x7f020011;
-        public static int btn_player_play_x=0x7f020012;
-        public static int btn_player_slider=0x7f020013;
-        public static int checkbox=0x7f020014;
-        public static int checkbox_checked=0x7f020015;
-        public static int checkbox_unchecked=0x7f020016;
-        public static int custom_home_button=0x7f020017;
-        public static int custom_menu_button=0x7f020018;
-        public static int divider=0x7f020019;
-        public static int divider_horizontal_bright=0x7f02001a;
-        public static int email_icon=0x7f02001b;
-        public static int group_border=0x7f02001c;
-        public static int group_mask=0x7f02001d;
-        public static int ic_action_next=0x7f02001e;
-        public static int ic_action_previous=0x7f02001f;
-        public static int ic_action_scan=0x7f020020;
-        public static int ic_btn_round_more=0x7f020021;
-        public static int ic_btn_round_more_disabled=0x7f020022;
-        public static int ic_btn_round_more_normal=0x7f020023;
-        public static int ic_dialog_menu_generic=0x7f020024;
-        public static int ic_media_pause=0x7f020025;
-        public static int ic_media_play=0x7f020026;
-        public static int ic_menu_about=0x7f020027;
-        public static int ic_menu_ar_custom_overflow=0x7f020028;
-        public static int ic_menu_camera=0x7f020029;
-        public static int ic_menu_layer_actions=0x7f02002a;
-        public static int ic_menu_list=0x7f02002b;
-        public static int ic_menu_mapmode=0x7f02002c;
-        public static int ic_menu_refresh=0x7f02002d;
-        public static int ic_menu_refresh_white=0x7f02002e;
-        public static int ic_menu_report_problem=0x7f02002f;
-        public static int ic_menu_settings=0x7f020030;
-        public static int ic_menu_share=0x7f020031;
-        public static int icon=0x7f020032;
-        public static int icon_3d=0x7f020033;
-        public static int icon_about=0x7f020034;
-        public static int icon_overlay=0x7f020035;
-        public static int icon_overlay_alpha=0x7f020036;
-        public static int layar_splash=0x7f020037;
-        public static int layar_watermark=0x7f020038;
-        public static int layer_details_divider=0x7f020039;
-        public static int library_icon=0x7f02003a;
-        public static int list_divider=0x7f02003b;
-        public static int list_pressed_holo_dark=0x7f02003c;
-        public static int list_selected_holo_dark=0x7f02003d;
-        public static int menu_dropdown_panel_holo_light=0x7f02003e;
-        public static int more_icon=0x7f02003f;
-        public static int no_poi_image=0x7f020040;
-        public static int poi_icon_border=0x7f020041;
-        public static int poi_icon_glow=0x7f020042;
-        public static int poi_icon_shadow=0x7f020043;
-        public static int popup_bottom_bright=0x7f020044;
-        public static int popup_bottom_medium=0x7f020045;
-        public static int popup_center_bright=0x7f020046;
-        public static int popup_top_dark=0x7f020047;
-        public static int qrcode_background=0x7f020048;
-        public static int qrcode_icon_audio=0x7f020049;
-        public static int qrcode_icon_email=0x7f02004a;
-        public static int qrcode_icon_geo=0x7f02004b;
-        public static int qrcode_icon_googleplay=0x7f02004c;
-        public static int qrcode_icon_layar=0x7f02004d;
-        public static int qrcode_icon_sms=0x7f02004e;
-        public static int qrcode_icon_tel=0x7f02004f;
-        public static int qrcode_icon_unknown=0x7f020050;
-        public static int qrcode_icon_vcard=0x7f020051;
-        public static int qrcode_icon_video=0x7f020052;
-        public static int qrcode_icon_web=0x7f020053;
-        public static int qrcode_shadow=0x7f020054;
-        public static int scan_image=0x7f020055;
-        public static int scan_toast_background=0x7f020056;
-        public static int shadow_clue_gallery=0x7f020057;
-        public static int sharing_icon=0x7f020058;
-        public static int slider_background=0x7f020059;
-        public static int splash_logo=0x7f02005a;
-        public static int splash_logo_container=0x7f02005b;
-        public static int throbber=0x7f02005c;
-        public static int throbber_dark=0x7f02005d;
-        public static int throbber_dark_x=0x7f02005e;
-        public static int throbber_inner=0x7f02005f;
-        public static int throbber_light=0x7f020060;
-        public static int throbber_light_x=0x7f020061;
-        public static int throbber_outer=0x7f020062;
-        public static int transparency=0x7f020063;
-        public static int video_bg=0x7f020064;
-        public static int video_fullscreen=0x7f020065;
-        public static int video_loader=0x7f020066;
-        public static int video_play=0x7f020067;
-        public static int video_rewind=0x7f020068;
-        public static int vision_bracket=0x7f020069;
-        public static int vision_brackets=0x7f02006a;
-        public static int vision_button_bg=0x7f02006b;
-        public static int vision_dark_bg=0x7f02006c;
-        public static int vision_no_content_bg=0x7f02006d;
-        public static int vision_no_content_icon=0x7f02006e;
-        public static int vision_status_active=0x7f02006f;
-        public static int vision_status_background=0x7f020070;
-        public static int vision_status_fail=0x7f020071;
-        public static int vision_status_inactive=0x7f020072;
-        public static int vision_status_inactive_ok=0x7f020073;
-        public static int vision_status_ok=0x7f020074;
-        public static int vision_status_transition_1=0x7f020075;
-        public static int vision_status_transition_2=0x7f020076;
-        public static int vision_status_transition_3=0x7f020077;
-        public static int vision_status_transition_4=0x7f020078;
-        public static int vision_status_transition_5=0x7f020079;
-        public static int vision_status_transition_6=0x7f02007a;
-        public static int vision_status_transition_7=0x7f02007b;
-        public static int vision_status_transition_animation=0x7f02007c;
-        public static int vision_status_transition_background=0x7f02007d;
+        public static int layar_ab_solid_shadow_holo=0x7f020000;
+        public static int layar_action_01_info=0x7f020001;
+        public static int layar_action_02_audio=0x7f020002;
+        public static int layar_action_03_video=0x7f020003;
+        public static int layar_action_04_phone=0x7f020004;
+        public static int layar_action_05_email=0x7f020005;
+        public static int layar_action_06_navigation=0x7f020006;
+        public static int layar_action_07_add=0x7f020007;
+        public static int layar_action_08_remove=0x7f020008;
+        public static int layar_action_09_edit=0x7f020009;
+        public static int layar_action_10_collect=0x7f02000a;
+        public static int layar_action_11_play_start=0x7f02000b;
+        public static int layar_action_12_play_move=0x7f02000c;
+        public static int layar_action_13_share=0x7f02000d;
+        public static int layar_action_14_pin=0x7f02000e;
+        public static int layar_action_15_checkin_checkout=0x7f02000f;
+        public static int layar_action_16_login=0x7f020010;
+        public static int layar_action_17_lock_unlock=0x7f020011;
+        public static int layar_action_18_list=0x7f020012;
+        public static int layar_action_19_money=0x7f020013;
+        public static int layar_action_20_open=0x7f020014;
+        public static int layar_action_21_close=0x7f020015;
+        public static int layar_action_22_search=0x7f020016;
+        public static int layar_action_23_update=0x7f020017;
+        public static int layar_action_24_layer_switch=0x7f020018;
+        public static int layar_action_25_yes=0x7f020019;
+        public static int layar_action_26_increase_decrease=0x7f02001a;
+        public static int layar_action_27_view=0x7f02001b;
+        public static int layar_action_28_favorite=0x7f02001c;
+        public static int layar_action_29_kill_hit=0x7f02001d;
+        public static int layar_action_30_heal=0x7f02001e;
+        public static int layar_action_31_defend=0x7f02001f;
+        public static int layar_action_32_repair=0x7f020020;
+        public static int layar_action_33_use_switch=0x7f020021;
+        public static int layar_action_34_animate=0x7f020022;
+        public static int layar_action_35_scoreboard=0x7f020023;
+        public static int layar_action_36_generic_icon=0x7f020024;
+        public static int layar_action_37_no=0x7f020025;
+        public static int layar_actionbar_item_selector=0x7f020026;
+        public static int layar_biw_action_item_background=0x7f020027;
+        public static int layar_btn_check_holo_light=0x7f020028;
+        public static int layar_btn_check_off_disabled_focused_holo_light=0x7f020029;
+        public static int layar_btn_check_off_disabled_holo_light=0x7f02002a;
+        public static int layar_btn_check_off_focused_holo_light=0x7f02002b;
+        public static int layar_btn_check_off_holo_light=0x7f02002c;
+        public static int layar_btn_check_off_pressed_holo_light=0x7f02002d;
+        public static int layar_btn_check_on_disabled_focused_holo_light=0x7f02002e;
+        public static int layar_btn_check_on_disabled_holo_light=0x7f02002f;
+        public static int layar_btn_check_on_focused_holo_light=0x7f020030;
+        public static int layar_btn_check_on_holo_light=0x7f020031;
+        public static int layar_btn_check_on_pressed_holo_light=0x7f020032;
+        public static int layar_btn_default_disabled_focused_holo_light=0x7f020033;
+        public static int layar_btn_default_disabled_holo_light=0x7f020034;
+        public static int layar_btn_default_focused_holo_light=0x7f020035;
+        public static int layar_btn_default_holo_light=0x7f020036;
+        public static int layar_btn_default_normal_holo_light=0x7f020037;
+        public static int layar_btn_default_pressed_holo_light=0x7f020038;
+        public static int layar_btn_new_shutter=0x7f020039;
+        public static int layar_btn_player_close=0x7f02003a;
+        public static int layar_btn_player_close_hit=0x7f02003b;
+        public static int layar_btn_player_close_x=0x7f02003c;
+        public static int layar_btn_player_pause=0x7f02003d;
+        public static int layar_btn_player_pause_hit=0x7f02003e;
+        public static int layar_btn_player_pause_x=0x7f02003f;
+        public static int layar_btn_player_play=0x7f020040;
+        public static int layar_btn_player_play_hit=0x7f020041;
+        public static int layar_btn_player_play_x=0x7f020042;
+        public static int layar_btn_player_slider=0x7f020043;
+        public static int layar_btn_radio_holo_light=0x7f020044;
+        public static int layar_btn_radio_off_disabled_focused_holo_light=0x7f020045;
+        public static int layar_btn_radio_off_disabled_holo_light=0x7f020046;
+        public static int layar_btn_radio_off_focused_holo_light=0x7f020047;
+        public static int layar_btn_radio_off_holo_light=0x7f020048;
+        public static int layar_btn_radio_off_pressed_holo_light=0x7f020049;
+        public static int layar_btn_radio_on_disabled_focused_holo_light=0x7f02004a;
+        public static int layar_btn_radio_on_disabled_holo_light=0x7f02004b;
+        public static int layar_btn_radio_on_focused_holo_light=0x7f02004c;
+        public static int layar_btn_radio_on_holo_light=0x7f02004d;
+        public static int layar_btn_radio_on_pressed_holo_light=0x7f02004e;
+        public static int layar_btn_shutter_default=0x7f02004f;
+        public static int layar_btn_shutter_pressed=0x7f020050;
+        public static int layar_checkbox=0x7f020051;
+        public static int layar_checkbox_checked=0x7f020052;
+        public static int layar_checkbox_unchecked=0x7f020053;
+        public static int layar_custom_menu_button=0x7f020054;
+        public static int layar_divider=0x7f020055;
+        public static int layar_divider_horizontal_bright=0x7f020056;
+        public static int layar_edit_text_holo_light=0x7f020057;
+        public static int layar_expander_open_holo_light=0x7f020058;
+        public static int layar_filters_background=0x7f020059;
+        public static int layar_ic_action_save=0x7f02005a;
+        public static int layar_ic_dialog_menu_generic=0x7f02005b;
+        public static int layar_ic_logo=0x7f02005c;
+        public static int layar_ic_menu_about=0x7f02005d;
+        public static int layar_ic_menu_ar_custom_overflow=0x7f02005e;
+        public static int layar_ic_menu_camera=0x7f02005f;
+        public static int layar_ic_menu_layer_actions=0x7f020060;
+        public static int layar_ic_menu_list=0x7f020061;
+        public static int layar_ic_menu_mapmode=0x7f020062;
+        public static int layar_ic_menu_refresh=0x7f020063;
+        public static int layar_ic_menu_refresh_white=0x7f020064;
+        public static int layar_ic_menu_report_problem=0x7f020065;
+        public static int layar_ic_menu_settings=0x7f020066;
+        public static int layar_ic_menu_share=0x7f020067;
+        public static int layar_list_focused_holo=0x7f020068;
+        public static int layar_list_longpressed_holo=0x7f020069;
+        public static int layar_list_pressed_holo_light=0x7f02006a;
+        public static int layar_list_selector_background_transition_holo_light=0x7f02006b;
+        public static int layar_list_selector_disabled_holo_light=0x7f02006c;
+        public static int layar_list_selector_holo_light=0x7f02006d;
+        public static int layar_menu_dropdown_panel_holo_light=0x7f02006e;
+        public static int layar_no_poi_image=0x7f02006f;
+        public static int layar_poi_icon_border=0x7f020070;
+        public static int layar_poi_icon_glow=0x7f020071;
+        public static int layar_poi_icon_shadow=0x7f020072;
+        public static int layar_popup_bottom_bright=0x7f020073;
+        public static int layar_popup_bottom_medium=0x7f020074;
+        public static int layar_popup_center_bright=0x7f020075;
+        public static int layar_popup_top_dark=0x7f020076;
+        public static int layar_progress_bg_holo_light=0x7f020077;
+        public static int layar_progress_horizontal_holo_light=0x7f020078;
+        public static int layar_progress_indeterminate_horizontal_holo_light=0x7f020079;
+        public static int layar_progress_primary_holo=0x7f02007a;
+        public static int layar_progress_secondary_holo=0x7f02007b;
+        public static int layar_progressbar_indeterminate_holo1=0x7f02007c;
+        public static int layar_progressbar_indeterminate_holo2=0x7f02007d;
+        public static int layar_progressbar_indeterminate_holo3=0x7f02007e;
+        public static int layar_progressbar_indeterminate_holo4=0x7f02007f;
+        public static int layar_progressbar_indeterminate_holo5=0x7f020080;
+        public static int layar_progressbar_indeterminate_holo6=0x7f020081;
+        public static int layar_progressbar_indeterminate_holo7=0x7f020082;
+        public static int layar_progressbar_indeterminate_holo8=0x7f020083;
+        public static int layar_qrcode_background=0x7f020084;
+        public static int layar_qrcode_icon_audio=0x7f020085;
+        public static int layar_qrcode_icon_email=0x7f020086;
+        public static int layar_qrcode_icon_geo=0x7f020087;
+        public static int layar_qrcode_icon_googleplay=0x7f020088;
+        public static int layar_qrcode_icon_layar=0x7f020089;
+        public static int layar_qrcode_icon_sms=0x7f02008a;
+        public static int layar_qrcode_icon_tel=0x7f02008b;
+        public static int layar_qrcode_icon_unknown=0x7f02008c;
+        public static int layar_qrcode_icon_vcard=0x7f02008d;
+        public static int layar_qrcode_icon_video=0x7f02008e;
+        public static int layar_qrcode_icon_web=0x7f02008f;
+        public static int layar_radar=0x7f020090;
+        public static int layar_scrubber_control_disabled_holo=0x7f020091;
+        public static int layar_scrubber_control_focused_holo=0x7f020092;
+        public static int layar_scrubber_control_normal_holo=0x7f020093;
+        public static int layar_scrubber_control_pressed_holo=0x7f020094;
+        public static int layar_scrubber_control_selector_holo_light=0x7f020095;
+        public static int layar_scrubber_primary_holo=0x7f020096;
+        public static int layar_scrubber_progress_horizontal_holo_light=0x7f020097;
+        public static int layar_scrubber_secondary_holo=0x7f020098;
+        public static int layar_scrubber_track_holo_light=0x7f020099;
+        public static int layar_share_on_facebook_post_button_background=0x7f02009a;
+        public static int layar_slider_background=0x7f02009b;
+        public static int layar_spinner=0x7f02009c;
+        public static int layar_spinner_background_holo_light=0x7f02009d;
+        public static int layar_spinner_default_holo_light=0x7f02009e;
+        public static int layar_spinner_disabled_holo_light=0x7f02009f;
+        public static int layar_spinner_focused_holo_light=0x7f0200a0;
+        public static int layar_spinner_pressed_holo_light=0x7f0200a1;
+        public static int layar_splash=0x7f0200a2;
+        public static int layar_splash_logo=0x7f0200a3;
+        public static int layar_splash_logo_container=0x7f0200a4;
+        public static int layar_spot=0x7f0200a5;
+        public static int layar_spot_focus=0x7f0200a6;
+        public static int layar_textfield_activated_holo_light=0x7f0200a7;
+        public static int layar_textfield_default_holo_light=0x7f0200a8;
+        public static int layar_textfield_disabled_focused_holo_light=0x7f0200a9;
+        public static int layar_textfield_disabled_holo_light=0x7f0200aa;
+        public static int layar_textfield_focused_holo_light=0x7f0200ab;
+        public static int layar_throbber=0x7f0200ac;
+        public static int layar_throbber_dark=0x7f0200ad;
+        public static int layar_throbber_dark_x=0x7f0200ae;
+        public static int layar_throbber_light=0x7f0200af;
+        public static int layar_throbber_light_x=0x7f0200b0;
+        public static int layar_tip_nothing_found_1=0x7f0200b1;
+        public static int layar_tip_nothing_found_2=0x7f0200b2;
+        public static int layar_tip_point_back_at_page=0x7f0200b3;
+        public static int layar_transparency=0x7f0200b4;
+        public static int layar_video_fullscreen=0x7f0200b5;
+        public static int layar_video_play=0x7f0200b6;
+        public static int layar_vision_line=0x7f0200b7;
+        public static int layar_vision_no_content_bg=0x7f0200b8;
+        public static int layar_vision_no_content_icon=0x7f0200b9;
+        public static int layar_watermark=0x7f0200ba;
+        public static int layer_details_divider=0x7f0200bb;
     }
     public static final class id {
-        public static int action_bar_title=0x7f09001c;
+        public static int action_bar_title=0x7f09000e;
+        public static int attribution=0x7f090068;
         public static int audioLayout=0x7f090000;
-        public static int back=0x7f090059;
-        public static int bottom_bar=0x7f090018;
-        public static int brackets=0x7f090013;
-        public static int btnClose=0x7f09004f;
+        public static int audio_view=0x7f090044;
+        public static int biw=0x7f090043;
+        public static int biwActions=0x7f09006a;
+        public static int biwRight=0x7f090065;
+        public static int biwTop=0x7f090061;
+        public static int briefLine2=0x7f090067;
+        public static int briefTitle=0x7f090064;
+        public static int btnClose=0x7f090060;
+        public static int btnMore=0x7f09002b;
         public static int btnPlay=0x7f090001;
-        public static int btn_refresh=0x7f09001e;
-        public static int btn_share=0x7f09001d;
-        public static int buttonPanel=0x7f09002f;
-        public static int content=0x7f090007;
-        public static int content_area=0x7f090012;
-        public static int copy_link_button=0x7f09003f;
+        public static int btn_refresh=0x7f090024;
+        public static int btn_save=0x7f09000f;
+        public static int btn_share=0x7f090010;
+        public static int buttonBar=0x7f090008;
+        public static int buttonCancel=0x7f09000a;
+        public static int buttonPanel=0x7f090038;
+        public static int buttonSave=0x7f090009;
+        public static int content=0x7f09000c;
+        public static int copy_link_button=0x7f09004f;
         public static int currentPosistion=0x7f090003;
-        public static int current_layer=0x7f09005a;
-        public static int custom_home_button=0x7f090050;
-        public static int custom_home_icon=0x7f090051;
-        public static int custom_home_label=0x7f090052;
-        public static int custom_menu_button=0x7f090053;
-        public static int description=0x7f090058;
-        public static int distanceIcon=0x7f090046;
-        public static int distanceString=0x7f090047;
-        public static int divider=0x7f09002c;
+        public static int custom_menu_button=0x7f09006b;
+        public static int description=0x7f090073;
+        public static int distance=0x7f090069;
+        public static int divider=0x7f090035;
         public static int duration=0x7f090004;
-        public static int forward=0x7f09005d;
-        public static int glsurfaceview=0x7f090010;
-        public static int home=0x7f09001b;
-        public static int icon=0x7f09002a;
-        public static int imageBox=0x7f090023;
-        public static int imageShareScreenIcon=0x7f09000e;
-        public static int imageThrobber=0x7f09004a;
-        public static int imageThrobberShare=0x7f09002e;
-        public static int info_area=0x7f090039;
-        public static int launchArea=0x7f090045;
-        public static int layar_list_item=0x7f090044;
-        public static int layer_description=0x7f090042;
-        public static int layer_header=0x7f090034;
-        public static int layer_icon=0x7f09005b;
-        public static int layer_list_desc=0x7f09003c;
-        public static int layer_list_icon=0x7f090036;
-        public static int layer_list_icongroup=0x7f090035;
-        public static int layer_list_publisher=0x7f09003a;
-        public static int layer_list_title=0x7f09003b;
-        public static int layer_name=0x7f09005c;
-        public static int layer_rate=0x7f090041;
-        public static int layer_screenshot=0x7f090043;
-        public static int layer_type_icon=0x7f090037;
-        public static int layer_url_text=0x7f09003e;
-        public static int linkBar=0x7f09003d;
-        public static int loadingPanel=0x7f09001f;
-        public static int loadingProgress=0x7f090020;
-        public static int menu_ar=0x7f09006d;
-        public static int menu_layer_actions=0x7f090071;
-        public static int menu_layer_details=0x7f090073;
-        public static int menu_layer_filters=0x7f090072;
-        public static int menu_list=0x7f09006f;
-        public static int menu_map=0x7f09006e;
-        public static int menu_open_browser=0x7f090074;
-        public static int menu_refresh_progress=0x7f09006c;
-        public static int menu_screenshot=0x7f090070;
-        public static int message=0x7f090026;
-        public static int messageArea=0x7f09000c;
-        public static int messageIcon=0x7f090024;
-        public static int messageIconProgress=0x7f090025;
-        public static int messageLimit=0x7f090055;
-        public static int messageText=0x7f090054;
-        public static int message_area=0x7f09002d;
-        public static int message_area_linear=0x7f090022;
-        public static int message_input_area=0x7f09000d;
-        public static int negativeButton=0x7f090031;
-        public static int poiAttribution=0x7f09004e;
-        public static int poiDetails=0x7f09004b;
-        public static int poiImage=0x7f090049;
-        public static int poiInfo=0x7f090048;
-        public static int poiLine2=0x7f09004d;
-        public static int poiTitle=0x7f09004c;
-        public static int positiveButton=0x7f090030;
-        public static int progress=0x7f090032;
+        public static int filterControl=0x7f09006c;
+        public static int filterLabel=0x7f09002a;
+        public static int filterValue=0x7f09006d;
+        public static int filtersRoot=0x7f09000b;
+        public static int glSurfaceView=0x7f09003d;
+        public static int home=0x7f09000d;
+        public static int icon=0x7f090028;
+        public static int imageBox=0x7f09002d;
+        public static int imageShareScreenIcon=0x7f090021;
+        public static int imageThrobberShare=0x7f090037;
+        public static int info_area=0x7f090049;
+        public static int label=0x7f090029;
+        public static int layar_content_fragment=0x7f090059;
+        public static int layar_controller_fragment=0x7f09005b;
+        public static int layar_screenshot_fragment=0x7f09005c;
+        public static int layar_sdk_fragment=0x7f090058;
+        public static int layar_sdk_layout=0x7f090057;
+        public static int layar_watermark=0x7f09005a;
+        public static int layerLogo=0x7f09006e;
+        public static int layerTitle=0x7f09006f;
+        public static int layer_description=0x7f090052;
+        public static int layer_header=0x7f090045;
+        public static int layer_list_desc=0x7f09004c;
+        public static int layer_list_icon=0x7f090047;
+        public static int layer_list_icongroup=0x7f090046;
+        public static int layer_list_publisher=0x7f09004a;
+        public static int layer_list_title=0x7f09004b;
+        public static int layer_rate=0x7f090051;
+        public static int layer_screenshot=0x7f090053;
+        public static int layer_url_text=0x7f09004e;
+        public static int linkBar=0x7f09004d;
+        public static int loadingPanel=0x7f090025;
+        public static int loadingProgress=0x7f090026;
+        public static int logo=0x7f090063;
+        public static int logoContainer=0x7f090062;
+        public static int menu_ar=0x7f090075;
+        public static int menu_layer_actions=0x7f090079;
+        public static int menu_layer_details=0x7f09007b;
+        public static int menu_layer_filters=0x7f09007a;
+        public static int menu_list=0x7f090077;
+        public static int menu_map=0x7f090076;
+        public static int menu_open_browser=0x7f09007c;
+        public static int menu_refresh_progress=0x7f090074;
+        public static int menu_screenshot=0x7f090078;
+        public static int message=0x7f090030;
+        public static int messageArea=0x7f09001f;
+        public static int messageIcon=0x7f09002e;
+        public static int messageIconProgress=0x7f09002f;
+        public static int messageLimit=0x7f090071;
+        public static int messageText=0x7f090070;
+        public static int message_area=0x7f090036;
+        public static int message_area_linear=0x7f09002c;
+        public static int message_input_area=0x7f090020;
+        public static int negativeButton=0x7f09003a;
+        public static int nothing_found_widget=0x7f090056;
+        public static int poiImage=0x7f090066;
+        public static int positiveButton=0x7f090039;
+        public static int progress=0x7f09003b;
         public static int progressLoading=0x7f090005;
-        public static int progressText=0x7f090033;
-        public static int rotateLayout=0x7f090027;
-        public static int scan_button=0x7f090060;
-        public static int scan_hint=0x7f09005f;
-        public static int scan_in_progress=0x7f090015;
-        public static int scan_no_results=0x7f090017;
-        public static int scan_point_hint=0x7f090066;
-        public static int scan_point_title=0x7f090065;
-        public static int scan_status=0x7f090016;
-        public static int scan_tip=0x7f090014;
-        public static int scan_title=0x7f09005e;
-        public static int screenshot_button_retake=0x7f09000a;
-        public static int screenshot_button_take=0x7f090057;
-        public static int screenshot_button_use=0x7f090009;
-        public static int screenshot_imageview=0x7f090008;
-        public static int screenshot_take_bar=0x7f09001a;
-        public static int shadow=0x7f090040;
-        public static int shareButton=0x7f09000b;
+        public static int progressText=0x7f09003c;
+        public static int root_layout=0x7f090023;
+        public static int rotateLayout=0x7f090031;
+        public static int scanView=0x7f090054;
+        public static int screenshot_button=0x7f090040;
+        public static int screenshot_flush=0x7f09003f;
+        public static int screenshot_hint=0x7f090041;
+        public static int screenshot_imageview=0x7f090011;
+        public static int screenshot_layout=0x7f09003e;
+        public static int shadow=0x7f090050;
+        public static int shareButton=0x7f09001e;
+        public static int share_on_facebook_image_to_share=0x7f090019;
+        public static int share_on_facebook_link=0x7f09001c;
+        public static int share_on_facebook_link_description=0x7f09001d;
+        public static int share_on_facebook_link_layout=0x7f09001a;
+        public static int share_on_facebook_link_title=0x7f09001b;
+        public static int share_on_facebook_message=0x7f090018;
+        public static int share_on_facebook_message_layout=0x7f090016;
+        public static int share_on_facebook_post=0x7f090015;
+        public static int share_on_facebook_title_divider=0x7f090014;
+        public static int share_on_facebook_title_layout=0x7f090012;
+        public static int share_on_facebook_user_photo=0x7f090017;
+        public static int share_on_facebook_window_title=0x7f090013;
         public static int status=0x7f090006;
-        public static int status_step_1=0x7f090067;
-        public static int status_step_2=0x7f090068;
-        public static int status_step_3=0x7f090069;
-        public static int status_transition_1=0x7f09006a;
-        public static int status_transition_2=0x7f09006b;
-        public static int text=0x7f090056;
-        public static int throbber=0x7f090038;
+        public static int status_view=0x7f090042;
+        public static int text=0x7f090072;
+        public static int throbber=0x7f090048;
         public static int timeline=0x7f090002;
-        public static int tip_layout=0x7f090064;
-        public static int title=0x7f09002b;
-        public static int title_template=0x7f090029;
-        public static int topPanel=0x7f090028;
-        public static int top_bar=0x7f090011;
-        public static int video=0x7f09000f;
-        public static int vision_nothing_found=0x7f090061;
-        public static int vision_nothing_found_2=0x7f090062;
-        public static int vision_nothing_found_continue=0x7f090063;
-        public static int watermark=0x7f090019;
-        public static int webview=0x7f090021;
+        public static int tip_image=0x7f09005e;
+        public static int tip_text=0x7f09005f;
+        public static int tip_title=0x7f09005d;
+        public static int title=0x7f090034;
+        public static int titleBar=0x7f090007;
+        public static int title_template=0x7f090033;
+        public static int topPanel=0x7f090032;
+        public static int txt_tap_to_scan=0x7f090055;
+        public static int video=0x7f090022;
+        public static int webview=0x7f090027;
     }
     public static final class layout {
         public static int layar_activity_audio=0x7f030000;
-        public static int layar_activity_layer_details=0x7f030001;
-        public static int layar_activity_screenshot=0x7f030002;
-        public static int layar_activity_share_social=0x7f030003;
-        public static int layar_activity_video=0x7f030004;
-        public static int layar_activity_vision=0x7f030005;
-        public static int layar_activity_web=0x7f030006;
-        public static int layar_dialog_message_with_icon=0x7f030007;
-        public static int layar_dialog_smart=0x7f030008;
-        public static int layar_dialog_smart_progress=0x7f030009;
-        public static int layar_fragment_layer_details=0x7f03000a;
-        public static int layar_list_item=0x7f03000b;
-        public static int layar_view_audio=0x7f03000c;
-        public static int layar_view_custom_home_button=0x7f03000d;
-        public static int layar_view_custom_menu_button=0x7f03000e;
-        public static int layar_view_divider=0x7f03000f;
-        public static int layar_view_message_input=0x7f030010;
-        public static int layar_view_poi_action_item=0x7f030011;
-        public static int layar_view_qrcode_plaintext=0x7f030012;
-        public static int layar_view_qrcode_template=0x7f030013;
-        public static int layar_view_take_screenshot_bar=0x7f030014;
-        public static int layar_view_unsupported_content=0x7f030015;
-        public static int layar_view_vision_loading=0x7f030016;
-        public static int layar_view_vision_nav_bar=0x7f030017;
-        public static int layar_view_vision_no_content=0x7f030018;
-        public static int layar_view_vision_scan_brackets=0x7f030019;
-        public static int layar_view_vision_scan_no_results=0x7f03001a;
-        public static int layar_view_vision_scan_toast=0x7f03001b;
-        public static int layar_view_vision_status=0x7f03001c;
+        public static int layar_activity_filter_settings=0x7f030001;
+        public static int layar_activity_layer_details=0x7f030002;
+        public static int layar_activity_screenshot=0x7f030003;
+        public static int layar_activity_share_on_facebook=0x7f030004;
+        public static int layar_activity_share_social=0x7f030005;
+        public static int layar_activity_video=0x7f030006;
+        public static int layar_activity_web=0x7f030007;
+        public static int layar_custom_menu_item=0x7f030008;
+        public static int layar_dialog_filter=0x7f030009;
+        public static int layar_dialog_message_with_icon=0x7f03000a;
+        public static int layar_dialog_smart=0x7f03000b;
+        public static int layar_dialog_smart_progress=0x7f03000c;
+        public static int layar_fragment_ar=0x7f03000d;
+        public static int layar_fragment_create_screenshot=0x7f03000e;
+        public static int layar_fragment_geo=0x7f03000f;
+        public static int layar_fragment_layer_details=0x7f030010;
+        public static int layar_fragment_vision=0x7f030011;
+        public static int layar_sdk_activity=0x7f030012;
+        public static int layar_sdk_fragment=0x7f030013;
+        public static int layar_tip_view=0x7f030014;
+        public static int layar_tip_view_contents=0x7f030015;
+        public static int layar_view_audio=0x7f030016;
+        public static int layar_view_biw=0x7f030017;
+        public static int layar_view_custom_menu_button=0x7f030018;
+        public static int layar_view_divider=0x7f030019;
+        public static int layar_view_filter_button=0x7f03001a;
+        public static int layar_view_filter_range=0x7f03001b;
+        public static int layar_view_filter_searchbox=0x7f03001c;
+        public static int layar_view_filter_slider=0x7f03001d;
+        public static int layar_view_layer_header=0x7f03001e;
+        public static int layar_view_message_input=0x7f03001f;
+        public static int layar_view_poi_action_item=0x7f030020;
+        public static int layar_view_qrcode_plaintext=0x7f030021;
+        public static int layar_view_qrcode_template=0x7f030022;
+        public static int layar_view_section_header=0x7f030023;
+        public static int layar_view_unsupported_content=0x7f030024;
+        public static int layar_view_vision_no_content=0x7f030025;
     }
     public static final class menu {
         public static int layar_activity_geo=0x7f080000;
@@ -363,12 +453,13 @@ public final class R {
  Action Chooser 
  Action Chooser 
          */
-        public static int action_chooser_title=0x7f050035;
+        public static int action_chooser_title=0x7f05002e;
         public static int action_scan=0x7f05000b;
         public static int action_share=0x7f05000c;
         public static int apply=0x7f050005;
-        public static int audio_error=0x7f05004b;
-        public static int audio_error_title=0x7f05004c;
+        public static int ar_view=0x7f05008d;
+        public static int audio_error=0x7f050045;
+        public static int audio_error_title=0x7f050046;
         /**  Audio 
  Audio 
  Audio 
@@ -377,8 +468,9 @@ public final class R {
  Audio 
  Audio 
          */
-        public static int audio_loading=0x7f05004a;
+        public static int audio_loading=0x7f050044;
         public static int cancel=0x7f050008;
+        public static int cant_take_screenshot=0x7f050089;
         public static int continue_=0x7f050009;
         /**  DetailsView 
  DetailsView 
@@ -388,11 +480,11 @@ public final class R {
  DetailsView 
  DetailsView 
          */
-        public static int copy_link=0x7f05004e;
-        public static int copy_message=0x7f05004f;
-        public static int copy_message_fail=0x7f050050;
+        public static int copy_link=0x7f050048;
+        public static int copy_message=0x7f050049;
+        public static int copy_message_fail=0x7f05004a;
         public static int country_code_default=0x7f050000;
-        public static int custom_filter_layer_settings=0x7f050066;
+        public static int custom_filter_layer_settings=0x7f05005f;
         /**  Layer custom filters 
  Layer custom filters 
  Layer custom filters 
@@ -401,16 +493,16 @@ public final class R {
  Layer custom filters 
  Layer custom filters 
          */
-        public static int custom_filter_range_settings=0x7f050064;
-        public static int custom_filter_range_text=0x7f050065;
-        public static int developer=0x7f05005f;
+        public static int custom_filter_range_settings=0x7f05005d;
+        public static int custom_filter_range_text=0x7f05005e;
+        public static int developer=0x7f050059;
         public static int distance_unit_default=0x7f050001;
-        public static int download_layar_button=0x7f05006c;
-        public static int download_layar_description=0x7f05006b;
-        public static int download_layar_title=0x7f05006a;
-        public static int download_message=0x7f050068;
+        public static int download_layar_button=0x7f050065;
+        public static int download_layar_description=0x7f050064;
+        public static int download_layar_title=0x7f050063;
+        public static int download_message=0x7f050061;
         public static int ellipsis=0x7f05000d;
-        public static int email=0x7f050060;
+        public static int email=0x7f05005a;
         public static int error_layer_deleted=0x7f050017;
         public static int error_location_provider_message=0x7f05001b;
         public static int error_location_provider_title=0x7f05001a;
@@ -430,7 +522,8 @@ public final class R {
  Social stuff 
  Social stuff 
          */
-        public static int facebook=0x7f05005d;
+        public static int facebook=0x7f050057;
+        public static int filters=0x7f05008f;
         public static int layer=0x7f05000a;
         /**  Layer actions 
  Layer actions 
@@ -438,11 +531,11 @@ public final class R {
  Layer actions 
  Layer actions 
  Layer actions 
- Layer actions 
          */
-        public static int layer_actions=0x7f050061;
-        public static int layer_details_body=0x7f05003d;
-        public static int layer_details_subject=0x7f05003c;
+        public static int layer_actions=0x7f050091;
+        public static int layer_details_body=0x7f050036;
+        public static int layer_details_subject=0x7f050035;
+        public static int layer_info=0x7f050090;
         /**  Feedback 
  Feedback 
  Feedback 
@@ -451,8 +544,9 @@ public final class R {
  Feedback 
  Feedback 
          */
-        public static int layer_report_problem=0x7f050062;
-        public static int layer_report_problem_body=0x7f05006e;
+        public static int layer_report_problem=0x7f05005b;
+        public static int layer_report_problem_body=0x7f050067;
+        public static int layer_screenshot=0x7f050092;
         /**  DetailsView activity 
  DetailsView activity 
  DetailsView activity 
@@ -461,8 +555,8 @@ public final class R {
  DetailsView activity 
  DetailsView activity 
          */
-        public static int leaving_message=0x7f050067;
-        public static int menu_about=0x7f050030;
+        public static int leaving_message=0x7f050060;
+        public static int map_view=0x7f05008b;
         /**  Menu Options 
  Menu Options 
  Menu Options 
@@ -471,11 +565,11 @@ public final class R {
  Menu Options 
  Menu Options 
          */
-        public static int menu_filter=0x7f05002c;
-        public static int menu_goto_ar=0x7f050031;
-        public static int menu_layer_info=0x7f05002e;
-        public static int menu_refresh=0x7f05002d;
-        public static int menu_screenshot=0x7f05002f;
+        public static int menu_filter=0x7f050026;
+        public static int menu_goto_ar=0x7f05002a;
+        public static int menu_layer_info=0x7f050028;
+        public static int menu_refresh=0x7f050027;
+        public static int menu_screenshot=0x7f050029;
         /**  Problem reporting 
  Problem reporting 
  Problem reporting 
@@ -484,7 +578,7 @@ public final class R {
  Problem reporting 
  Problem reporting 
          */
-        public static int multiple_login_email_address=0x7f05006d;
+        public static int multiple_login_email_address=0x7f050066;
         public static int no=0x7f050004;
         public static int no_connection_message=0x7f05000f;
         public static int no_connection_settings=0x7f050010;
@@ -514,7 +608,7 @@ public final class R {
          */
         public static int ok=0x7f050002;
         public static int openGPSSettingPrompt=0x7f050012;
-        public static int open_in_browser=0x7f050069;
+        public static int open_in_browser=0x7f050062;
         /**  POI actions 
  POI actions 
  POI actions 
@@ -523,12 +617,13 @@ public final class R {
  POI actions 
  POI actions 
          */
-        public static int poi_action_directions=0x7f050047;
-        public static int poi_action_lock=0x7f050048;
-        public static int poi_action_unlock=0x7f050049;
-        public static int progress_analyzing=0x7f05005a;
-        public static int progress_getting_content=0x7f05005c;
-        public static int progress_getting_results=0x7f05005b;
+        public static int poi_action_directions=0x7f050040;
+        public static int poi_action_lock=0x7f050041;
+        public static int poi_action_more=0x7f050043;
+        public static int poi_action_unlock=0x7f050042;
+        public static int progress_analyzing=0x7f050054;
+        public static int progress_getting_content=0x7f050056;
+        public static int progress_getting_results=0x7f050055;
         /**  Progress 
  Progress 
  Progress 
@@ -537,23 +632,24 @@ public final class R {
  Progress 
  Progress 
          */
-        public static int progress_loading=0x7f050058;
-        public static int progress_processing=0x7f050059;
-        public static int qrcode_audio=0x7f05006f;
-        public static int qrcode_audio_text=0x7f050070;
-        public static int qrcode_email=0x7f050071;
-        public static int qrcode_geo=0x7f050072;
-        public static int qrcode_geo_text=0x7f050073;
-        public static int qrcode_googleplay=0x7f05007c;
-        public static int qrcode_layer=0x7f050074;
-        public static int qrcode_sms=0x7f050075;
-        public static int qrcode_tel=0x7f050076;
-        public static int qrcode_unknown=0x7f050077;
-        public static int qrcode_unsuported_action=0x7f05007d;
-        public static int qrcode_vcard=0x7f050078;
-        public static int qrcode_video=0x7f050079;
-        public static int qrcode_video_text=0x7f05007a;
-        public static int qrcode_web=0x7f05007b;
+        public static int progress_loading=0x7f050052;
+        public static int progress_processing=0x7f050053;
+        public static int qrcode_audio=0x7f050068;
+        public static int qrcode_audio_text=0x7f050069;
+        public static int qrcode_email=0x7f05006a;
+        public static int qrcode_geo=0x7f05006b;
+        public static int qrcode_geo_text=0x7f05006c;
+        public static int qrcode_googleplay=0x7f050075;
+        public static int qrcode_layer=0x7f05006d;
+        public static int qrcode_sms=0x7f05006e;
+        public static int qrcode_tel=0x7f05006f;
+        public static int qrcode_unknown=0x7f050070;
+        public static int qrcode_unsuported_action=0x7f050076;
+        public static int qrcode_vcard=0x7f050071;
+        public static int qrcode_video=0x7f050072;
+        public static int qrcode_video_text=0x7f050073;
+        public static int qrcode_web=0x7f050074;
+        public static int refresh_layer=0x7f05008c;
         public static int save=0x7f050006;
         /**  Screenshot 
  Screenshot 
@@ -563,15 +659,17 @@ public final class R {
  Screenshot 
  Screenshot 
          */
-        public static int screenshot_hold_steady=0x7f05003f;
-        public static int screenshot_no_sdcard=0x7f050041;
-        public static int screenshot_out_of_memory=0x7f050042;
-        public static int screenshot_preview=0x7f050044;
-        public static int screenshot_processsing=0x7f050040;
-        public static int screenshot_retake=0x7f050043;
-        public static int screenshot_save_to_library=0x7f050046;
-        public static int screenshot_send_email=0x7f050045;
-        public static int share_chooser_title=0x7f050037;
+        public static int screenshot_hold_steady=0x7f050038;
+        public static int screenshot_no_sdcard=0x7f05003a;
+        public static int screenshot_out_of_memory=0x7f05003b;
+        public static int screenshot_preview=0x7f05003d;
+        public static int screenshot_processsing=0x7f050039;
+        public static int screenshot_retake=0x7f05003c;
+        public static int screenshot_save_to_library=0x7f05003f;
+        public static int screenshot_saved=0x7f05008a;
+        public static int screenshot_send_email=0x7f05003e;
+        public static int share=0x7f05008e;
+        public static int share_chooser_title=0x7f050030;
         /**  Sharing 
  Sharing 
  Sharing 
@@ -580,14 +678,15 @@ public final class R {
  Sharing 
  Sharing 
          */
-        public static int share_dialog_title=0x7f050036;
-        public static int share_fail=0x7f05003b;
-        public static int share_layer=0x7f050038;
-        public static int share_on_facebook_add_your_thougth=0x7f050083;
-        public static int share_on_facebook_post=0x7f05007f;
-        public static int share_on_facebook_share=0x7f050082;
-        public static int share_on_facebook_share_link=0x7f050081;
-        public static int share_on_facebook_whats_on_your_mind=0x7f050080;
+        public static int share_dialog_title=0x7f05002f;
+        public static int share_fail=0x7f050034;
+        public static int share_generic_message=0x7f05007d;
+        public static int share_layer=0x7f050031;
+        public static int share_on_facebook_add_your_thougth=0x7f05007c;
+        public static int share_on_facebook_post=0x7f050078;
+        public static int share_on_facebook_share=0x7f05007b;
+        public static int share_on_facebook_share_link=0x7f05007a;
+        public static int share_on_facebook_whats_on_your_mind=0x7f050079;
         /**  Share on Facebook 
  Share on Facebook 
  Share on Facebook 
@@ -596,7 +695,7 @@ public final class R {
  Share on Facebook 
  Share on Facebook 
          */
-        public static int share_on_facebook_write_post=0x7f05007e;
+        public static int share_on_facebook_write_post=0x7f050077;
         /**  supressed 
  supressed 
  supressed 
@@ -605,9 +704,10 @@ public final class R {
  supressed 
  supressed 
          */
-        public static int share_screenshot=0x7f050039;
-        public static int share_status=0x7f05003e;
-        public static int share_success_message=0x7f05003a;
+        public static int share_screenshot=0x7f050032;
+        public static int share_status=0x7f050037;
+        public static int share_success_message=0x7f050033;
+        public static int share_via=0x7f05007e;
         /**  POIDetails strings 
  POIDetails strings 
  POIDetails strings 
@@ -616,10 +716,10 @@ public final class R {
  POIDetails strings 
  POIDetails strings 
          */
-        public static int spot_actions=0x7f050063;
-        public static int status_1_result_found=0x7f050054;
-        public static int status_authentication_required=0x7f050052;
-        public static int status_no_content_available=0x7f050056;
+        public static int spot_actions=0x7f05005c;
+        public static int status_1_result_found=0x7f05004e;
+        public static int status_authentication_required=0x7f05004c;
+        public static int status_no_content_available=0x7f050050;
         /**  Status results 
  Status results 
  Status results 
@@ -628,8 +728,8 @@ public final class R {
  Status results 
  Status results 
          */
-        public static int status_no_results_found=0x7f050053;
-        public static int status_something_went_wrong=0x7f050057;
+        public static int status_no_results_found=0x7f05004d;
+        public static int status_something_went_wrong=0x7f050051;
         /**  Status 
  Status 
  Status 
@@ -638,8 +738,34 @@ public final class R {
  Status 
  Status 
          */
-        public static int status_waiting_location=0x7f050051;
-        public static int status_x_results_found=0x7f050055;
+        public static int status_waiting_location=0x7f05004b;
+        public static int status_x_results_found=0x7f05004f;
+        public static int tap_to_dismiss=0x7f050087;
+        /**  Take screenshot 
+ Take screenshot 
+ Take screenshot 
+ Take screenshot 
+ Take screenshot 
+ Take screenshot 
+ Take screenshot 
+         */
+        public static int tap_to_take_screenshot=0x7f050088;
+        public static int tip_nothing_found=0x7f050081;
+        public static int tip_nothing_found_hint_1=0x7f050082;
+        public static int tip_nothing_found_hint_2=0x7f050083;
+        public static int tip_nothing_found_hint_3=0x7f050084;
+        public static int tip_nothing_found_hint_4=0x7f050085;
+        public static int tip_nothing_found_hint_5=0x7f050086;
+        /**  Tips 
+ Tips 
+ Tips 
+ Tips 
+ Tips 
+ Tips 
+ Tips 
+         */
+        public static int tip_point_back=0x7f05007f;
+        public static int tip_point_back_hint=0x7f050080;
         public static int toast_gps_disabled=0x7f050011;
         /**  Auto Trigger Options 
  Auto Trigger Options 
@@ -649,13 +775,13 @@ public final class R {
  Auto Trigger Options 
  Auto Trigger Options 
          */
-        public static int trigger_available=0x7f050032;
-        public static int trigger_do_launch_action=0x7f050033;
-        public static int trigger_dont_launch_action=0x7f050034;
-        public static int twitter=0x7f05005e;
+        public static int trigger_available=0x7f05002b;
+        public static int trigger_do_launch_action=0x7f05002c;
+        public static int trigger_dont_launch_action=0x7f05002d;
+        public static int twitter=0x7f050058;
         public static int unable_to_connect=0x7f050015;
-        public static int unsupported_content_description=0x7f050029;
-        public static int unsupported_content_title=0x7f050028;
+        public static int unsupported_content_description=0x7f050023;
+        public static int unsupported_content_title=0x7f050022;
         public static int use=0x7f050007;
         /**  Video 
  Video 
@@ -665,8 +791,8 @@ public final class R {
  Video 
  Video 
          */
-        public static int video_loading=0x7f05004d;
-        public static int view_list=0x7f05002b;
+        public static int video_loading=0x7f050047;
+        public static int view_list=0x7f050025;
         /**  View Buttons 
  View Buttons 
  View Buttons 
@@ -675,10 +801,8 @@ public final class R {
  View Buttons 
  View Buttons 
          */
-        public static int view_map=0x7f05002a;
-        public static int vision_no_content_text=0x7f050023;
-        public static int vision_no_content_title=0x7f050022;
-        public static int vision_nothing_found_hint=0x7f050020;
+        public static int view_map=0x7f050024;
+        public static int vision_no_content_text=0x7f050020;
         /**  Vision AR View 
  Vision AR View 
  Vision AR View 
@@ -687,34 +811,44 @@ public final class R {
  Vision AR View 
  Vision AR View 
          */
-        public static int vision_nothing_found_title=0x7f05001f;
-        public static int vision_point_hint=0x7f050027;
-        public static int vision_point_title=0x7f050026;
-        public static int vision_scan_hint=0x7f050025;
-        public static int vision_scan_title=0x7f050024;
-        public static int vision_tap_to_continue=0x7f050021;
+        public static int vision_no_content_title=0x7f05001f;
+        public static int vision_scan=0x7f050021;
         public static int yes=0x7f050003;
     }
     public static final class style {
-        public static int ActionBarCompatText=0x7f070017;
         public static int AudioSeekBar=0x7f07000a;
+        /**  Styles to make widgets look like in Holo theme 
+         */
+        public static int AutoCompleteTextViewLayar=0x7f070017;
         public static int BaseListView=0x7f07000b;
         public static int BiwDialogTheme=0x7f070008;
+        public static int ButtonLayar=0x7f070019;
+        public static int CheckBoxLayar=0x7f07001b;
         public static int CustomHomeLabel=0x7f070016;
         public static int CustomMenuDialog=0x7f070015;
         public static int DefaultText=0x7f07000c;
         public static int DescriptionText=0x7f07000f;
         public static int DetailsText=0x7f070010;
+        public static int EditTextLayar=0x7f070018;
         public static int FilterTextView=0x7f070007;
         public static int FilterTheme=0x7f070006;
         public static int FullScreenTheme=0x7f070005;
+        public static int ImageButtonLayar=0x7f07001a;
+        public static int Layar_ProgressBar_Horizontal=0x7f07001d;
         public static int Layar_Theme_Default=0x7f070000;
         public static int LayarTheme=0x7f070003;
         public static int LayarTheme_Black=0x7f070001;
         public static int LayarTheme_Light=0x7f070002;
         public static int LayarTitleTheme=0x7f070004;
+        public static int RadioButtonLayar=0x7f07001c;
+        /**  <item name="android:textStyle">bold</item> 
+         */
         public static int SectionHeaderText=0x7f070011;
+        public static int SeekBarLayar=0x7f07001e;
         public static int SmartDialogTheme=0x7f070009;
+        public static int SpinnerDropDownItemLayar=0x7f070021;
+        public static int SpinnerLayar=0x7f07001f;
+        public static int SpinnerLayar_DropDown=0x7f070020;
         public static int TabTitleText=0x7f07000e;
         public static int Throbber=0x7f070012;
         public static int Throbber_Black=0x7f070014;

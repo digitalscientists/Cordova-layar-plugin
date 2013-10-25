@@ -3,13 +3,13 @@
     android:layout_width="220px"
     android:layout_height="220px"
     android:padding="10px"
-    android:background="@drawable/qrcode_background">
+    android:background="@drawable/layar_qrcode_background">
     
     <ImageView android:id="@+id/icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28px"
-        android:src="@drawable/qrcode_icon_audio"
+        android:src="@drawable/layar_qrcode_icon_audio"
         android:layout_centerHorizontal="true"
         />
 

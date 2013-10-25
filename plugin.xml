@@ -35,6 +35,12 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
+            <permission
+                android:name="com.layar.permission.MAPS_RECEIVE"
+                android:protectionLevel="signature" />
+            
+            <uses-permission android:name="com.layar.permission.MAPS_RECEIVE" />
+            <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
             <uses-permission android:name="android.permission.INTERNET" />
             <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -49,14 +55,17 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-             <!-- Vision Only -->
-            <activity
-                android:name="com.layar.sdk.LayarVisionActivity"
+             <activity
+                android:name="com.layar.sdk.LayarSDKActivity"
                 android:launchMode="singleTask"
                 android:screenOrientation="nosensor"
                 android:theme="@android:style/Theme.Light.NoTitleBar" />
 
-            <!-- Common -->
+            <activity
+                android:name="com.layar.player.geo.FilterSettingsActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+                android:theme="@style/FilterTheme" />
+
             <activity
                 android:name="com.layar.LayerDetailsActivity"
                 android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
@@ -65,7 +74,8 @@
                 android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
             <activity
                 android:name="com.layar.ShareSocialActivity"
-                android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+                android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+                android:theme="@style/Layar.Theme.Default" />
             <activity
                 android:name="com.layar.VideoActivity"
                 android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
@@ -78,239 +88,475 @@
                 android:name="com.layar.ScreenshotActivity"
                 android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
                 android:theme="@style/FullScreenTheme" />
+
+            <!-- Facebook's login -->
+            <activity
+                android:name="com.facebook.LoginActivity"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            <activity
+                android:name="com.layar.ShareOnFacebookActivity"
+                android:theme="@android:style/Theme.Light.NoTitleBar"
+                android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+
+            <!-- Map v2 -->
+            <activity
+                android:name="com.layar.MapV2Activity"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+            <receiver
+                android:name="com.layar.localytics.CloseSesionBroadcastReciever"
+                android:exported="false" >
+                <intent-filter>
+                    <action android:name="com.layar.close_session" />
+                </intent-filter>
+            </receiver>
         </config-file>
 
         <!-- PLugin implementation -->
         <source-file src="src/android/LayarVision.java" target-dir="src/com/ds/cordova/layar" />
 
         <!-- Libraries -->
-        <source-file src="src/android/sdk/libs/android-support-v4.jar" target-dir="libs"/>
+        <source-file src="src/android/sdk/libs/eventbus-2.0.2.jar" target-dir="libs"/>
         <source-file src="src/android/sdk/libs/httpmime-4.1-beta1.jar" target-dir="libs"/>
         <source-file src="src/android/sdk/libs/jsoup-1.7.1.jar" target-dir="libs"/>
         <source-file src="src/android/sdk/libs/player.jar" target-dir="libs"/>
-        <source-file src="src/android/sdk/libs/armeabi/libHelios.so" target-dir="libs/armeabi"/>
-        <source-file src="src/android/sdk/libs/armeabi/libiconv.so" target-dir="libs/armeabi"/>
-        <source-file src="src/android/sdk/libs/armeabi/libNativeUtil.so" target-dir="libs/armeabi"/>
-        <source-file src="src/android/sdk/libs/armeabi-v7a/libHelios_armv7.so" target-dir="libs/armeabi-v7a"/>
-        <source-file src="src/android/sdk/libs/armeabi-v7a/libiconv_armv7.so" target-dir="libs/armeabi-v7a"/>
+        <source-file src="src/android/sdk/libs/armeabi-v7a/libiconv.so" target-dir="libs/armeabi-v7a"/>
+        <source-file src="src/android/sdk/libs/armeabi-v7a/libLayarNative.so" target-dir="libs/armeabi-v7a"/>
         <source-file src="src/android/sdk/libs/armeabi-v7a/libNativeUtil.so" target-dir="libs/armeabi-v7a"/>
-        <source-file src="src/android/sdk/libs/x86/libHelios.so" target-dir="libs/x86"/>
         <source-file src="src/android/sdk/libs/x86/libiconv.so" target-dir="libs/x86"/>
+        <source-file src="src/android/sdk/libs/x86/libLayarNative.so" target-dir="libs/x86"/>
         <source-file src="src/android/sdk/libs/x86/libNativeUtil.so" target-dir="libs/x86"/>
     
         <!-- Will hope it works! :) R.java is regenrated -->
         <source-file src="src/android/sdk/gen/com/layar/player/R.java" target-dir="src/com/layar/player"/>
+        <source-file src="src/android/sdk/gen/com/layar/player/Manifest.java" target-dir="src/com/layar/player"/>
         <source-file src="src/android/sdk/gen/com/layar/player/BuildConfig.java" target-dir="src/com/layar/player"/> -->
 
         <!-- adding resources -->
-        <source-file src="src/android/sdk/res/drawable/actionbar_item_selector.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_copy.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_copy_f.9.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_copy_n.9.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_copy_p.9.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_launch.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_launch_f.9.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_launch_n.9.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_launch_p.9.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_player_close.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_player_close_hit.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_player_close_x.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_player_pause.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_player_pause_hit.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_player_pause_x.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_player_play.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_player_play_hit.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_player_play_x.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/btn_player_slider.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/checkbox.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/checkbox_checked.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/checkbox_unchecked.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/custom_home_button.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/custom_menu_button.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/divider.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/divider_horizontal_bright.9.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/email_icon.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/group_border.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/group_mask.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/icon_3d.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/icon_overlay.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/icon_overlay_alpha.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/ic_btn_round_more.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/ic_btn_round_more_disabled.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/ic_btn_round_more_normal.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/ic_dialog_menu_generic.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/ic_media_pause.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/ic_media_play.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/color/share_on_facebook_post_button_text.xml" target-dir="res/color/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_actionbar_item_selector.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_01_info.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_02_audio.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_03_video.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_04_phone.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_05_email.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_06_navigation.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_07_add.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_08_remove.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_09_edit.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_10_collect.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_11_play_start.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_12_play_move.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_13_share.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_14_pin.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_15_checkin_checkout.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_16_login.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_17_lock_unlock.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_18_list.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_19_money.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_20_open.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_21_close.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_22_search.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_23_update.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_24_layer_switch.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_25_yes.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_26_increase_decrease.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_27_view.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_28_favorite.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_29_kill_hit.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_30_heal.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_31_defend.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_32_repair.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_33_use_switch.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_34_animate.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_35_scoreboard.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_36_generic_icon.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_action_37_no.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_biw_action_item_background.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_btn_check_holo_light.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_btn_default_holo_light.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_btn_new_shutter.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_btn_player_close.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_btn_player_close_hit.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_btn_player_close_x.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_btn_player_pause.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_btn_player_pause_hit.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_btn_player_pause_x.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_btn_player_play.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_btn_player_play_hit.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_btn_player_play_x.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_btn_player_slider.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_btn_radio_holo_light.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_checkbox.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_checkbox_checked.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_checkbox_unchecked.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_custom_menu_button.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_divider.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_divider_horizontal_bright.9.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_edit_text_holo_light.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_filters_background.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_ic_dialog_menu_generic.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_list_selector_background_transition_holo_light.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_list_selector_holo_light.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_no_poi_image.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_popup_bottom_bright.9.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_popup_bottom_medium.9.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_popup_center_bright.9.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_popup_top_dark.9.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_progress_horizontal_holo_light.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_progress_indeterminate_horizontal_holo_light.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_scrubber_control_selector_holo_light.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_scrubber_progress_horizontal_holo_light.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_share_on_facebook_post_button_background.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_slider_background.9.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_spinner_background_holo_light.xml" target-dir="res/drawable/"/>
         <source-file src="src/android/sdk/res/drawable/layar_splash.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_splash_logo_container.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_throbber.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_throbber_dark.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_throbber_dark_x.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_throbber_light.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_throbber_light_x.xml" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_transparency.png" target-dir="res/drawable/"/>
+        <source-file src="src/android/sdk/res/drawable/layar_vision_no_content_bg.xml" target-dir="res/drawable/"/>
         <source-file src="src/android/sdk/res/drawable/layer_details_divider.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/library_icon.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/list_divider.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/more_icon.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/no_poi_image.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/popup_bottom_bright.9.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/popup_bottom_medium.9.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/popup_center_bright.9.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/popup_top_dark.9.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/scan_toast_background.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/shadow_clue_gallery.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/sharing_icon.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/slider_background.9.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/splash_logo_container.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/throbber.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/throbber_dark.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/throbber_dark_x.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/throbber_light.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/throbber_light_x.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/transparency.png" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/vision_dark_bg.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable/vision_no_content_bg.xml" target-dir="res/drawable/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/ab_solid.9.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/btn_player_close.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/btn_player_close_hit.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/btn_player_pause.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/btn_player_pause_hit.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/btn_player_play.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/btn_player_play_hit.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/group_border.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/group_mask.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/icon_3d.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/icon_about.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/ic_action_scan.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/ic_btn_round_more_disabled.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/ic_btn_round_more_normal.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/ic_menu_about.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/ic_menu_camera.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/ic_menu_layer_actions.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/ic_menu_list.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/ic_menu_mapmode.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/ic_menu_refresh.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/ic_menu_refresh_white.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/ic_menu_report_problem.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/ic_menu_settings.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/ic_menu_share.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_ab_solid_shadow_holo.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_01_info.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_02_audio.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_03_video.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_04_phone.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_05_email.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_06_navigation.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_07_add.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_08_remove.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_09_edit.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_10_collect.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_11_play_start.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_12_play_move.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_13_share.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_14_pin.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_15_checkin_checkout.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_16_login.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_17_lock_unlock.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_18_list.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_19_money.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_20_open.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_21_close.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_22_search.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_23_update.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_24_layer_switch.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_25_yes.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_26_increase_decrease.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_27_view.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_28_favorite.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_29_kill_hit.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_30_heal.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_31_defend.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_32_repair.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_33_use_switch.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_34_animate.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_35_scoreboard.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_action_37_no.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_check_off_disabled_focused_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_check_off_disabled_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_check_off_focused_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_check_off_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_check_off_pressed_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_check_on_disabled_focused_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_check_on_disabled_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_check_on_focused_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_check_on_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_check_on_pressed_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_default_disabled_focused_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_default_disabled_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_default_focused_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_default_normal_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_default_pressed_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_player_close.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_player_close_hit.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_player_pause.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_player_pause_hit.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_player_play.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_player_play_hit.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_radio_off_disabled_focused_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_radio_off_disabled_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_radio_off_focused_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_radio_off_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_radio_off_pressed_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_radio_on_disabled_focused_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_radio_on_disabled_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_radio_on_focused_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_radio_on_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_radio_on_pressed_holo_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_shutter_default.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_btn_shutter_pressed.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_expander_open_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_ic_action_save.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_ic_menu_about.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_ic_menu_camera.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_ic_menu_layer_actions.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_ic_menu_list.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_ic_menu_mapmode.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_ic_menu_refresh.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_ic_menu_refresh_white.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_ic_menu_report_problem.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_ic_menu_settings.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_ic_menu_share.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_list_focused_holo.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_list_longpressed_holo.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_list_pressed_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_list_selector_disabled_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_menu_dropdown_panel_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_no_poi_image.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_popup_bottom_bright.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_popup_bottom_medium.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_popup_center_bright.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_popup_top_dark.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_progressbar_indeterminate_holo1.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_progressbar_indeterminate_holo2.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_progressbar_indeterminate_holo3.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_progressbar_indeterminate_holo4.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_progressbar_indeterminate_holo5.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_progressbar_indeterminate_holo6.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_progressbar_indeterminate_holo7.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_progressbar_indeterminate_holo8.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_progress_bg_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_progress_primary_holo.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_progress_secondary_holo.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_scrubber_control_disabled_holo.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_scrubber_control_focused_holo.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_scrubber_control_normal_holo.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_scrubber_control_pressed_holo.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_scrubber_primary_holo.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_scrubber_secondary_holo.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_scrubber_track_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_spinner_default_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_spinner_disabled_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_spinner_focused_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_spinner_pressed_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_textfield_activated_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_textfield_default_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_textfield_disabled_focused_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_textfield_disabled_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_textfield_focused_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_throbber.xml" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_throbber_dark.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_throbber_dark_x.xml" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_throbber_light.png" target-dir="res/drawable-hdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-hdpi/layar_throbber_light_x.xml" target-dir="res/drawable-hdpi/"/>
         <source-file src="src/android/sdk/res/drawable-hdpi/layar_watermark.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/list_pressed_holo_dark.9.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/list_selected_holo_dark.9.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/menu_dropdown_panel_holo_light.9.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/more_icon.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/no_poi_image.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/popup_bottom_bright.9.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/popup_bottom_medium.9.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/popup_center_bright.9.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/popup_top_dark.9.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/scan_image.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/splash_logo.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/throbber.xml" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/throbber_dark.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/throbber_dark_x.xml" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/throbber_light.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/throbber_light_x.xml" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-hdpi/vision_brackets.9.png" target-dir="res/drawable-hdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-mdpi/ic_action_scan.png" target-dir="res/drawable-mdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-mdpi/ic_menu_about.png" target-dir="res/drawable-mdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-mdpi/ic_menu_camera.png" target-dir="res/drawable-mdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-mdpi/ic_menu_layer_actions.png" target-dir="res/drawable-mdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-mdpi/ic_menu_list.png" target-dir="res/drawable-mdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-mdpi/ic_menu_mapmode.png" target-dir="res/drawable-mdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-mdpi/ic_menu_refresh.png" target-dir="res/drawable-mdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-mdpi/ic_menu_refresh_white.png" target-dir="res/drawable-mdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-mdpi/ic_menu_report_problem.png" target-dir="res/drawable-mdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-mdpi/ic_menu_settings.png" target-dir="res/drawable-mdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-mdpi/ic_menu_share.png" target-dir="res/drawable-mdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-mdpi/list_pressed_holo_dark.9.png" target-dir="res/drawable-mdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-mdpi/list_selected_holo_dark.9.png" target-dir="res/drawable-mdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-mdpi/menu_dropdown_panel_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-mdpi/scan_image.png" target-dir="res/drawable-mdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-mdpi/splash_logo.png" target-dir="res/drawable-mdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/poi_icon_border.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/poi_icon_glow.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/poi_icon_shadow.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/qrcode_background.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/qrcode_icon_audio.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/qrcode_icon_email.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/qrcode_icon_geo.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/qrcode_icon_googleplay.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/qrcode_icon_layar.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/qrcode_icon_sms.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/qrcode_icon_tel.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/qrcode_icon_unknown.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/qrcode_icon_vcard.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/qrcode_icon_video.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/qrcode_icon_web.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/qrcode_shadow.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/throbber_inner.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/throbber_outer.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/video_bg.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/video_fullscreen.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/video_loader.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/video_play.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/video_rewind.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/vision_bracket.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-nodpi/vision_no_content_icon.png" target-dir="res/drawable-nodpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/ic_action_next.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/ic_action_previous.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/ic_action_scan.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/ic_menu_about.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/ic_menu_ar_custom_overflow.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/ic_menu_camera.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/ic_menu_layer_actions.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/ic_menu_list.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/ic_menu_mapmode.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/ic_menu_refresh.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/ic_menu_refresh_white.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/ic_menu_report_problem.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/ic_menu_settings.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/ic_menu_share.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/list_pressed_holo_dark.9.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/list_selected_holo_dark.9.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/menu_dropdown_panel_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/scan_image.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/splash_logo.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/vision_button_bg.9.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/vision_status_active.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/vision_status_background.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/vision_status_fail.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/vision_status_inactive.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/vision_status_inactive_ok.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/vision_status_ok.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/vision_status_transition_1.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/vision_status_transition_2.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/vision_status_transition_3.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/vision_status_transition_4.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/vision_status_transition_5.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/vision_status_transition_6.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/vision_status_transition_7.png" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/vision_status_transition_animation.xml" target-dir="res/drawable-xhdpi/"/>
-        <source-file src="src/android/sdk/res/drawable-xhdpi/vision_status_transition_background.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_check_off_disabled_focused_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_check_off_disabled_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_check_off_focused_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_check_off_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_check_off_pressed_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_check_on_disabled_focused_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_check_on_disabled_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_check_on_focused_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_check_on_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_check_on_pressed_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_default_disabled_focused_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_default_disabled_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_default_focused_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_default_normal_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_default_pressed_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_radio_off_disabled_focused_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_radio_off_disabled_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_radio_off_focused_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_radio_off_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_radio_off_pressed_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_radio_on_disabled_focused_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_radio_on_disabled_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_radio_on_focused_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_radio_on_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_radio_on_pressed_holo_light.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_shutter_default.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_btn_shutter_pressed.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_expander_open_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_ic_action_save.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_ic_menu_about.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_ic_menu_camera.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_ic_menu_layer_actions.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_ic_menu_list.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_ic_menu_mapmode.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_ic_menu_refresh.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_ic_menu_refresh_white.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_ic_menu_report_problem.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_ic_menu_settings.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_ic_menu_share.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_list_focused_holo.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_list_longpressed_holo.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_list_pressed_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_list_selector_disabled_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_menu_dropdown_panel_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_progressbar_indeterminate_holo1.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_progressbar_indeterminate_holo2.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_progressbar_indeterminate_holo3.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_progressbar_indeterminate_holo4.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_progressbar_indeterminate_holo5.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_progressbar_indeterminate_holo6.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_progressbar_indeterminate_holo7.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_progressbar_indeterminate_holo8.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_progress_bg_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_progress_primary_holo.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_progress_secondary_holo.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_scrubber_control_disabled_holo.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_scrubber_control_focused_holo.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_scrubber_control_normal_holo.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_scrubber_control_pressed_holo.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_scrubber_primary_holo.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_scrubber_secondary_holo.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_scrubber_track_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_spinner_default_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_spinner_disabled_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_spinner_focused_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_spinner_pressed_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_splash_logo.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_textfield_activated_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_textfield_default_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_textfield_disabled_focused_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_textfield_disabled_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-mdpi/layar_textfield_focused_holo_light.9.png" target-dir="res/drawable-mdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_poi_icon_border.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_poi_icon_glow.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_poi_icon_shadow.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_qrcode_background.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_qrcode_icon_audio.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_qrcode_icon_email.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_qrcode_icon_geo.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_qrcode_icon_googleplay.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_qrcode_icon_layar.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_qrcode_icon_sms.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_qrcode_icon_tel.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_qrcode_icon_unknown.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_qrcode_icon_vcard.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_qrcode_icon_video.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_qrcode_icon_web.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_radar.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_spinner.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_spot.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_spot_focus.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_video_fullscreen.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_video_play.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_vision_line.9.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-nodpi/layar_vision_no_content_icon.png" target-dir="res/drawable-nodpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_check_off_disabled_focused_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_check_off_disabled_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_check_off_focused_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_check_off_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_check_off_pressed_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_check_on_disabled_focused_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_check_on_disabled_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_check_on_focused_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_check_on_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_check_on_pressed_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_default_disabled_focused_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_default_disabled_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_default_focused_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_default_normal_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_default_pressed_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_radio_off_disabled_focused_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_radio_off_disabled_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_radio_off_focused_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_radio_off_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_radio_off_pressed_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_radio_on_disabled_focused_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_radio_on_disabled_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_radio_on_focused_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_radio_on_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_radio_on_pressed_holo_light.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_shutter_default.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_btn_shutter_pressed.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_expander_open_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_ic_action_save.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_ic_logo.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_ic_menu_about.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_ic_menu_ar_custom_overflow.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_ic_menu_camera.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_ic_menu_layer_actions.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_ic_menu_list.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_ic_menu_mapmode.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_ic_menu_refresh.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_ic_menu_refresh_white.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_ic_menu_report_problem.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_ic_menu_settings.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_ic_menu_share.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_list_focused_holo.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_list_longpressed_holo.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_list_pressed_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_list_selector_disabled_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_menu_dropdown_panel_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_progressbar_indeterminate_holo1.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_progressbar_indeterminate_holo2.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_progressbar_indeterminate_holo3.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_progressbar_indeterminate_holo4.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_progressbar_indeterminate_holo5.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_progressbar_indeterminate_holo6.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_progressbar_indeterminate_holo7.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_progressbar_indeterminate_holo8.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_progress_bg_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_progress_primary_holo.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_progress_secondary_holo.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_scrubber_control_disabled_holo.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_scrubber_control_focused_holo.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_scrubber_control_normal_holo.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_scrubber_control_pressed_holo.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_scrubber_primary_holo.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_scrubber_secondary_holo.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_scrubber_track_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_spinner_default_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_spinner_disabled_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_spinner_focused_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_spinner_pressed_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_splash_logo.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_textfield_activated_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_textfield_default_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_textfield_disabled_focused_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_textfield_disabled_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_textfield_focused_holo_light.9.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_tip_nothing_found_1.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_tip_nothing_found_2.png" target-dir="res/drawable-xhdpi/"/>
+        <source-file src="src/android/sdk/res/drawable-xhdpi/layar_tip_point_back_at_page.png" target-dir="res/drawable-xhdpi/"/>
         <source-file src="src/android/sdk/res/layout/layar_activity_audio.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_activity_filter_settings.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_activity_layer_details.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_activity_screenshot.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_activity_share_on_facebook.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_activity_share_social.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_activity_video.xml" target-dir="res/layout/"/>
-        <source-file src="src/android/sdk/res/layout/layar_activity_vision.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_activity_web.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_custom_menu_item.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_dialog_filter.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_dialog_message_with_icon.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_dialog_smart.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_dialog_smart_progress.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_fragment_ar.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_fragment_create_screenshot.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_fragment_geo.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_fragment_layer_details.xml" target-dir="res/layout/"/>
-        <source-file src="src/android/sdk/res/layout/layar_list_item.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_fragment_vision.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_sdk_activity.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_sdk_fragment.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_tip_view.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_tip_view_contents.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_view_audio.xml" target-dir="res/layout/"/>
-        <source-file src="src/android/sdk/res/layout/layar_view_custom_home_button.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_view_biw.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_view_custom_menu_button.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_view_divider.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_view_filter_button.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_view_filter_range.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_view_filter_searchbox.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_view_filter_slider.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_view_layer_header.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_view_message_input.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_view_poi_action_item.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_view_qrcode_plaintext.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_view_qrcode_template.xml" target-dir="res/layout/"/>
-        <source-file src="src/android/sdk/res/layout/layar_view_take_screenshot_bar.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout/layar_view_section_header.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_view_unsupported_content.xml" target-dir="res/layout/"/>
-        <source-file src="src/android/sdk/res/layout/layar_view_vision_loading.xml" target-dir="res/layout/"/>
-        <source-file src="src/android/sdk/res/layout/layar_view_vision_nav_bar.xml" target-dir="res/layout/"/>
         <source-file src="src/android/sdk/res/layout/layar_view_vision_no_content.xml" target-dir="res/layout/"/>
-        <source-file src="src/android/sdk/res/layout/layar_view_vision_scan_brackets.xml" target-dir="res/layout/"/>
-        <source-file src="src/android/sdk/res/layout/layar_view_vision_scan_no_results.xml" target-dir="res/layout/"/>
-        <source-file src="src/android/sdk/res/layout/layar_view_vision_scan_toast.xml" target-dir="res/layout/"/>
-        <source-file src="src/android/sdk/res/layout/layar_view_vision_status.xml" target-dir="res/layout/"/>
+        <source-file src="src/android/sdk/res/layout-notouch-nokeys/layar_view_biw.xml" target-dir="res/layout-notouch-nokeys/"/>
+        <source-file src="src/android/sdk/res/layout-w600dp/layar_tip_view.xml" target-dir="res/layout-w600dp/"/>
         <source-file src="src/android/sdk/res/menu/layar_activity_geo.xml" target-dir="res/menu/"/>
         <source-file src="src/android/sdk/res/menu/layar_activity_web.xml" target-dir="res/menu/"/>
         <source-file src="src/android/sdk/res/values/colors.xml" target-dir="res/values/"/>
@@ -319,7 +565,7 @@
         <source-file src="src/android/sdk/res/values/strings-player.xml" target-dir="res/values/"/>
         <source-file src="src/android/sdk/res/values/styles.xml" target-dir="res/values/"/>
         <source-file src="src/android/sdk/res/values-en-rUS/defaults.xml" target-dir="res/values-en-rUS/"/>
-        <source-file src="src/android/sdk/res/values-v14/styles.xml" target-dir="res/values-v14/"/>
+        <source-file src="src/android/sdk/res/values-v11/styles.xml" target-dir="res/values-v11/"/>
         <!-- merging resources -->
         <!-- no any for now -->
      </platform>

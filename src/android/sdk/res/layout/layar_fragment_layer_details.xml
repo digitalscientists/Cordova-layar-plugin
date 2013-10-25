@@ -31,15 +31,6 @@
                 android:maxWidth="66dip"
                 android:scaleType="centerInside" />
 
-            <ImageView
-                android:id="@+id/layer_type_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="1dip"
-                android:background="@null"
-                android:src="@drawable/icon_3d"
-                android:visibility="gone" />
-
             <ProgressBar
                 android:id="@+id/throbber"
                 style="@style/Throbber.Black"

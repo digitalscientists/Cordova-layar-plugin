@@ -23,6 +23,17 @@ public class R {
     public static final class attr {
     }
     public static final class color {
+        public static int accent = sRes.getIdentifier("accent", "color", sPackageName);
+        public static int actionbar_text = sRes.getIdentifier("actionbar_text", "color", sPackageName);
+        public static int background_actionbar = sRes.getIdentifier("background_actionbar", "color", sPackageName);
+        public static int background_actionbar_empty_space = sRes.getIdentifier("background_actionbar_empty_space", "color", sPackageName);
+        public static int background_actionbar_not_branded = sRes.getIdentifier("background_actionbar_not_branded", "color", sPackageName);
+        /**   
+         */
+        public static int background_nothing_found_dialog = sRes.getIdentifier("background_nothing_found_dialog", "color", sPackageName);
+        public static int background_panel = sRes.getIdentifier("background_panel", "color", sPackageName);
+        public static int background_welcome_sequence = sRes.getIdentifier("background_welcome_sequence", "color", sPackageName);
+        public static int black = sRes.getIdentifier("black", "color", sPackageName);
         public static int briefinfo_arrow = sRes.getIdentifier("briefinfo_arrow", "color", sPackageName);
         public static int button_highlight = sRes.getIdentifier("button_highlight", "color", sPackageName);
         public static int buttons_bar_backcolor = sRes.getIdentifier("buttons_bar_backcolor", "color", sPackageName);
@@ -34,236 +45,310 @@ public class R {
         public static int detail_background = sRes.getIdentifier("detail_background", "color", sPackageName);
         public static int details_text_color = sRes.getIdentifier("details_text_color", "color", sPackageName);
         public static int error = sRes.getIdentifier("error", "color", sPackageName);
+        public static int grey = sRes.getIdentifier("grey", "color", sPackageName);
+        public static int holo_blue_bright = sRes.getIdentifier("holo_blue_bright", "color", sPackageName);
+        public static int holo_blue_light = sRes.getIdentifier("holo_blue_light", "color", sPackageName);
+        public static int layar_brand = sRes.getIdentifier("layar_brand", "color", sPackageName);
         public static int layar_divider = sRes.getIdentifier("layar_divider", "color", sPackageName);
         public static int layar_splash_color = sRes.getIdentifier("layar_splash_color", "color", sPackageName);
         public static int layerlist_text = sRes.getIdentifier("layerlist_text", "color", sPackageName);
         public static int list_background = sRes.getIdentifier("list_background", "color", sPackageName);
         public static int poi_details_background = sRes.getIdentifier("poi_details_background", "color", sPackageName);
+        public static int primary_text = sRes.getIdentifier("primary_text", "color", sPackageName);
+        public static int secondary_text = sRes.getIdentifier("secondary_text", "color", sPackageName);
+        /**  Used for pressed state of items in actionbar 
+         */
+        public static int semitransparent_white = sRes.getIdentifier("semitransparent_white", "color", sPackageName);
+        public static int share_on_facebook_button_pressed = sRes.getIdentifier("share_on_facebook_button_pressed", "color", sPackageName);
+        public static int share_on_facebook_post_button_text = sRes.getIdentifier("share_on_facebook_post_button_text", "color", sPackageName);
+        public static int share_on_facebook_title = sRes.getIdentifier("share_on_facebook_title", "color", sPackageName);
         public static int translucenter_dark = sRes.getIdentifier("translucenter_dark", "color", sPackageName);
         public static int transparent = sRes.getIdentifier("transparent", "color", sPackageName);
         public static int vision_ar_overlay_bar = sRes.getIdentifier("vision_ar_overlay_bar", "color", sPackageName);
+        /**  Base colors 
+         */
+        public static int white = sRes.getIdentifier("white", "color", sPackageName);
     }
     public static final class dimen {
-        /**  Default height of an action bar. 
-         */
-        public static int action_bar_default_height = sRes.getIdentifier("action_bar_default_height", "dimen", sPackageName);
-        /**  Vertical padding around action bar icons. 
-         */
-        public static int action_bar_icon_vertical_padding = sRes.getIdentifier("action_bar_icon_vertical_padding", "dimen", sPackageName);
-        /**  Bottom margin for action bar subtitles 
-         */
-        public static int action_bar_subtitle_bottom_margin = sRes.getIdentifier("action_bar_subtitle_bottom_margin", "dimen", sPackageName);
-        /**  Text size for action bar subtitles 
-         */
-        public static int action_bar_subtitle_text_size = sRes.getIdentifier("action_bar_subtitle_text_size", "dimen", sPackageName);
-        /**  Top margin for action bar subtitles 
-         */
-        public static int action_bar_subtitle_top_margin = sRes.getIdentifier("action_bar_subtitle_top_margin", "dimen", sPackageName);
-        /**  Text size for action bar titles 
-         */
-        public static int action_bar_title_text_size = sRes.getIdentifier("action_bar_title_text_size", "dimen", sPackageName);
-        /**  Minimum width for an action button in the menu area of an action bar 
-         */
-        public static int action_button_min_width = sRes.getIdentifier("action_button_min_width", "dimen", sPackageName);
-        /**  Action bar elements 
-         */
-        public static int actionbar_compat_height = sRes.getIdentifier("actionbar_compat_height", "dimen", sPackageName);
+        public static int actionbar_height = sRes.getIdentifier("actionbar_height", "dimen", sPackageName);
         public static int ar_biw_top_height = sRes.getIdentifier("ar_biw_top_height", "dimen", sPackageName);
         public static int ar_buttons_offset = sRes.getIdentifier("ar_buttons_offset", "dimen", sPackageName);
+        public static int big_actionbar_height = sRes.getIdentifier("big_actionbar_height", "dimen", sPackageName);
         /**  Layar stuff 
          */
         public static int launch_area_width = sRes.getIdentifier("launch_area_width", "dimen", sPackageName);
         public static int layer_item_height = sRes.getIdentifier("layer_item_height", "dimen", sPackageName);
+        public static int list_divider_height = sRes.getIdentifier("list_divider_height", "dimen", sPackageName);
+        public static int margin_big = sRes.getIdentifier("margin_big", "dimen", sPackageName);
+        public static int margin_normal = sRes.getIdentifier("margin_normal", "dimen", sPackageName);
+        public static int margin_small = sRes.getIdentifier("margin_small", "dimen", sPackageName);
         public static int poi_image_height = sRes.getIdentifier("poi_image_height", "dimen", sPackageName);
         public static int poi_image_rounds = sRes.getIdentifier("poi_image_rounds", "dimen", sPackageName);
         public static int poi_image_width = sRes.getIdentifier("poi_image_width", "dimen", sPackageName);
         public static int spotlight_details_actions = sRes.getIdentifier("spotlight_details_actions", "dimen", sPackageName);
         public static int spotlight_details_lines_portrait = sRes.getIdentifier("spotlight_details_lines_portrait", "dimen", sPackageName);
         public static int spotlight_item_height = sRes.getIdentifier("spotlight_item_height", "dimen", sPackageName);
+        public static int text_size_large = sRes.getIdentifier("text_size_large", "dimen", sPackageName);
         public static int text_size_medium = sRes.getIdentifier("text_size_medium", "dimen", sPackageName);
+        public static int text_size_prefs_section = sRes.getIdentifier("text_size_prefs_section", "dimen", sPackageName);
         public static int text_size_small = sRes.getIdentifier("text_size_small", "dimen", sPackageName);
         public static int vision_bottom_bar_height = sRes.getIdentifier("vision_bottom_bar_height", "dimen", sPackageName);
+        public static int watermark_padding = sRes.getIdentifier("watermark_padding", "dimen", sPackageName);
     }
     public static final class drawable {
-        public static int ab_solid = sRes.getIdentifier("ab_solid", "drawable", sPackageName);
-        public static int actionbar_item_selector = sRes.getIdentifier("actionbar_item_selector", "drawable", sPackageName);
-        public static int btn_copy = sRes.getIdentifier("btn_copy", "drawable", sPackageName);
-        public static int btn_copy_f = sRes.getIdentifier("btn_copy_f", "drawable", sPackageName);
-        public static int btn_copy_n = sRes.getIdentifier("btn_copy_n", "drawable", sPackageName);
-        public static int btn_copy_p = sRes.getIdentifier("btn_copy_p", "drawable", sPackageName);
-        public static int btn_launch = sRes.getIdentifier("btn_launch", "drawable", sPackageName);
-        public static int btn_launch_f = sRes.getIdentifier("btn_launch_f", "drawable", sPackageName);
-        public static int btn_launch_n = sRes.getIdentifier("btn_launch_n", "drawable", sPackageName);
-        public static int btn_launch_p = sRes.getIdentifier("btn_launch_p", "drawable", sPackageName);
-        public static int btn_player_close = sRes.getIdentifier("btn_player_close", "drawable", sPackageName);
-        public static int btn_player_close_hit = sRes.getIdentifier("btn_player_close_hit", "drawable", sPackageName);
-        public static int btn_player_close_x = sRes.getIdentifier("btn_player_close_x", "drawable", sPackageName);
-        public static int btn_player_pause = sRes.getIdentifier("btn_player_pause", "drawable", sPackageName);
-        public static int btn_player_pause_hit = sRes.getIdentifier("btn_player_pause_hit", "drawable", sPackageName);
-        public static int btn_player_pause_x = sRes.getIdentifier("btn_player_pause_x", "drawable", sPackageName);
-        public static int btn_player_play = sRes.getIdentifier("btn_player_play", "drawable", sPackageName);
-        public static int btn_player_play_hit = sRes.getIdentifier("btn_player_play_hit", "drawable", sPackageName);
-        public static int btn_player_play_x = sRes.getIdentifier("btn_player_play_x", "drawable", sPackageName);
-        public static int btn_player_slider = sRes.getIdentifier("btn_player_slider", "drawable", sPackageName);
-        public static int checkbox = sRes.getIdentifier("checkbox", "drawable", sPackageName);
-        public static int checkbox_checked = sRes.getIdentifier("checkbox_checked", "drawable", sPackageName);
-        public static int checkbox_unchecked = sRes.getIdentifier("checkbox_unchecked", "drawable", sPackageName);
-        public static int custom_home_button = sRes.getIdentifier("custom_home_button", "drawable", sPackageName);
-        public static int custom_menu_button = sRes.getIdentifier("custom_menu_button", "drawable", sPackageName);
-        public static int divider = sRes.getIdentifier("divider", "drawable", sPackageName);
-        public static int divider_horizontal_bright = sRes.getIdentifier("divider_horizontal_bright", "drawable", sPackageName);
-        public static int email_icon = sRes.getIdentifier("email_icon", "drawable", sPackageName);
-        public static int group_border = sRes.getIdentifier("group_border", "drawable", sPackageName);
-        public static int group_mask = sRes.getIdentifier("group_mask", "drawable", sPackageName);
-        public static int ic_action_next = sRes.getIdentifier("ic_action_next", "drawable", sPackageName);
-        public static int ic_action_previous = sRes.getIdentifier("ic_action_previous", "drawable", sPackageName);
-        public static int ic_action_scan = sRes.getIdentifier("ic_action_scan", "drawable", sPackageName);
-        public static int ic_btn_round_more = sRes.getIdentifier("ic_btn_round_more", "drawable", sPackageName);
-        public static int ic_btn_round_more_disabled = sRes.getIdentifier("ic_btn_round_more_disabled", "drawable", sPackageName);
-        public static int ic_btn_round_more_normal = sRes.getIdentifier("ic_btn_round_more_normal", "drawable", sPackageName);
-        public static int ic_dialog_menu_generic = sRes.getIdentifier("ic_dialog_menu_generic", "drawable", sPackageName);
-        public static int ic_media_pause = sRes.getIdentifier("ic_media_pause", "drawable", sPackageName);
-        public static int ic_media_play = sRes.getIdentifier("ic_media_play", "drawable", sPackageName);
-        public static int ic_menu_about = sRes.getIdentifier("ic_menu_about", "drawable", sPackageName);
-        public static int ic_menu_ar_custom_overflow = sRes.getIdentifier("ic_menu_ar_custom_overflow", "drawable", sPackageName);
-        public static int ic_menu_camera = sRes.getIdentifier("ic_menu_camera", "drawable", sPackageName);
-        public static int ic_menu_layer_actions = sRes.getIdentifier("ic_menu_layer_actions", "drawable", sPackageName);
-        public static int ic_menu_list = sRes.getIdentifier("ic_menu_list", "drawable", sPackageName);
-        public static int ic_menu_mapmode = sRes.getIdentifier("ic_menu_mapmode", "drawable", sPackageName);
-        public static int ic_menu_refresh = sRes.getIdentifier("ic_menu_refresh", "drawable", sPackageName);
-        public static int ic_menu_refresh_white = sRes.getIdentifier("ic_menu_refresh_white", "drawable", sPackageName);
-        public static int ic_menu_report_problem = sRes.getIdentifier("ic_menu_report_problem", "drawable", sPackageName);
-        public static int ic_menu_settings = sRes.getIdentifier("ic_menu_settings", "drawable", sPackageName);
-        public static int ic_menu_share = sRes.getIdentifier("ic_menu_share", "drawable", sPackageName);
-        public static int icon = sRes.getIdentifier("icon", "drawable", sPackageName);
-        public static int icon_3d = sRes.getIdentifier("icon_3d", "drawable", sPackageName);
-        public static int icon_about = sRes.getIdentifier("icon_about", "drawable", sPackageName);
-        public static int icon_overlay = sRes.getIdentifier("icon_overlay", "drawable", sPackageName);
-        public static int icon_overlay_alpha = sRes.getIdentifier("icon_overlay_alpha", "drawable", sPackageName);
+        public static int layar_ab_solid_shadow_holo = sRes.getIdentifier("layar_ab_solid_shadow_holo", "drawable", sPackageName);
+        public static int layar_action_01_info = sRes.getIdentifier("layar_action_01_info", "drawable", sPackageName);
+        public static int layar_action_02_audio = sRes.getIdentifier("layar_action_02_audio", "drawable", sPackageName);
+        public static int layar_action_03_video = sRes.getIdentifier("layar_action_03_video", "drawable", sPackageName);
+        public static int layar_action_04_phone = sRes.getIdentifier("layar_action_04_phone", "drawable", sPackageName);
+        public static int layar_action_05_email = sRes.getIdentifier("layar_action_05_email", "drawable", sPackageName);
+        public static int layar_action_06_navigation = sRes.getIdentifier("layar_action_06_navigation", "drawable", sPackageName);
+        public static int layar_action_07_add = sRes.getIdentifier("layar_action_07_add", "drawable", sPackageName);
+        public static int layar_action_08_remove = sRes.getIdentifier("layar_action_08_remove", "drawable", sPackageName);
+        public static int layar_action_09_edit = sRes.getIdentifier("layar_action_09_edit", "drawable", sPackageName);
+        public static int layar_action_10_collect = sRes.getIdentifier("layar_action_10_collect", "drawable", sPackageName);
+        public static int layar_action_11_play_start = sRes.getIdentifier("layar_action_11_play_start", "drawable", sPackageName);
+        public static int layar_action_12_play_move = sRes.getIdentifier("layar_action_12_play_move", "drawable", sPackageName);
+        public static int layar_action_13_share = sRes.getIdentifier("layar_action_13_share", "drawable", sPackageName);
+        public static int layar_action_14_pin = sRes.getIdentifier("layar_action_14_pin", "drawable", sPackageName);
+        public static int layar_action_15_checkin_checkout = sRes.getIdentifier("layar_action_15_checkin_checkout", "drawable", sPackageName);
+        public static int layar_action_16_login = sRes.getIdentifier("layar_action_16_login", "drawable", sPackageName);
+        public static int layar_action_17_lock_unlock = sRes.getIdentifier("layar_action_17_lock_unlock", "drawable", sPackageName);
+        public static int layar_action_18_list = sRes.getIdentifier("layar_action_18_list", "drawable", sPackageName);
+        public static int layar_action_19_money = sRes.getIdentifier("layar_action_19_money", "drawable", sPackageName);
+        public static int layar_action_20_open = sRes.getIdentifier("layar_action_20_open", "drawable", sPackageName);
+        public static int layar_action_21_close = sRes.getIdentifier("layar_action_21_close", "drawable", sPackageName);
+        public static int layar_action_22_search = sRes.getIdentifier("layar_action_22_search", "drawable", sPackageName);
+        public static int layar_action_23_update = sRes.getIdentifier("layar_action_23_update", "drawable", sPackageName);
+        public static int layar_action_24_layer_switch = sRes.getIdentifier("layar_action_24_layer_switch", "drawable", sPackageName);
+        public static int layar_action_25_yes = sRes.getIdentifier("layar_action_25_yes", "drawable", sPackageName);
+        public static int layar_action_26_increase_decrease = sRes.getIdentifier("layar_action_26_increase_decrease", "drawable", sPackageName);
+        public static int layar_action_27_view = sRes.getIdentifier("layar_action_27_view", "drawable", sPackageName);
+        public static int layar_action_28_favorite = sRes.getIdentifier("layar_action_28_favorite", "drawable", sPackageName);
+        public static int layar_action_29_kill_hit = sRes.getIdentifier("layar_action_29_kill_hit", "drawable", sPackageName);
+        public static int layar_action_30_heal = sRes.getIdentifier("layar_action_30_heal", "drawable", sPackageName);
+        public static int layar_action_31_defend = sRes.getIdentifier("layar_action_31_defend", "drawable", sPackageName);
+        public static int layar_action_32_repair = sRes.getIdentifier("layar_action_32_repair", "drawable", sPackageName);
+        public static int layar_action_33_use_switch = sRes.getIdentifier("layar_action_33_use_switch", "drawable", sPackageName);
+        public static int layar_action_34_animate = sRes.getIdentifier("layar_action_34_animate", "drawable", sPackageName);
+        public static int layar_action_35_scoreboard = sRes.getIdentifier("layar_action_35_scoreboard", "drawable", sPackageName);
+        public static int layar_action_36_generic_icon = sRes.getIdentifier("layar_action_36_generic_icon", "drawable", sPackageName);
+        public static int layar_action_37_no = sRes.getIdentifier("layar_action_37_no", "drawable", sPackageName);
+        public static int layar_actionbar_item_selector = sRes.getIdentifier("layar_actionbar_item_selector", "drawable", sPackageName);
+        public static int layar_biw_action_item_background = sRes.getIdentifier("layar_biw_action_item_background", "drawable", sPackageName);
+        public static int layar_btn_check_holo_light = sRes.getIdentifier("layar_btn_check_holo_light", "drawable", sPackageName);
+        public static int layar_btn_check_off_disabled_focused_holo_light = sRes.getIdentifier("layar_btn_check_off_disabled_focused_holo_light", "drawable", sPackageName);
+        public static int layar_btn_check_off_disabled_holo_light = sRes.getIdentifier("layar_btn_check_off_disabled_holo_light", "drawable", sPackageName);
+        public static int layar_btn_check_off_focused_holo_light = sRes.getIdentifier("layar_btn_check_off_focused_holo_light", "drawable", sPackageName);
+        public static int layar_btn_check_off_holo_light = sRes.getIdentifier("layar_btn_check_off_holo_light", "drawable", sPackageName);
+        public static int layar_btn_check_off_pressed_holo_light = sRes.getIdentifier("layar_btn_check_off_pressed_holo_light", "drawable", sPackageName);
+        public static int layar_btn_check_on_disabled_focused_holo_light = sRes.getIdentifier("layar_btn_check_on_disabled_focused_holo_light", "drawable", sPackageName);
+        public static int layar_btn_check_on_disabled_holo_light = sRes.getIdentifier("layar_btn_check_on_disabled_holo_light", "drawable", sPackageName);
+        public static int layar_btn_check_on_focused_holo_light = sRes.getIdentifier("layar_btn_check_on_focused_holo_light", "drawable", sPackageName);
+        public static int layar_btn_check_on_holo_light = sRes.getIdentifier("layar_btn_check_on_holo_light", "drawable", sPackageName);
+        public static int layar_btn_check_on_pressed_holo_light = sRes.getIdentifier("layar_btn_check_on_pressed_holo_light", "drawable", sPackageName);
+        public static int layar_btn_default_disabled_focused_holo_light = sRes.getIdentifier("layar_btn_default_disabled_focused_holo_light", "drawable", sPackageName);
+        public static int layar_btn_default_disabled_holo_light = sRes.getIdentifier("layar_btn_default_disabled_holo_light", "drawable", sPackageName);
+        public static int layar_btn_default_focused_holo_light = sRes.getIdentifier("layar_btn_default_focused_holo_light", "drawable", sPackageName);
+        public static int layar_btn_default_holo_light = sRes.getIdentifier("layar_btn_default_holo_light", "drawable", sPackageName);
+        public static int layar_btn_default_normal_holo_light = sRes.getIdentifier("layar_btn_default_normal_holo_light", "drawable", sPackageName);
+        public static int layar_btn_default_pressed_holo_light = sRes.getIdentifier("layar_btn_default_pressed_holo_light", "drawable", sPackageName);
+        public static int layar_btn_new_shutter = sRes.getIdentifier("layar_btn_new_shutter", "drawable", sPackageName);
+        public static int layar_btn_player_close = sRes.getIdentifier("layar_btn_player_close", "drawable", sPackageName);
+        public static int layar_btn_player_close_hit = sRes.getIdentifier("layar_btn_player_close_hit", "drawable", sPackageName);
+        public static int layar_btn_player_close_x = sRes.getIdentifier("layar_btn_player_close_x", "drawable", sPackageName);
+        public static int layar_btn_player_pause = sRes.getIdentifier("layar_btn_player_pause", "drawable", sPackageName);
+        public static int layar_btn_player_pause_hit = sRes.getIdentifier("layar_btn_player_pause_hit", "drawable", sPackageName);
+        public static int layar_btn_player_pause_x = sRes.getIdentifier("layar_btn_player_pause_x", "drawable", sPackageName);
+        public static int layar_btn_player_play = sRes.getIdentifier("layar_btn_player_play", "drawable", sPackageName);
+        public static int layar_btn_player_play_hit = sRes.getIdentifier("layar_btn_player_play_hit", "drawable", sPackageName);
+        public static int layar_btn_player_play_x = sRes.getIdentifier("layar_btn_player_play_x", "drawable", sPackageName);
+        public static int layar_btn_player_slider = sRes.getIdentifier("layar_btn_player_slider", "drawable", sPackageName);
+        public static int layar_btn_radio_holo_light = sRes.getIdentifier("layar_btn_radio_holo_light", "drawable", sPackageName);
+        public static int layar_btn_radio_off_disabled_focused_holo_light = sRes.getIdentifier("layar_btn_radio_off_disabled_focused_holo_light", "drawable", sPackageName);
+        public static int layar_btn_radio_off_disabled_holo_light = sRes.getIdentifier("layar_btn_radio_off_disabled_holo_light", "drawable", sPackageName);
+        public static int layar_btn_radio_off_focused_holo_light = sRes.getIdentifier("layar_btn_radio_off_focused_holo_light", "drawable", sPackageName);
+        public static int layar_btn_radio_off_holo_light = sRes.getIdentifier("layar_btn_radio_off_holo_light", "drawable", sPackageName);
+        public static int layar_btn_radio_off_pressed_holo_light = sRes.getIdentifier("layar_btn_radio_off_pressed_holo_light", "drawable", sPackageName);
+        public static int layar_btn_radio_on_disabled_focused_holo_light = sRes.getIdentifier("layar_btn_radio_on_disabled_focused_holo_light", "drawable", sPackageName);
+        public static int layar_btn_radio_on_disabled_holo_light = sRes.getIdentifier("layar_btn_radio_on_disabled_holo_light", "drawable", sPackageName);
+        public static int layar_btn_radio_on_focused_holo_light = sRes.getIdentifier("layar_btn_radio_on_focused_holo_light", "drawable", sPackageName);
+        public static int layar_btn_radio_on_holo_light = sRes.getIdentifier("layar_btn_radio_on_holo_light", "drawable", sPackageName);
+        public static int layar_btn_radio_on_pressed_holo_light = sRes.getIdentifier("layar_btn_radio_on_pressed_holo_light", "drawable", sPackageName);
+        public static int layar_btn_shutter_default = sRes.getIdentifier("layar_btn_shutter_default", "drawable", sPackageName);
+        public static int layar_btn_shutter_pressed = sRes.getIdentifier("layar_btn_shutter_pressed", "drawable", sPackageName);
+        public static int layar_checkbox = sRes.getIdentifier("layar_checkbox", "drawable", sPackageName);
+        public static int layar_checkbox_checked = sRes.getIdentifier("layar_checkbox_checked", "drawable", sPackageName);
+        public static int layar_checkbox_unchecked = sRes.getIdentifier("layar_checkbox_unchecked", "drawable", sPackageName);
+        public static int layar_custom_menu_button = sRes.getIdentifier("layar_custom_menu_button", "drawable", sPackageName);
+        public static int layar_divider = sRes.getIdentifier("layar_divider", "drawable", sPackageName);
+        public static int layar_divider_horizontal_bright = sRes.getIdentifier("layar_divider_horizontal_bright", "drawable", sPackageName);
+        public static int layar_edit_text_holo_light = sRes.getIdentifier("layar_edit_text_holo_light", "drawable", sPackageName);
+        public static int layar_expander_open_holo_light = sRes.getIdentifier("layar_expander_open_holo_light", "drawable", sPackageName);
+        public static int layar_filters_background = sRes.getIdentifier("layar_filters_background", "drawable", sPackageName);
+        public static int layar_ic_action_save = sRes.getIdentifier("layar_ic_action_save", "drawable", sPackageName);
+        public static int layar_ic_dialog_menu_generic = sRes.getIdentifier("layar_ic_dialog_menu_generic", "drawable", sPackageName);
+        public static int layar_ic_logo = sRes.getIdentifier("layar_ic_logo", "drawable", sPackageName);
+        public static int layar_ic_menu_about = sRes.getIdentifier("layar_ic_menu_about", "drawable", sPackageName);
+        public static int layar_ic_menu_ar_custom_overflow = sRes.getIdentifier("layar_ic_menu_ar_custom_overflow", "drawable", sPackageName);
+        public static int layar_ic_menu_camera = sRes.getIdentifier("layar_ic_menu_camera", "drawable", sPackageName);
+        public static int layar_ic_menu_layer_actions = sRes.getIdentifier("layar_ic_menu_layer_actions", "drawable", sPackageName);
+        public static int layar_ic_menu_list = sRes.getIdentifier("layar_ic_menu_list", "drawable", sPackageName);
+        public static int layar_ic_menu_mapmode = sRes.getIdentifier("layar_ic_menu_mapmode", "drawable", sPackageName);
+        public static int layar_ic_menu_refresh = sRes.getIdentifier("layar_ic_menu_refresh", "drawable", sPackageName);
+        public static int layar_ic_menu_refresh_white = sRes.getIdentifier("layar_ic_menu_refresh_white", "drawable", sPackageName);
+        public static int layar_ic_menu_report_problem = sRes.getIdentifier("layar_ic_menu_report_problem", "drawable", sPackageName);
+        public static int layar_ic_menu_settings = sRes.getIdentifier("layar_ic_menu_settings", "drawable", sPackageName);
+        public static int layar_ic_menu_share = sRes.getIdentifier("layar_ic_menu_share", "drawable", sPackageName);
+        public static int layar_list_focused_holo = sRes.getIdentifier("layar_list_focused_holo", "drawable", sPackageName);
+        public static int layar_list_longpressed_holo = sRes.getIdentifier("layar_list_longpressed_holo", "drawable", sPackageName);
+        public static int layar_list_pressed_holo_light = sRes.getIdentifier("layar_list_pressed_holo_light", "drawable", sPackageName);
+        public static int layar_list_selector_background_transition_holo_light = sRes.getIdentifier("layar_list_selector_background_transition_holo_light", "drawable", sPackageName);
+        public static int layar_list_selector_disabled_holo_light = sRes.getIdentifier("layar_list_selector_disabled_holo_light", "drawable", sPackageName);
+        public static int layar_list_selector_holo_light = sRes.getIdentifier("layar_list_selector_holo_light", "drawable", sPackageName);
+        public static int layar_menu_dropdown_panel_holo_light = sRes.getIdentifier("layar_menu_dropdown_panel_holo_light", "drawable", sPackageName);
+        public static int layar_no_poi_image = sRes.getIdentifier("layar_no_poi_image", "drawable", sPackageName);
+        public static int layar_poi_icon_border = sRes.getIdentifier("layar_poi_icon_border", "drawable", sPackageName);
+        public static int layar_poi_icon_glow = sRes.getIdentifier("layar_poi_icon_glow", "drawable", sPackageName);
+        public static int layar_poi_icon_shadow = sRes.getIdentifier("layar_poi_icon_shadow", "drawable", sPackageName);
+        public static int layar_popup_bottom_bright = sRes.getIdentifier("layar_popup_bottom_bright", "drawable", sPackageName);
+        public static int layar_popup_bottom_medium = sRes.getIdentifier("layar_popup_bottom_medium", "drawable", sPackageName);
+        public static int layar_popup_center_bright = sRes.getIdentifier("layar_popup_center_bright", "drawable", sPackageName);
+        public static int layar_popup_top_dark = sRes.getIdentifier("layar_popup_top_dark", "drawable", sPackageName);
+        public static int layar_progress_bg_holo_light = sRes.getIdentifier("layar_progress_bg_holo_light", "drawable", sPackageName);
+        public static int layar_progress_horizontal_holo_light = sRes.getIdentifier("layar_progress_horizontal_holo_light", "drawable", sPackageName);
+        public static int layar_progress_indeterminate_horizontal_holo_light = sRes.getIdentifier("layar_progress_indeterminate_horizontal_holo_light", "drawable", sPackageName);
+        public static int layar_progress_primary_holo = sRes.getIdentifier("layar_progress_primary_holo", "drawable", sPackageName);
+        public static int layar_progress_secondary_holo = sRes.getIdentifier("layar_progress_secondary_holo", "drawable", sPackageName);
+        public static int layar_progressbar_indeterminate_holo1 = sRes.getIdentifier("layar_progressbar_indeterminate_holo1", "drawable", sPackageName);
+        public static int layar_progressbar_indeterminate_holo2 = sRes.getIdentifier("layar_progressbar_indeterminate_holo2", "drawable", sPackageName);
+        public static int layar_progressbar_indeterminate_holo3 = sRes.getIdentifier("layar_progressbar_indeterminate_holo3", "drawable", sPackageName);
+        public static int layar_progressbar_indeterminate_holo4 = sRes.getIdentifier("layar_progressbar_indeterminate_holo4", "drawable", sPackageName);
+        public static int layar_progressbar_indeterminate_holo5 = sRes.getIdentifier("layar_progressbar_indeterminate_holo5", "drawable", sPackageName);
+        public static int layar_progressbar_indeterminate_holo6 = sRes.getIdentifier("layar_progressbar_indeterminate_holo6", "drawable", sPackageName);
+        public static int layar_progressbar_indeterminate_holo7 = sRes.getIdentifier("layar_progressbar_indeterminate_holo7", "drawable", sPackageName);
+        public static int layar_progressbar_indeterminate_holo8 = sRes.getIdentifier("layar_progressbar_indeterminate_holo8", "drawable", sPackageName);
+        public static int layar_qrcode_background = sRes.getIdentifier("layar_qrcode_background", "drawable", sPackageName);
+        public static int layar_qrcode_icon_audio = sRes.getIdentifier("layar_qrcode_icon_audio", "drawable", sPackageName);
+        public static int layar_qrcode_icon_email = sRes.getIdentifier("layar_qrcode_icon_email", "drawable", sPackageName);
+        public static int layar_qrcode_icon_geo = sRes.getIdentifier("layar_qrcode_icon_geo", "drawable", sPackageName);
+        public static int layar_qrcode_icon_googleplay = sRes.getIdentifier("layar_qrcode_icon_googleplay", "drawable", sPackageName);
+        public static int layar_qrcode_icon_layar = sRes.getIdentifier("layar_qrcode_icon_layar", "drawable", sPackageName);
+        public static int layar_qrcode_icon_sms = sRes.getIdentifier("layar_qrcode_icon_sms", "drawable", sPackageName);
+        public static int layar_qrcode_icon_tel = sRes.getIdentifier("layar_qrcode_icon_tel", "drawable", sPackageName);
+        public static int layar_qrcode_icon_unknown = sRes.getIdentifier("layar_qrcode_icon_unknown", "drawable", sPackageName);
+        public static int layar_qrcode_icon_vcard = sRes.getIdentifier("layar_qrcode_icon_vcard", "drawable", sPackageName);
+        public static int layar_qrcode_icon_video = sRes.getIdentifier("layar_qrcode_icon_video", "drawable", sPackageName);
+        public static int layar_qrcode_icon_web = sRes.getIdentifier("layar_qrcode_icon_web", "drawable", sPackageName);
+        public static int layar_radar = sRes.getIdentifier("layar_radar", "drawable", sPackageName);
+        public static int layar_scrubber_control_disabled_holo = sRes.getIdentifier("layar_scrubber_control_disabled_holo", "drawable", sPackageName);
+        public static int layar_scrubber_control_focused_holo = sRes.getIdentifier("layar_scrubber_control_focused_holo", "drawable", sPackageName);
+        public static int layar_scrubber_control_normal_holo = sRes.getIdentifier("layar_scrubber_control_normal_holo", "drawable", sPackageName);
+        public static int layar_scrubber_control_pressed_holo = sRes.getIdentifier("layar_scrubber_control_pressed_holo", "drawable", sPackageName);
+        public static int layar_scrubber_control_selector_holo_light = sRes.getIdentifier("layar_scrubber_control_selector_holo_light", "drawable", sPackageName);
+        public static int layar_scrubber_primary_holo = sRes.getIdentifier("layar_scrubber_primary_holo", "drawable", sPackageName);
+        public static int layar_scrubber_progress_horizontal_holo_light = sRes.getIdentifier("layar_scrubber_progress_horizontal_holo_light", "drawable", sPackageName);
+        public static int layar_scrubber_secondary_holo = sRes.getIdentifier("layar_scrubber_secondary_holo", "drawable", sPackageName);
+        public static int layar_scrubber_track_holo_light = sRes.getIdentifier("layar_scrubber_track_holo_light", "drawable", sPackageName);
+        public static int layar_share_on_facebook_post_button_background = sRes.getIdentifier("layar_share_on_facebook_post_button_background", "drawable", sPackageName);
+        public static int layar_slider_background = sRes.getIdentifier("layar_slider_background", "drawable", sPackageName);
+        public static int layar_spinner = sRes.getIdentifier("layar_spinner", "drawable", sPackageName);
+        public static int layar_spinner_background_holo_light = sRes.getIdentifier("layar_spinner_background_holo_light", "drawable", sPackageName);
+        public static int layar_spinner_default_holo_light = sRes.getIdentifier("layar_spinner_default_holo_light", "drawable", sPackageName);
+        public static int layar_spinner_disabled_holo_light = sRes.getIdentifier("layar_spinner_disabled_holo_light", "drawable", sPackageName);
+        public static int layar_spinner_focused_holo_light = sRes.getIdentifier("layar_spinner_focused_holo_light", "drawable", sPackageName);
+        public static int layar_spinner_pressed_holo_light = sRes.getIdentifier("layar_spinner_pressed_holo_light", "drawable", sPackageName);
         public static int layar_splash = sRes.getIdentifier("layar_splash", "drawable", sPackageName);
+        public static int layar_splash_logo = sRes.getIdentifier("layar_splash_logo", "drawable", sPackageName);
+        public static int layar_splash_logo_container = sRes.getIdentifier("layar_splash_logo_container", "drawable", sPackageName);
+        public static int layar_spot = sRes.getIdentifier("layar_spot", "drawable", sPackageName);
+        public static int layar_spot_focus = sRes.getIdentifier("layar_spot_focus", "drawable", sPackageName);
+        public static int layar_textfield_activated_holo_light = sRes.getIdentifier("layar_textfield_activated_holo_light", "drawable", sPackageName);
+        public static int layar_textfield_default_holo_light = sRes.getIdentifier("layar_textfield_default_holo_light", "drawable", sPackageName);
+        public static int layar_textfield_disabled_focused_holo_light = sRes.getIdentifier("layar_textfield_disabled_focused_holo_light", "drawable", sPackageName);
+        public static int layar_textfield_disabled_holo_light = sRes.getIdentifier("layar_textfield_disabled_holo_light", "drawable", sPackageName);
+        public static int layar_textfield_focused_holo_light = sRes.getIdentifier("layar_textfield_focused_holo_light", "drawable", sPackageName);
+        public static int layar_throbber = sRes.getIdentifier("layar_throbber", "drawable", sPackageName);
+        public static int layar_throbber_dark = sRes.getIdentifier("layar_throbber_dark", "drawable", sPackageName);
+        public static int layar_throbber_dark_x = sRes.getIdentifier("layar_throbber_dark_x", "drawable", sPackageName);
+        public static int layar_throbber_light = sRes.getIdentifier("layar_throbber_light", "drawable", sPackageName);
+        public static int layar_throbber_light_x = sRes.getIdentifier("layar_throbber_light_x", "drawable", sPackageName);
+        public static int layar_tip_nothing_found_1 = sRes.getIdentifier("layar_tip_nothing_found_1", "drawable", sPackageName);
+        public static int layar_tip_nothing_found_2 = sRes.getIdentifier("layar_tip_nothing_found_2", "drawable", sPackageName);
+        public static int layar_tip_point_back_at_page = sRes.getIdentifier("layar_tip_point_back_at_page", "drawable", sPackageName);
+        public static int layar_transparency = sRes.getIdentifier("layar_transparency", "drawable", sPackageName);
+        public static int layar_video_fullscreen = sRes.getIdentifier("layar_video_fullscreen", "drawable", sPackageName);
+        public static int layar_video_play = sRes.getIdentifier("layar_video_play", "drawable", sPackageName);
+        public static int layar_vision_line = sRes.getIdentifier("layar_vision_line", "drawable", sPackageName);
+        public static int layar_vision_no_content_bg = sRes.getIdentifier("layar_vision_no_content_bg", "drawable", sPackageName);
+        public static int layar_vision_no_content_icon = sRes.getIdentifier("layar_vision_no_content_icon", "drawable", sPackageName);
         public static int layar_watermark = sRes.getIdentifier("layar_watermark", "drawable", sPackageName);
         public static int layer_details_divider = sRes.getIdentifier("layer_details_divider", "drawable", sPackageName);
-        public static int library_icon = sRes.getIdentifier("library_icon", "drawable", sPackageName);
-        public static int list_divider = sRes.getIdentifier("list_divider", "drawable", sPackageName);
-        public static int list_pressed_holo_dark = sRes.getIdentifier("list_pressed_holo_dark", "drawable", sPackageName);
-        public static int list_selected_holo_dark = sRes.getIdentifier("list_selected_holo_dark", "drawable", sPackageName);
-        public static int menu_dropdown_panel_holo_light = sRes.getIdentifier("menu_dropdown_panel_holo_light", "drawable", sPackageName);
-        public static int more_icon = sRes.getIdentifier("more_icon", "drawable", sPackageName);
-        public static int no_poi_image = sRes.getIdentifier("no_poi_image", "drawable", sPackageName);
-        public static int poi_icon_border = sRes.getIdentifier("poi_icon_border", "drawable", sPackageName);
-        public static int poi_icon_glow = sRes.getIdentifier("poi_icon_glow", "drawable", sPackageName);
-        public static int poi_icon_shadow = sRes.getIdentifier("poi_icon_shadow", "drawable", sPackageName);
-        public static int popup_bottom_bright = sRes.getIdentifier("popup_bottom_bright", "drawable", sPackageName);
-        public static int popup_bottom_medium = sRes.getIdentifier("popup_bottom_medium", "drawable", sPackageName);
-        public static int popup_center_bright = sRes.getIdentifier("popup_center_bright", "drawable", sPackageName);
-        public static int popup_top_dark = sRes.getIdentifier("popup_top_dark", "drawable", sPackageName);
-        public static int qrcode_background = sRes.getIdentifier("qrcode_background", "drawable", sPackageName);
-        public static int qrcode_icon_audio = sRes.getIdentifier("qrcode_icon_audio", "drawable", sPackageName);
-        public static int qrcode_icon_email = sRes.getIdentifier("qrcode_icon_email", "drawable", sPackageName);
-        public static int qrcode_icon_geo = sRes.getIdentifier("qrcode_icon_geo", "drawable", sPackageName);
-        public static int qrcode_icon_googleplay = sRes.getIdentifier("qrcode_icon_googleplay", "drawable", sPackageName);
-        public static int qrcode_icon_layar = sRes.getIdentifier("qrcode_icon_layar", "drawable", sPackageName);
-        public static int qrcode_icon_sms = sRes.getIdentifier("qrcode_icon_sms", "drawable", sPackageName);
-        public static int qrcode_icon_tel = sRes.getIdentifier("qrcode_icon_tel", "drawable", sPackageName);
-        public static int qrcode_icon_unknown = sRes.getIdentifier("qrcode_icon_unknown", "drawable", sPackageName);
-        public static int qrcode_icon_vcard = sRes.getIdentifier("qrcode_icon_vcard", "drawable", sPackageName);
-        public static int qrcode_icon_video = sRes.getIdentifier("qrcode_icon_video", "drawable", sPackageName);
-        public static int qrcode_icon_web = sRes.getIdentifier("qrcode_icon_web", "drawable", sPackageName);
-        public static int qrcode_shadow = sRes.getIdentifier("qrcode_shadow", "drawable", sPackageName);
-        public static int scan_image = sRes.getIdentifier("scan_image", "drawable", sPackageName);
-        public static int scan_toast_background = sRes.getIdentifier("scan_toast_background", "drawable", sPackageName);
-        public static int shadow_clue_gallery = sRes.getIdentifier("shadow_clue_gallery", "drawable", sPackageName);
-        public static int sharing_icon = sRes.getIdentifier("sharing_icon", "drawable", sPackageName);
-        public static int slider_background = sRes.getIdentifier("slider_background", "drawable", sPackageName);
-        public static int splash_logo = sRes.getIdentifier("splash_logo", "drawable", sPackageName);
-        public static int splash_logo_container = sRes.getIdentifier("splash_logo_container", "drawable", sPackageName);
-        public static int throbber = sRes.getIdentifier("throbber", "drawable", sPackageName);
-        public static int throbber_dark = sRes.getIdentifier("throbber_dark", "drawable", sPackageName);
-        public static int throbber_dark_x = sRes.getIdentifier("throbber_dark_x", "drawable", sPackageName);
-        public static int throbber_inner = sRes.getIdentifier("throbber_inner", "drawable", sPackageName);
-        public static int throbber_light = sRes.getIdentifier("throbber_light", "drawable", sPackageName);
-        public static int throbber_light_x = sRes.getIdentifier("throbber_light_x", "drawable", sPackageName);
-        public static int throbber_outer = sRes.getIdentifier("throbber_outer", "drawable", sPackageName);
-        public static int transparency = sRes.getIdentifier("transparency", "drawable", sPackageName);
-        public static int video_bg = sRes.getIdentifier("video_bg", "drawable", sPackageName);
-        public static int video_fullscreen = sRes.getIdentifier("video_fullscreen", "drawable", sPackageName);
-        public static int video_loader = sRes.getIdentifier("video_loader", "drawable", sPackageName);
-        public static int video_play = sRes.getIdentifier("video_play", "drawable", sPackageName);
-        public static int video_rewind = sRes.getIdentifier("video_rewind", "drawable", sPackageName);
-        public static int vision_bracket = sRes.getIdentifier("vision_bracket", "drawable", sPackageName);
-        public static int vision_brackets = sRes.getIdentifier("vision_brackets", "drawable", sPackageName);
-        public static int vision_button_bg = sRes.getIdentifier("vision_button_bg", "drawable", sPackageName);
-        public static int vision_dark_bg = sRes.getIdentifier("vision_dark_bg", "drawable", sPackageName);
-        public static int vision_no_content_bg = sRes.getIdentifier("vision_no_content_bg", "drawable", sPackageName);
-        public static int vision_no_content_icon = sRes.getIdentifier("vision_no_content_icon", "drawable", sPackageName);
-        public static int vision_status_active = sRes.getIdentifier("vision_status_active", "drawable", sPackageName);
-        public static int vision_status_background = sRes.getIdentifier("vision_status_background", "drawable", sPackageName);
-        public static int vision_status_fail = sRes.getIdentifier("vision_status_fail", "drawable", sPackageName);
-        public static int vision_status_inactive = sRes.getIdentifier("vision_status_inactive", "drawable", sPackageName);
-        public static int vision_status_inactive_ok = sRes.getIdentifier("vision_status_inactive_ok", "drawable", sPackageName);
-        public static int vision_status_ok = sRes.getIdentifier("vision_status_ok", "drawable", sPackageName);
-        public static int vision_status_transition_1 = sRes.getIdentifier("vision_status_transition_1", "drawable", sPackageName);
-        public static int vision_status_transition_2 = sRes.getIdentifier("vision_status_transition_2", "drawable", sPackageName);
-        public static int vision_status_transition_3 = sRes.getIdentifier("vision_status_transition_3", "drawable", sPackageName);
-        public static int vision_status_transition_4 = sRes.getIdentifier("vision_status_transition_4", "drawable", sPackageName);
-        public static int vision_status_transition_5 = sRes.getIdentifier("vision_status_transition_5", "drawable", sPackageName);
-        public static int vision_status_transition_6 = sRes.getIdentifier("vision_status_transition_6", "drawable", sPackageName);
-        public static int vision_status_transition_7 = sRes.getIdentifier("vision_status_transition_7", "drawable", sPackageName);
-        public static int vision_status_transition_animation = sRes.getIdentifier("vision_status_transition_animation", "drawable", sPackageName);
-        public static int vision_status_transition_background = sRes.getIdentifier("vision_status_transition_background", "drawable", sPackageName);
     }
     public static final class id {
         public static int action_bar_title = sRes.getIdentifier("action_bar_title", "id", sPackageName);
+        public static int attribution = sRes.getIdentifier("attribution", "id", sPackageName);
         public static int audioLayout = sRes.getIdentifier("audioLayout", "id", sPackageName);
-        public static int back = sRes.getIdentifier("back", "id", sPackageName);
-        public static int bottom_bar = sRes.getIdentifier("bottom_bar", "id", sPackageName);
-        public static int brackets = sRes.getIdentifier("brackets", "id", sPackageName);
+        public static int audio_view = sRes.getIdentifier("audio_view", "id", sPackageName);
+        public static int biw = sRes.getIdentifier("biw", "id", sPackageName);
+        public static int biwActions = sRes.getIdentifier("biwActions", "id", sPackageName);
+        public static int biwRight = sRes.getIdentifier("biwRight", "id", sPackageName);
+        public static int biwTop = sRes.getIdentifier("biwTop", "id", sPackageName);
+        public static int briefLine2 = sRes.getIdentifier("briefLine2", "id", sPackageName);
+        public static int briefTitle = sRes.getIdentifier("briefTitle", "id", sPackageName);
         public static int btnClose = sRes.getIdentifier("btnClose", "id", sPackageName);
+        public static int btnMore = sRes.getIdentifier("btnMore", "id", sPackageName);
         public static int btnPlay = sRes.getIdentifier("btnPlay", "id", sPackageName);
         public static int btn_refresh = sRes.getIdentifier("btn_refresh", "id", sPackageName);
+        public static int btn_save = sRes.getIdentifier("btn_save", "id", sPackageName);
         public static int btn_share = sRes.getIdentifier("btn_share", "id", sPackageName);
+        public static int buttonBar = sRes.getIdentifier("buttonBar", "id", sPackageName);
+        public static int buttonCancel = sRes.getIdentifier("buttonCancel", "id", sPackageName);
         public static int buttonPanel = sRes.getIdentifier("buttonPanel", "id", sPackageName);
+        public static int buttonSave = sRes.getIdentifier("buttonSave", "id", sPackageName);
         public static int content = sRes.getIdentifier("content", "id", sPackageName);
-        public static int content_area = sRes.getIdentifier("content_area", "id", sPackageName);
         public static int copy_link_button = sRes.getIdentifier("copy_link_button", "id", sPackageName);
         public static int currentPosistion = sRes.getIdentifier("currentPosistion", "id", sPackageName);
-        public static int current_layer = sRes.getIdentifier("current_layer", "id", sPackageName);
-        public static int custom_home_button = sRes.getIdentifier("custom_home_button", "id", sPackageName);
-        public static int custom_home_icon = sRes.getIdentifier("custom_home_icon", "id", sPackageName);
-        public static int custom_home_label = sRes.getIdentifier("custom_home_label", "id", sPackageName);
         public static int custom_menu_button = sRes.getIdentifier("custom_menu_button", "id", sPackageName);
         public static int description = sRes.getIdentifier("description", "id", sPackageName);
-        public static int distanceIcon = sRes.getIdentifier("distanceIcon", "id", sPackageName);
-        public static int distanceString = sRes.getIdentifier("distanceString", "id", sPackageName);
+        public static int distance = sRes.getIdentifier("distance", "id", sPackageName);
         public static int divider = sRes.getIdentifier("divider", "id", sPackageName);
         public static int duration = sRes.getIdentifier("duration", "id", sPackageName);
-        public static int forward = sRes.getIdentifier("forward", "id", sPackageName);
-        public static int glsurfaceview = sRes.getIdentifier("glsurfaceview", "id", sPackageName);
+        public static int filterControl = sRes.getIdentifier("filterControl", "id", sPackageName);
+        public static int filterLabel = sRes.getIdentifier("filterLabel", "id", sPackageName);
+        public static int filterValue = sRes.getIdentifier("filterValue", "id", sPackageName);
+        public static int filtersRoot = sRes.getIdentifier("filtersRoot", "id", sPackageName);
+        public static int glSurfaceView = sRes.getIdentifier("glSurfaceView", "id", sPackageName);
         public static int home = sRes.getIdentifier("home", "id", sPackageName);
         public static int icon = sRes.getIdentifier("icon", "id", sPackageName);
         public static int imageBox = sRes.getIdentifier("imageBox", "id", sPackageName);
         public static int imageShareScreenIcon = sRes.getIdentifier("imageShareScreenIcon", "id", sPackageName);
-        public static int imageThrobber = sRes.getIdentifier("imageThrobber", "id", sPackageName);
         public static int imageThrobberShare = sRes.getIdentifier("imageThrobberShare", "id", sPackageName);
         public static int info_area = sRes.getIdentifier("info_area", "id", sPackageName);
-        public static int launchArea = sRes.getIdentifier("launchArea", "id", sPackageName);
-        public static int layar_list_item = sRes.getIdentifier("layar_list_item", "id", sPackageName);
+        public static int label = sRes.getIdentifier("label", "id", sPackageName);
+        public static int layar_content_fragment = sRes.getIdentifier("layar_content_fragment", "id", sPackageName);
+        public static int layar_controller_fragment = sRes.getIdentifier("layar_controller_fragment", "id", sPackageName);
+        public static int layar_screenshot_fragment = sRes.getIdentifier("layar_screenshot_fragment", "id", sPackageName);
+        public static int layar_sdk_fragment = sRes.getIdentifier("layar_sdk_fragment", "id", sPackageName);
+        public static int layar_sdk_layout = sRes.getIdentifier("layar_sdk_layout", "id", sPackageName);
+        public static int layar_watermark = sRes.getIdentifier("layar_watermark", "id", sPackageName);
+        public static int layerLogo = sRes.getIdentifier("layerLogo", "id", sPackageName);
+        public static int layerTitle = sRes.getIdentifier("layerTitle", "id", sPackageName);
         public static int layer_description = sRes.getIdentifier("layer_description", "id", sPackageName);
         public static int layer_header = sRes.getIdentifier("layer_header", "id", sPackageName);
-        public static int layer_icon = sRes.getIdentifier("layer_icon", "id", sPackageName);
         public static int layer_list_desc = sRes.getIdentifier("layer_list_desc", "id", sPackageName);
         public static int layer_list_icon = sRes.getIdentifier("layer_list_icon", "id", sPackageName);
         public static int layer_list_icongroup = sRes.getIdentifier("layer_list_icongroup", "id", sPackageName);
         public static int layer_list_publisher = sRes.getIdentifier("layer_list_publisher", "id", sPackageName);
         public static int layer_list_title = sRes.getIdentifier("layer_list_title", "id", sPackageName);
-        public static int layer_name = sRes.getIdentifier("layer_name", "id", sPackageName);
         public static int layer_rate = sRes.getIdentifier("layer_rate", "id", sPackageName);
         public static int layer_screenshot = sRes.getIdentifier("layer_screenshot", "id", sPackageName);
-        public static int layer_type_icon = sRes.getIdentifier("layer_type_icon", "id", sPackageName);
         public static int layer_url_text = sRes.getIdentifier("layer_url_text", "id", sPackageName);
         public static int linkBar = sRes.getIdentifier("linkBar", "id", sPackageName);
         public static int loadingPanel = sRes.getIdentifier("loadingPanel", "id", sPackageName);
         public static int loadingProgress = sRes.getIdentifier("loadingProgress", "id", sPackageName);
+        public static int logo = sRes.getIdentifier("logo", "id", sPackageName);
+        public static int logoContainer = sRes.getIdentifier("logoContainer", "id", sPackageName);
         public static int menu_ar = sRes.getIdentifier("menu_ar", "id", sPackageName);
         public static int menu_layer_actions = sRes.getIdentifier("menu_layer_actions", "id", sPackageName);
         public static int menu_layer_details = sRes.getIdentifier("menu_layer_details", "id", sPackageName);
@@ -283,84 +368,89 @@ public class R {
         public static int message_area_linear = sRes.getIdentifier("message_area_linear", "id", sPackageName);
         public static int message_input_area = sRes.getIdentifier("message_input_area", "id", sPackageName);
         public static int negativeButton = sRes.getIdentifier("negativeButton", "id", sPackageName);
-        public static int poiAttribution = sRes.getIdentifier("poiAttribution", "id", sPackageName);
-        public static int poiDetails = sRes.getIdentifier("poiDetails", "id", sPackageName);
+        public static int nothing_found_widget = sRes.getIdentifier("nothing_found_widget", "id", sPackageName);
         public static int poiImage = sRes.getIdentifier("poiImage", "id", sPackageName);
-        public static int poiInfo = sRes.getIdentifier("poiInfo", "id", sPackageName);
-        public static int poiLine2 = sRes.getIdentifier("poiLine2", "id", sPackageName);
-        public static int poiTitle = sRes.getIdentifier("poiTitle", "id", sPackageName);
         public static int positiveButton = sRes.getIdentifier("positiveButton", "id", sPackageName);
         public static int progress = sRes.getIdentifier("progress", "id", sPackageName);
         public static int progressLoading = sRes.getIdentifier("progressLoading", "id", sPackageName);
         public static int progressText = sRes.getIdentifier("progressText", "id", sPackageName);
+        public static int root_layout = sRes.getIdentifier("root_layout", "id", sPackageName);
         public static int rotateLayout = sRes.getIdentifier("rotateLayout", "id", sPackageName);
-        public static int scan_button = sRes.getIdentifier("scan_button", "id", sPackageName);
-        public static int scan_hint = sRes.getIdentifier("scan_hint", "id", sPackageName);
-        public static int scan_in_progress = sRes.getIdentifier("scan_in_progress", "id", sPackageName);
-        public static int scan_no_results = sRes.getIdentifier("scan_no_results", "id", sPackageName);
-        public static int scan_point_hint = sRes.getIdentifier("scan_point_hint", "id", sPackageName);
-        public static int scan_point_title = sRes.getIdentifier("scan_point_title", "id", sPackageName);
-        public static int scan_status = sRes.getIdentifier("scan_status", "id", sPackageName);
-        public static int scan_tip = sRes.getIdentifier("scan_tip", "id", sPackageName);
-        public static int scan_title = sRes.getIdentifier("scan_title", "id", sPackageName);
-        public static int screenshot_button_retake = sRes.getIdentifier("screenshot_button_retake", "id", sPackageName);
-        public static int screenshot_button_take = sRes.getIdentifier("screenshot_button_take", "id", sPackageName);
-        public static int screenshot_button_use = sRes.getIdentifier("screenshot_button_use", "id", sPackageName);
+        public static int scanView = sRes.getIdentifier("scanView", "id", sPackageName);
+        public static int screenshot_button = sRes.getIdentifier("screenshot_button", "id", sPackageName);
+        public static int screenshot_flush = sRes.getIdentifier("screenshot_flush", "id", sPackageName);
+        public static int screenshot_hint = sRes.getIdentifier("screenshot_hint", "id", sPackageName);
         public static int screenshot_imageview = sRes.getIdentifier("screenshot_imageview", "id", sPackageName);
-        public static int screenshot_take_bar = sRes.getIdentifier("screenshot_take_bar", "id", sPackageName);
+        public static int screenshot_layout = sRes.getIdentifier("screenshot_layout", "id", sPackageName);
         public static int shadow = sRes.getIdentifier("shadow", "id", sPackageName);
         public static int shareButton = sRes.getIdentifier("shareButton", "id", sPackageName);
+        public static int share_on_facebook_image_to_share = sRes.getIdentifier("share_on_facebook_image_to_share", "id", sPackageName);
+        public static int share_on_facebook_link = sRes.getIdentifier("share_on_facebook_link", "id", sPackageName);
+        public static int share_on_facebook_link_description = sRes.getIdentifier("share_on_facebook_link_description", "id", sPackageName);
+        public static int share_on_facebook_link_layout = sRes.getIdentifier("share_on_facebook_link_layout", "id", sPackageName);
+        public static int share_on_facebook_link_title = sRes.getIdentifier("share_on_facebook_link_title", "id", sPackageName);
+        public static int share_on_facebook_message = sRes.getIdentifier("share_on_facebook_message", "id", sPackageName);
+        public static int share_on_facebook_message_layout = sRes.getIdentifier("share_on_facebook_message_layout", "id", sPackageName);
+        public static int share_on_facebook_post = sRes.getIdentifier("share_on_facebook_post", "id", sPackageName);
+        public static int share_on_facebook_title_divider = sRes.getIdentifier("share_on_facebook_title_divider", "id", sPackageName);
+        public static int share_on_facebook_title_layout = sRes.getIdentifier("share_on_facebook_title_layout", "id", sPackageName);
+        public static int share_on_facebook_user_photo = sRes.getIdentifier("share_on_facebook_user_photo", "id", sPackageName);
+        public static int share_on_facebook_window_title = sRes.getIdentifier("share_on_facebook_window_title", "id", sPackageName);
         public static int status = sRes.getIdentifier("status", "id", sPackageName);
-        public static int status_step_1 = sRes.getIdentifier("status_step_1", "id", sPackageName);
-        public static int status_step_2 = sRes.getIdentifier("status_step_2", "id", sPackageName);
-        public static int status_step_3 = sRes.getIdentifier("status_step_3", "id", sPackageName);
-        public static int status_transition_1 = sRes.getIdentifier("status_transition_1", "id", sPackageName);
-        public static int status_transition_2 = sRes.getIdentifier("status_transition_2", "id", sPackageName);
+        public static int status_view = sRes.getIdentifier("status_view", "id", sPackageName);
         public static int text = sRes.getIdentifier("text", "id", sPackageName);
         public static int throbber = sRes.getIdentifier("throbber", "id", sPackageName);
         public static int timeline = sRes.getIdentifier("timeline", "id", sPackageName);
-        public static int tip_layout = sRes.getIdentifier("tip_layout", "id", sPackageName);
+        public static int tip_image = sRes.getIdentifier("tip_image", "id", sPackageName);
+        public static int tip_text = sRes.getIdentifier("tip_text", "id", sPackageName);
+        public static int tip_title = sRes.getIdentifier("tip_title", "id", sPackageName);
         public static int title = sRes.getIdentifier("title", "id", sPackageName);
+        public static int titleBar = sRes.getIdentifier("titleBar", "id", sPackageName);
         public static int title_template = sRes.getIdentifier("title_template", "id", sPackageName);
         public static int topPanel = sRes.getIdentifier("topPanel", "id", sPackageName);
-        public static int top_bar = sRes.getIdentifier("top_bar", "id", sPackageName);
+        public static int txt_tap_to_scan = sRes.getIdentifier("txt_tap_to_scan", "id", sPackageName);
         public static int video = sRes.getIdentifier("video", "id", sPackageName);
-        public static int vision_nothing_found = sRes.getIdentifier("vision_nothing_found", "id", sPackageName);
-        public static int vision_nothing_found_2 = sRes.getIdentifier("vision_nothing_found_2", "id", sPackageName);
-        public static int vision_nothing_found_continue = sRes.getIdentifier("vision_nothing_found_continue", "id", sPackageName);
-        public static int watermark = sRes.getIdentifier("watermark", "id", sPackageName);
         public static int webview = sRes.getIdentifier("webview", "id", sPackageName);
     }
     public static final class layout {
         public static int layar_activity_audio = sRes.getIdentifier("layar_activity_audio", "layout", sPackageName);
+        public static int layar_activity_filter_settings = sRes.getIdentifier("layar_activity_filter_settings", "layout", sPackageName);
         public static int layar_activity_layer_details = sRes.getIdentifier("layar_activity_layer_details", "layout", sPackageName);
         public static int layar_activity_screenshot = sRes.getIdentifier("layar_activity_screenshot", "layout", sPackageName);
+        public static int layar_activity_share_on_facebook = sRes.getIdentifier("layar_activity_share_on_facebook", "layout", sPackageName);
         public static int layar_activity_share_social = sRes.getIdentifier("layar_activity_share_social", "layout", sPackageName);
         public static int layar_activity_video = sRes.getIdentifier("layar_activity_video", "layout", sPackageName);
-        public static int layar_activity_vision = sRes.getIdentifier("layar_activity_vision", "layout", sPackageName);
         public static int layar_activity_web = sRes.getIdentifier("layar_activity_web", "layout", sPackageName);
+        public static int layar_custom_menu_item = sRes.getIdentifier("layar_custom_menu_item", "layout", sPackageName);
+        public static int layar_dialog_filter = sRes.getIdentifier("layar_dialog_filter", "layout", sPackageName);
         public static int layar_dialog_message_with_icon = sRes.getIdentifier("layar_dialog_message_with_icon", "layout", sPackageName);
         public static int layar_dialog_smart = sRes.getIdentifier("layar_dialog_smart", "layout", sPackageName);
         public static int layar_dialog_smart_progress = sRes.getIdentifier("layar_dialog_smart_progress", "layout", sPackageName);
+        public static int layar_fragment_ar = sRes.getIdentifier("layar_fragment_ar", "layout", sPackageName);
+        public static int layar_fragment_create_screenshot = sRes.getIdentifier("layar_fragment_create_screenshot", "layout", sPackageName);
+        public static int layar_fragment_geo = sRes.getIdentifier("layar_fragment_geo", "layout", sPackageName);
         public static int layar_fragment_layer_details = sRes.getIdentifier("layar_fragment_layer_details", "layout", sPackageName);
-        public static int layar_list_item = sRes.getIdentifier("layar_list_item", "layout", sPackageName);
+        public static int layar_fragment_vision = sRes.getIdentifier("layar_fragment_vision", "layout", sPackageName);
+        public static int layar_sdk_activity = sRes.getIdentifier("layar_sdk_activity", "layout", sPackageName);
+        public static int layar_sdk_fragment = sRes.getIdentifier("layar_sdk_fragment", "layout", sPackageName);
+        public static int layar_tip_view = sRes.getIdentifier("layar_tip_view", "layout", sPackageName);
+        public static int layar_tip_view_contents = sRes.getIdentifier("layar_tip_view_contents", "layout", sPackageName);
         public static int layar_view_audio = sRes.getIdentifier("layar_view_audio", "layout", sPackageName);
-        public static int layar_view_custom_home_button = sRes.getIdentifier("layar_view_custom_home_button", "layout", sPackageName);
+        public static int layar_view_biw = sRes.getIdentifier("layar_view_biw", "layout", sPackageName);
         public static int layar_view_custom_menu_button = sRes.getIdentifier("layar_view_custom_menu_button", "layout", sPackageName);
         public static int layar_view_divider = sRes.getIdentifier("layar_view_divider", "layout", sPackageName);
+        public static int layar_view_filter_button = sRes.getIdentifier("layar_view_filter_button", "layout", sPackageName);
+        public static int layar_view_filter_range = sRes.getIdentifier("layar_view_filter_range", "layout", sPackageName);
+        public static int layar_view_filter_searchbox = sRes.getIdentifier("layar_view_filter_searchbox", "layout", sPackageName);
+        public static int layar_view_filter_slider = sRes.getIdentifier("layar_view_filter_slider", "layout", sPackageName);
+        public static int layar_view_layer_header = sRes.getIdentifier("layar_view_layer_header", "layout", sPackageName);
         public static int layar_view_message_input = sRes.getIdentifier("layar_view_message_input", "layout", sPackageName);
         public static int layar_view_poi_action_item = sRes.getIdentifier("layar_view_poi_action_item", "layout", sPackageName);
         public static int layar_view_qrcode_plaintext = sRes.getIdentifier("layar_view_qrcode_plaintext", "layout", sPackageName);
         public static int layar_view_qrcode_template = sRes.getIdentifier("layar_view_qrcode_template", "layout", sPackageName);
-        public static int layar_view_take_screenshot_bar = sRes.getIdentifier("layar_view_take_screenshot_bar", "layout", sPackageName);
+        public static int layar_view_section_header = sRes.getIdentifier("layar_view_section_header", "layout", sPackageName);
         public static int layar_view_unsupported_content = sRes.getIdentifier("layar_view_unsupported_content", "layout", sPackageName);
-        public static int layar_view_vision_loading = sRes.getIdentifier("layar_view_vision_loading", "layout", sPackageName);
-        public static int layar_view_vision_nav_bar = sRes.getIdentifier("layar_view_vision_nav_bar", "layout", sPackageName);
         public static int layar_view_vision_no_content = sRes.getIdentifier("layar_view_vision_no_content", "layout", sPackageName);
-        public static int layar_view_vision_scan_brackets = sRes.getIdentifier("layar_view_vision_scan_brackets", "layout", sPackageName);
-        public static int layar_view_vision_scan_no_results = sRes.getIdentifier("layar_view_vision_scan_no_results", "layout", sPackageName);
-        public static int layar_view_vision_scan_toast = sRes.getIdentifier("layar_view_vision_scan_toast", "layout", sPackageName);
-        public static int layar_view_vision_status = sRes.getIdentifier("layar_view_vision_status", "layout", sPackageName);
     }
     public static final class menu {
         public static int layar_activity_geo = sRes.getIdentifier("layar_activity_geo", "menu", sPackageName);
@@ -383,6 +473,7 @@ public class R {
         public static int action_scan = sRes.getIdentifier("action_scan", "string", sPackageName);
         public static int action_share = sRes.getIdentifier("action_share", "string", sPackageName);
         public static int apply = sRes.getIdentifier("apply", "string", sPackageName);
+        public static int ar_view = sRes.getIdentifier("ar_view", "string", sPackageName);
         public static int audio_error = sRes.getIdentifier("audio_error", "string", sPackageName);
         public static int audio_error_title = sRes.getIdentifier("audio_error_title", "string", sPackageName);
         /**  Audio 
@@ -395,6 +486,7 @@ public class R {
          */
         public static int audio_loading = sRes.getIdentifier("audio_loading", "string", sPackageName);
         public static int cancel = sRes.getIdentifier("cancel", "string", sPackageName);
+        public static int cant_take_screenshot = sRes.getIdentifier("cant_take_screenshot", "string", sPackageName);
         public static int continue_ = sRes.getIdentifier("continue_", "string", sPackageName);
         /**  DetailsView 
  DetailsView 
@@ -447,9 +539,9 @@ public class R {
  Social stuff 
          */
         public static int facebook = sRes.getIdentifier("facebook", "string", sPackageName);
+        public static int filters = sRes.getIdentifier("filters", "string", sPackageName);
         public static int layer = sRes.getIdentifier("layer", "string", sPackageName);
         /**  Layer actions 
- Layer actions 
  Layer actions 
  Layer actions 
  Layer actions 
@@ -459,6 +551,7 @@ public class R {
         public static int layer_actions = sRes.getIdentifier("layer_actions", "string", sPackageName);
         public static int layer_details_body = sRes.getIdentifier("layer_details_body", "string", sPackageName);
         public static int layer_details_subject = sRes.getIdentifier("layer_details_subject", "string", sPackageName);
+        public static int layer_info = sRes.getIdentifier("layer_info", "string", sPackageName);
         /**  Feedback 
  Feedback 
  Feedback 
@@ -469,6 +562,7 @@ public class R {
          */
         public static int layer_report_problem = sRes.getIdentifier("layer_report_problem", "string", sPackageName);
         public static int layer_report_problem_body = sRes.getIdentifier("layer_report_problem_body", "string", sPackageName);
+        public static int layer_screenshot = sRes.getIdentifier("layer_screenshot", "string", sPackageName);
         /**  DetailsView activity 
  DetailsView activity 
  DetailsView activity 
@@ -478,7 +572,7 @@ public class R {
  DetailsView activity 
          */
         public static int leaving_message = sRes.getIdentifier("leaving_message", "string", sPackageName);
-        public static int menu_about = sRes.getIdentifier("menu_about", "string", sPackageName);
+        public static int map_view = sRes.getIdentifier("map_view", "string", sPackageName);
         /**  Menu Options 
  Menu Options 
  Menu Options 
@@ -541,6 +635,7 @@ public class R {
          */
         public static int poi_action_directions = sRes.getIdentifier("poi_action_directions", "string", sPackageName);
         public static int poi_action_lock = sRes.getIdentifier("poi_action_lock", "string", sPackageName);
+        public static int poi_action_more = sRes.getIdentifier("poi_action_more", "string", sPackageName);
         public static int poi_action_unlock = sRes.getIdentifier("poi_action_unlock", "string", sPackageName);
         public static int progress_analyzing = sRes.getIdentifier("progress_analyzing", "string", sPackageName);
         public static int progress_getting_content = sRes.getIdentifier("progress_getting_content", "string", sPackageName);
@@ -570,6 +665,7 @@ public class R {
         public static int qrcode_video = sRes.getIdentifier("qrcode_video", "string", sPackageName);
         public static int qrcode_video_text = sRes.getIdentifier("qrcode_video_text", "string", sPackageName);
         public static int qrcode_web = sRes.getIdentifier("qrcode_web", "string", sPackageName);
+        public static int refresh_layer = sRes.getIdentifier("refresh_layer", "string", sPackageName);
         public static int save = sRes.getIdentifier("save", "string", sPackageName);
         /**  Screenshot 
  Screenshot 
@@ -586,7 +682,9 @@ public class R {
         public static int screenshot_processsing = sRes.getIdentifier("screenshot_processsing", "string", sPackageName);
         public static int screenshot_retake = sRes.getIdentifier("screenshot_retake", "string", sPackageName);
         public static int screenshot_save_to_library = sRes.getIdentifier("screenshot_save_to_library", "string", sPackageName);
+        public static int screenshot_saved = sRes.getIdentifier("screenshot_saved", "string", sPackageName);
         public static int screenshot_send_email = sRes.getIdentifier("screenshot_send_email", "string", sPackageName);
+        public static int share = sRes.getIdentifier("share", "string", sPackageName);
         public static int share_chooser_title = sRes.getIdentifier("share_chooser_title", "string", sPackageName);
         /**  Sharing 
  Sharing 
@@ -598,6 +696,7 @@ public class R {
          */
         public static int share_dialog_title = sRes.getIdentifier("share_dialog_title", "string", sPackageName);
         public static int share_fail = sRes.getIdentifier("share_fail", "string", sPackageName);
+        public static int share_generic_message = sRes.getIdentifier("share_generic_message", "string", sPackageName);
         public static int share_layer = sRes.getIdentifier("share_layer", "string", sPackageName);
         public static int share_on_facebook_add_your_thougth = sRes.getIdentifier("share_on_facebook_add_your_thougth", "string", sPackageName);
         public static int share_on_facebook_post = sRes.getIdentifier("share_on_facebook_post", "string", sPackageName);
@@ -624,6 +723,7 @@ public class R {
         public static int share_screenshot = sRes.getIdentifier("share_screenshot", "string", sPackageName);
         public static int share_status = sRes.getIdentifier("share_status", "string", sPackageName);
         public static int share_success_message = sRes.getIdentifier("share_success_message", "string", sPackageName);
+        public static int share_via = sRes.getIdentifier("share_via", "string", sPackageName);
         /**  POIDetails strings 
  POIDetails strings 
  POIDetails strings 
@@ -656,6 +756,32 @@ public class R {
          */
         public static int status_waiting_location = sRes.getIdentifier("status_waiting_location", "string", sPackageName);
         public static int status_x_results_found = sRes.getIdentifier("status_x_results_found", "string", sPackageName);
+        public static int tap_to_dismiss = sRes.getIdentifier("tap_to_dismiss", "string", sPackageName);
+        /**  Take screenshot 
+ Take screenshot 
+ Take screenshot 
+ Take screenshot 
+ Take screenshot 
+ Take screenshot 
+ Take screenshot 
+         */
+        public static int tap_to_take_screenshot = sRes.getIdentifier("tap_to_take_screenshot", "string", sPackageName);
+        public static int tip_nothing_found = sRes.getIdentifier("tip_nothing_found", "string", sPackageName);
+        public static int tip_nothing_found_hint_1 = sRes.getIdentifier("tip_nothing_found_hint_1", "string", sPackageName);
+        public static int tip_nothing_found_hint_2 = sRes.getIdentifier("tip_nothing_found_hint_2", "string", sPackageName);
+        public static int tip_nothing_found_hint_3 = sRes.getIdentifier("tip_nothing_found_hint_3", "string", sPackageName);
+        public static int tip_nothing_found_hint_4 = sRes.getIdentifier("tip_nothing_found_hint_4", "string", sPackageName);
+        public static int tip_nothing_found_hint_5 = sRes.getIdentifier("tip_nothing_found_hint_5", "string", sPackageName);
+        /**  Tips 
+ Tips 
+ Tips 
+ Tips 
+ Tips 
+ Tips 
+ Tips 
+         */
+        public static int tip_point_back = sRes.getIdentifier("tip_point_back", "string", sPackageName);
+        public static int tip_point_back_hint = sRes.getIdentifier("tip_point_back_hint", "string", sPackageName);
         public static int toast_gps_disabled = sRes.getIdentifier("toast_gps_disabled", "string", sPackageName);
         /**  Auto Trigger Options 
  Auto Trigger Options 
@@ -693,8 +819,6 @@ public class R {
          */
         public static int view_map = sRes.getIdentifier("view_map", "string", sPackageName);
         public static int vision_no_content_text = sRes.getIdentifier("vision_no_content_text", "string", sPackageName);
-        public static int vision_no_content_title = sRes.getIdentifier("vision_no_content_title", "string", sPackageName);
-        public static int vision_nothing_found_hint = sRes.getIdentifier("vision_nothing_found_hint", "string", sPackageName);
         /**  Vision AR View 
  Vision AR View 
  Vision AR View 
@@ -703,34 +827,44 @@ public class R {
  Vision AR View 
  Vision AR View 
          */
-        public static int vision_nothing_found_title = sRes.getIdentifier("vision_nothing_found_title", "string", sPackageName);
-        public static int vision_point_hint = sRes.getIdentifier("vision_point_hint", "string", sPackageName);
-        public static int vision_point_title = sRes.getIdentifier("vision_point_title", "string", sPackageName);
-        public static int vision_scan_hint = sRes.getIdentifier("vision_scan_hint", "string", sPackageName);
-        public static int vision_scan_title = sRes.getIdentifier("vision_scan_title", "string", sPackageName);
-        public static int vision_tap_to_continue = sRes.getIdentifier("vision_tap_to_continue", "string", sPackageName);
+        public static int vision_no_content_title = sRes.getIdentifier("vision_no_content_title", "string", sPackageName);
+        public static int vision_scan = sRes.getIdentifier("vision_scan", "string", sPackageName);
         public static int yes = sRes.getIdentifier("yes", "string", sPackageName);
     }
     public static final class style {
-        public static int ActionBarCompatText = sRes.getIdentifier("ActionBarCompatText", "style", sPackageName);
         public static int AudioSeekBar = sRes.getIdentifier("AudioSeekBar", "style", sPackageName);
+        /**  Styles to make widgets look like in Holo theme 
+         */
+        public static int AutoCompleteTextViewLayar = sRes.getIdentifier("AutoCompleteTextViewLayar", "style", sPackageName);
         public static int BaseListView = sRes.getIdentifier("BaseListView", "style", sPackageName);
         public static int BiwDialogTheme = sRes.getIdentifier("BiwDialogTheme", "style", sPackageName);
+        public static int ButtonLayar = sRes.getIdentifier("ButtonLayar", "style", sPackageName);
+        public static int CheckBoxLayar = sRes.getIdentifier("CheckBoxLayar", "style", sPackageName);
         public static int CustomHomeLabel = sRes.getIdentifier("CustomHomeLabel", "style", sPackageName);
         public static int CustomMenuDialog = sRes.getIdentifier("CustomMenuDialog", "style", sPackageName);
         public static int DefaultText = sRes.getIdentifier("DefaultText", "style", sPackageName);
         public static int DescriptionText = sRes.getIdentifier("DescriptionText", "style", sPackageName);
         public static int DetailsText = sRes.getIdentifier("DetailsText", "style", sPackageName);
+        public static int EditTextLayar = sRes.getIdentifier("EditTextLayar", "style", sPackageName);
         public static int FilterTextView = sRes.getIdentifier("FilterTextView", "style", sPackageName);
         public static int FilterTheme = sRes.getIdentifier("FilterTheme", "style", sPackageName);
         public static int FullScreenTheme = sRes.getIdentifier("FullScreenTheme", "style", sPackageName);
+        public static int ImageButtonLayar = sRes.getIdentifier("ImageButtonLayar", "style", sPackageName);
+        public static int Layar_ProgressBar_Horizontal = sRes.getIdentifier("Layar_ProgressBar_Horizontal", "style", sPackageName);
         public static int Layar_Theme_Default = sRes.getIdentifier("Layar_Theme_Default", "style", sPackageName);
         public static int LayarTheme = sRes.getIdentifier("LayarTheme", "style", sPackageName);
         public static int LayarTheme_Black = sRes.getIdentifier("LayarTheme_Black", "style", sPackageName);
         public static int LayarTheme_Light = sRes.getIdentifier("LayarTheme_Light", "style", sPackageName);
         public static int LayarTitleTheme = sRes.getIdentifier("LayarTitleTheme", "style", sPackageName);
+        public static int RadioButtonLayar = sRes.getIdentifier("RadioButtonLayar", "style", sPackageName);
+        /**  <item name="android:textStyle">bold</item> 
+         */
         public static int SectionHeaderText = sRes.getIdentifier("SectionHeaderText", "style", sPackageName);
+        public static int SeekBarLayar = sRes.getIdentifier("SeekBarLayar", "style", sPackageName);
         public static int SmartDialogTheme = sRes.getIdentifier("SmartDialogTheme", "style", sPackageName);
+        public static int SpinnerDropDownItemLayar = sRes.getIdentifier("SpinnerDropDownItemLayar", "style", sPackageName);
+        public static int SpinnerLayar = sRes.getIdentifier("SpinnerLayar", "style", sPackageName);
+        public static int SpinnerLayar_DropDown = sRes.getIdentifier("SpinnerLayar_DropDown", "style", sPackageName);
         public static int TabTitleText = sRes.getIdentifier("TabTitleText", "style", sPackageName);
         public static int Throbber = sRes.getIdentifier("Throbber", "style", sPackageName);
         public static int Throbber_Black = sRes.getIdentifier("Throbber_Black", "style", sPackageName);

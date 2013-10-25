@@ -3,7 +3,7 @@
     android:layout_width="256px"
     android:layout_height="256px"
     android:padding="45px"
-    android:background="@drawable/qrcode_background">
+    android:background="@drawable/layar_qrcode_background">
    
     <TextView android:id="@+id/text"
         android:layout_width="wrap_content"

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- Frame -->
+
+    <LinearLayout
+        android:id="@+id/scanView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#33ffffff" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:background="#33ffffff" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/layar_vision_line" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:background="#33ffffff" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_tap_to_scan"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#33ffffff"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:shadowRadius="1"
+            android:text="@string/vision_scan"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/text_size_large" />
+    </LinearLayout>
+
+    <!-- End of frame -->
+
+    <com.layar.ui.AudioPlayerView
+        android:id="@+id/audio_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <com.layar.player.ui.TipView
+        android:id="@+id/nothing_found_widget"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>
