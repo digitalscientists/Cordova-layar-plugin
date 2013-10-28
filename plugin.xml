@@ -120,6 +120,7 @@
         <source-file src="src/android/sdk/libs/httpmime-4.1-beta1.jar" target-dir="libs"/>
         <source-file src="src/android/sdk/libs/jsoup-1.7.1.jar" target-dir="libs"/>
         <source-file src="src/android/sdk/libs/player.jar" target-dir="libs"/>
+        <source-file src="src/android/sdk/libs/android-support-v4.jar" target-dir="libs"/>
         <source-file src="src/android/sdk/libs/armeabi-v7a/libiconv.so" target-dir="libs/armeabi-v7a"/>
         <source-file src="src/android/sdk/libs/armeabi-v7a/libLayarNative.so" target-dir="libs/armeabi-v7a"/>
         <source-file src="src/android/sdk/libs/armeabi-v7a/libNativeUtil.so" target-dir="libs/armeabi-v7a"/>
@@ -127,7 +128,7 @@
         <source-file src="src/android/sdk/libs/x86/libLayarNative.so" target-dir="libs/x86"/>
         <source-file src="src/android/sdk/libs/x86/libNativeUtil.so" target-dir="libs/x86"/>
     
-        <!-- Will hope it works! :) R.java is regenrated -->
+        <!-- Will hope it works! :) R.java is regenerated -->
         <source-file src="src/android/sdk/gen/com/layar/player/R.java" target-dir="src/com/layar/player"/>
         <source-file src="src/android/sdk/gen/com/layar/player/Manifest.java" target-dir="src/com/layar/player"/>
         <source-file src="src/android/sdk/gen/com/layar/player/BuildConfig.java" target-dir="src/com/layar/player"/> -->
