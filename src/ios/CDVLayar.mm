@@ -19,9 +19,13 @@
 
 - (void)launchLayarVision:(CDVInvokedUrlCommand*)command
 {
+    NSBundle* mainBundle = [NSBundle mainBundle];
     
-    NSString *consumerKey = [[NSUserDefaults standardUserDefaults] valueForKey:@"LayarKey"];
-    NSString *consumerSecret = [[NSUserDefaults standardUserDefaults] valueForKey:@"LayarSecret"];
+    // The Info.plist is considered the mainBundle.
+    mainBundle = [NSBundle mainBundle];
+    
+    NSString *consumerKey = [mainBundle objectForInfoDictionaryKey:@"LayarKey"];
+    NSString *consumerSecret = [mainBundle objectForInfoDictionaryKey:@"LayarSecret"];
     LPARVisionViewController *augmentedRealityViewController = [[LPARVisionViewController alloc] init];
     augmentedRealityViewController.oauthConsumerKey = consumerKey;
     augmentedRealityViewController.oauthConsumerSecret = consumerSecret;
