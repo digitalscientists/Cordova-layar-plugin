@@ -5,7 +5,7 @@ window.launchLayarVision = function(show, hide) {
     }
     
     if(isFunction(show)) show();
-    setTimeout(function(){cordova.exec(null, null, "Layar", "launchLayarVision", [])}, 1000);
+    setTimeout(function(){cordova.exec(null, null, "Layar", "launchLayarVision", [])}, 1);
     if(isFunction(hide)) setTimeout(hide, 3000);
     
 };
