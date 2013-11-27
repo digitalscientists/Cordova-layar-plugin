@@ -1,0 +1,60 @@
+
+/* Class = "IBUIViewController"; title = "Tap to scan"; ObjectID = "2Em-0K-Hgs"; */
+"2Em-0K-Hgs.title" = "Touchez pour scanner";
+
+/* Class = "IBUIViewController"; title = "Point back to page"; ObjectID = "4ho-MF-laO"; */
+"4ho-MF-laO.title" = "Pointez la caméra vers la page";
+
+/* Class = "IBUIViewController"; title = "Error Message"; ObjectID = "8xR-N5-Ror"; */
+"8xR-N5-Ror.title" = "Message d'erreur";
+
+/* Class = "IBUILabel"; text = "Point back to see content"; ObjectID = "LTf-f0-3Rn"; */
+"LTf-f0-3Rn.text" = "Pointez de nouveau sur l'image précédente pour voir du contenu ";
+
+/* Class = "IBUILabel"; text = "tap screen to scan"; ObjectID = "MZw-ow-jWY"; */
+"MZw-ow-jWY.text" = "Touchez l'écran pour scanner";
+
+/* Class = "IBUILabel"; text = "TAP TO CONTINUE"; ObjectID = "NMz-yJ-f7a"; */
+"NMz-yJ-f7a.text" = "TAPEZ POUR CONTINUER";
+
+/* Class = "IBUILabel"; text = "Error Message is printed here. You get a localized explanation of what went wrong."; ObjectID = "Nzu-mI-cby"; */
+"Nzu-mI-cby.text" = "Error Message is printed here. You get a localized explanation of what went wrong.";
+
+/* Class = "IBUILabel"; text = "No content found"; ObjectID = "TUR-P8-h2I"; */
+"TUR-P8-h2I.text" = "Aucun contenu trouvé";
+
+/* Class = "IBUILabel"; text = "tap to continue"; ObjectID = "biD-RT-39m"; */
+"biD-RT-39m.text" = "Tapez pour continuer";
+
+/* Class = "IBUILabel"; text = "No content found"; ObjectID = "dD8-2w-HqV"; */
+"dD8-2w-HqV.text" = "Aucun contenu trouvé";
+
+/* Class = "IBUIViewController"; title = "Analyzing"; ObjectID = "hTA-Ud-UTt"; */
+"hTA-Ud-UTt.title" = "Analyse en cours...";
+
+/* Class = "IBUIButton"; normalTitle = "tap here to cancel"; ObjectID = "hrV-fv-gk4"; */
+"hrV-fv-gk4.normalTitle" = "Tapez ici pour annuler";
+
+/* Class = "IBUILabel"; text = "Error occured"; ObjectID = "luy-za-dyr"; */
+"luy-za-dyr.text" = "Une erreur s'est produite";
+
+/* Class = "IBUILabel"; text = "TAP TO CONTINUE"; ObjectID = "o9a-uB-DEV"; */
+"o9a-uB-DEV.text" = "TAPEZ POUR CONTINUER";
+
+/* Class = "IBUILabel"; text = "TAP TO DISMISS"; ObjectID = "r4P-Gj-yMc"; */
+"r4P-Gj-yMc.text" = "Taper pour fermer";
+
+/* Class = "IBUILabel"; text = "Placeholder string"; ObjectID = "rWw-Cl-G84"; */
+"rWw-Cl-G84.text" = "Placeholder string";
+
+/* Class = "IBUILabel"; text = "TAP TO CONTINUE"; ObjectID = "rkb-42-Egh"; */
+"rkb-42-Egh.text" = "TAPEZ POUR CONTINUER";
+
+/* Class = "IBUILabel"; text = "Tip: Hold your device steady under good light conditions"; ObjectID = "uGC-w9-U4K"; */
+"uGC-w9-U4K.text" = "Conseil: Maintenez fermement votre mobile avec de bonnes conditions de luminosité.";
+
+/* Class = "IBUILabel"; text = "No content found for this scan"; ObjectID = "xc1-uF-zqt"; */
+"xc1-uF-zqt.text" = "Aucun contenu trouvé pour ce scan";
+
+/* Class = "IBUILabel"; text = "Placeholder string"; ObjectID = "yGK-fM-bjy"; */
+"yGK-fM-bjy.text" = "Placeholder string";

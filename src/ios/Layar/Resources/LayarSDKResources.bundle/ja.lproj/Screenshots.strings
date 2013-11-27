@@ -1,0 +1,9 @@
+
+/* Class = "IBUIButton"; normalTitle = "Use"; ObjectID = "3sp-gU-13X"; */
+"3sp-gU-13X.normalTitle" = "利用する";
+
+/* Class = "IBUIButton"; normalTitle = "Retake"; ObjectID = "WIm-vA-0zM"; */
+"WIm-vA-0zM.normalTitle" = "撮り直し";
+
+/* Class = "IBUIButton"; normalTitle = "Cancel"; ObjectID = "mIV-U0-ppQ"; */
+"mIV-U0-ppQ.normalTitle" = "キャンセル";

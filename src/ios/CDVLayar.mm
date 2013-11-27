@@ -7,7 +7,12 @@
 //
 
 #import "CDVLayar.hpp"
-#import "LayarPlayer.hpp"
+#import "LayarSDK.h"
+
+@interface CDVLayar()
+// This goes into your class declaration
+@property (nonatomic, strong) LayarSDK *layarSDK;
+@end
 
 @implementation CDVLayar
 
@@ -26,15 +31,18 @@
     
     NSString *consumerKey = [mainBundle objectForInfoDictionaryKey:@"LayarKey"];
     NSString *consumerSecret = [mainBundle objectForInfoDictionaryKey:@"LayarSecret"];
-    LPARVisionViewController *augmentedRealityViewController = [[LPARVisionViewController alloc] init];
-    augmentedRealityViewController.oauthConsumerKey = consumerKey;
-    augmentedRealityViewController.oauthConsumerSecret = consumerSecret;
-    augmentedRealityViewController.delegate = nil;
-    [self.viewController presentViewController:augmentedRealityViewController animated:YES completion:nil];
-    
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Done"];
 
-    
+    self.layarSDK = [LayarSDK layarSDKWithConsumerKey:consumerKey andConsumerSecret:consumerSecret andDelegate:nil];
+
+    // This is how you construct a view controller for scanning
+    __weak typeof(self) weakSelf = self;
+    [self.layarSDK viewControllerForScanningWithCompletion:
+    ^(UIViewController<LayarSDKViewController> *viewController)
+    {
+        [weakSelf.viewController presentViewController:viewController animated:YES completion:nil];
+    }];
+
+    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Done"];    
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 

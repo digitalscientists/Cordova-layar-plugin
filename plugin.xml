@@ -604,23 +604,9 @@
         
          <resource-file src="src/ios/Layar/Resources/LayarSDKResources.bundle" />
 
-         <header-file src="src/ios/Layar/Headers/LayarPlayer.hpp" target-dir="layar" />
-         <header-file src="src/ios/Layar/Headers/LayarPlayerDelegate.h" target-dir="layar" />
-         <header-file src="src/ios/Layar/Headers/LPARVisionViewController.hpp"  target-dir="layar"  />
-         <header-file src="src/ios/Layar/Headers/LCTrackingManagerDelegate.h"  target-dir="layar" />
-         <header-file src="src/ios/Layar/Headers/LPActionManager.h"  target-dir="layar" />
-         <header-file src="src/ios/Layar/Headers/LPActionSheet.h"  target-dir="layar" />
-         <header-file src="src/ios/Layar/Headers/LPARVisionViewBase.h"  target-dir="layar" />
-         <header-file src="src/ios/Layar/Headers/LPBIW.h"  target-dir="layar" />
-         <header-file src="src/ios/Layar/Headers/LPBIWBase.h"  target-dir="layar" />
-         <header-file src="src/ios/Layar/Headers/LPCachingViewController.h"  target-dir="layar" />
-         <header-file src="src/ios/Layar/Headers/LPFactory.h"  target-dir="layar" />
-         <header-file src="src/ios/Layar/Headers/LPLayerActionHandler.h"  target-dir="layar" />
-         <header-file src="src/ios/Layar/Headers/LPPOIViewController.h"  target-dir="layar" />
-         <header-file src="src/ios/Layar/Headers/LPReferenceImageManager.h"  target-dir="layar" />
-         <header-file src="src/ios/Layar/Headers/LPShowDialog.h"  target-dir="layar" />
-         <header-file src="src/ios/Layar/Headers/LPStatusView.h"  target-dir="layar" />
-         <header-file src="src/ios/Layar/Headers/LSPOIView.h"  target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LayarSDK.h" target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LayarSDKDelegate.h" target-dir="layar" />
+         <header-file src="src/ios/Layar/Headers/LayarSDKViewController.h"  target-dir="layar"  />
 
          <source-file src="src/ios/Libraries/libsbjson-ios.a" framework="true"  target-dir="layar" />
          <source-file src="src/ios/Libraries/libMPOAuthMobile.a" framework="true"  target-dir="layar" />
