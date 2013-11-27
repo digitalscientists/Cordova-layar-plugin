@@ -6,7 +6,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <LayarSDK/LayarSDKViewController.h>
+#import "LayarSDKViewController.h"
 
 @class LayarSDK;
 

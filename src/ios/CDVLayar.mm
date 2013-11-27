@@ -39,11 +39,23 @@
     [self.layarSDK viewControllerForScanningWithCompletion:
     ^(UIViewController<LayarSDKViewController> *viewController)
     {
-        [weakSelf.viewController presentViewController:viewController animated:YES completion:nil];
+        [weakSelf.viewController presentViewController:viewController animated:YES completion:^{
+            UIButton* closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            closeButton.frame = CGRectMake(0, 25, 80, 30);
+            [closeButton addTarget:self action:@selector(closeScanner) forControlEvents:UIControlEventTouchUpInside];
+            [closeButton setTitle:@"Close" forState:UIControlStateNormal];
+            [viewController.view addSubview:closeButton];
+        }];
     }];
 
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Done"];    
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+
+- (void) closeScanner
+{
+    [self.viewController dismissModalViewControllerAnimated:YES];
 }
 
 @end

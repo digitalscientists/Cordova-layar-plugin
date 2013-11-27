@@ -639,6 +639,7 @@
          <framework src="UIKit.framework" />
          <framework src="AddressBook.framework" />
          <framework src="AddressBookUI.framework" />
+         <framework src="MapKit.framework" />
          <framework src="Social.framework" weak="true" />
      </platform>
 </plugin>

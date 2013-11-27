@@ -216,8 +216,8 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <LayarSDK/LayarSDKDelegate.h>
-#import <LayarSDK/LayarSDKViewController.h>
+#import "LayarSDKDelegate.h"
+#import "LayarSDKViewController.h"
 
 @class CLLocation;
 
